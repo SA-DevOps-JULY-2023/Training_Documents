@@ -1,0 +1,374 @@
+DevOps Training :
+Start Date : 24th July 2023
+
+#######################
+Day 1 - 25th July 2023 
+#######################
+
+	Module - 1 :	Intro. to DevOps.
+	
+	Software --> What it is ?
+			- Any Computer Application/Programs 
+			
+	
+	How Software is Developed?
+	What are the various process involved in Software Developement?
+	What is the Software Development LifeCycle ?
+	
+	Sofware :::
+	
+		- Application Software
+			Banking/Healthcare/E-Commerce,.....
+		- System Software 
+			Operating System/Middleware products
+			Micro-chip level programming/Embedded Application 
+			
+	Software Developement Life Cycle - (SDLC)
+		
+		- Requirement Analysis
+		- Design Phase 
+		- Coding/Implementation
+		- Testing 
+		- Deployment
+		- Maintenance/Monitoring
+		
+	Application :::
+	
+		Desktop Application 
+		Web Application 
+		Mobile Application 
+		
+		
+	Software Developement Life Cycle - (SDLC)
+		
+		- Requirement Analysis
+		- Design Phase 
+		- Coding/Implementation
+		- Testing 
+		- Deployment
+		- Maintenance/Monitoring	
+		
+		
+	Waterfall Model ::: Is a Traditional/Legacy SDLC Process/Model 
+						It is Linear in fashion --> Means the process is in sequential.
+		
+	
+E_Commerce Application -> 
+
+		6 Months, 10+2 Modules/Function, tools, supportive components 
+
+		
+	Waterfall::
+	
+	Core_Project1:
+		- Requirement Analysis
+		- Design Phase 
+		- Coding/Implementation
+		- Testing 
+		- Deployment
+		- Maintenance/Monitoring
+	
+		
+	Enhancement_Project1:
+		- Requirement Analysis
+		- Design Phase 
+		- Coding/Implementation
+		- Testing 
+		- Deployment
+		- Maintenance/Monitoring	
+		
+	
+	Agile Methodology :::::		The entire project is splitted into various Modules/Iterations in Agile.
+
+E_Commerce Application -> 
+
+		6 Months, 10+2 Modules/Function, tools, supportive components 	
+		
+		
+	Module/Iteration1:	
+	
+		- Requirement Analysis
+		- Design Phase 
+		- Coding/Implementation
+		- Testing 
+		- Deployment
+		- Maintenance/Monitoring	
+
+	Module/Iteration2:	
+	
+		- Requirement Analysis
+		- Design Phase 
+		- Coding/Implementation
+		- Testing 
+		- Deployment
+		- Maintenance/Monitoring
+
+	Module/Iteration3:	
+	
+		- Requirement Analysis
+		- Design Phase 
+		- Coding/Implementation
+		- Testing 
+		- Deployment
+		- Maintenance/Monitoring
+
+
+	Module/Iteration-n:	
+	
+		- Requirement Analysis
+		- Design Phase 
+		- Coding/Implementation
+		- Testing 
+		- Deployment
+		- Maintenance/Monitoring
+		
+	Agile Methodology can be used to achieve :
+		Continuous Development 
+		Continuous Integration
+		Continuous Delivery 		--> Requires Manual Approval for Prod release.
+		
+		Continuous Deployment 		--> Doesnt require any manual intervention/Approval for prod release.
+		
+	We cannot Achieve Continuous Deployment using Agile.
+	
+	
+	DevOps ::::
+	
+		DevOps is a Software Development Strategy/Process, which helps to promote collaboration with the teams like Development Team and Operations Team to achieve Continuous Developement, Continuous Integration, Continuous Testing, Continuous Delivery, Continuous Deployment and Continuous Monitoring, in an automated fashion.	
+	
+		- Requirement Analysis
+		- Design Phase 
+		- Coding/Implementation
+		- Testing 
+		- Deployment
+		- Maintenance/Monitoring
+		
+	Terminologies :::
+	
+		Teams Involved in the SDLC process ?
+		
+			IT - is responsible:
+		
+					- Infra-Structure Provision Team 
+					- Application Development Team - Application Owners/Architects/Leads/Developer
+					- Testing Team - UT/QA/UAT/..... 
+					- Release Management Team - For timely prod release
+					- Production Support Team 
+					- Production Monitoring Team
+						Infra-Structure/Application
+					- Security Team
+				
+			Why DevOps:::: ????	
+				
+			Tele-comm Domain - Service Providers1 ==> Introduce a New Offer/Service to their customers 
+			Tele-comm Domain - Service Providers2 ==> 
+
+		Environments:::
+		
+			Developer 	--> to do development I need Developement Environments
+			Tester 		--> Test Environments
+			Release		--> Production Environments
+			
+			Non-Prod Environments									Production Environment
+			
+				Dev - code - build - unit testing 
+				Test 
+					QA 
+					UAT 						======>					Prod_Environment
+		
+		What is the role of DevOps Team ??? where they fit in  SDLC Process ??
+		
+				DevOps Team:
+					- Infra-Structure Provision Team 
+					- Application Development Team - Application Owners/Architects/Leads/Developer
+					- Testing Team - UT/QA/UAT/..... 
+					- Release Management Team - For timely prod release
+					- Production Support Team 
+					- Production Monitoring Team
+						Infra-Structure/Application
+					- Security Team	
+
+			DevOps is all about People, Process and Tools
+		
+		DevOps Team:
+				DevOps Associate
+				Sr. DevOps Associate
+				DevOps Engineers
+				DevOps Lead 
+				Sr. DevOps Lead 
+				DevOps Architects
+				DevOps Consultants 
+				SRE 
+		
+		
+		
+		DevOps Need - Scripting Knowledge. 
+						Python, Shell, Groovy, Yaml 
+						
+					- Should know how the Applications are Developed, Built, Tested & Deployed.
+		
+Next :		
+		DevOps Stages ::::
+
+#######################
+Day 2 - 27th July 2023 
+#######################		
+
+			DevOps is a Software Development Strategy/Process, which helps to promote collaboration with the teams like Development Team and Operations Team and automate the end-to-end Software development process.
+		
+			
+			
+			Infra-Structure Provision & Configuration :::: 
+					Infra-Structure As Code - IAC Tools 
+							Terraform		==> Provision/Create the virtual Machines/servers
+							Ansible 		==> Configuration Management ==> Install/Remove/Upgrade any tools 
+							
+							
+							
+							
+			Continuous Development
+			
+			Sofware Development :::
+			
+				Developers --> Coding --> Java/C#/Python/Angular/NodeJS		==> Used to Develop Business Logics.
+							Eg.: www.amazon.com - E_Commerce 
+						Coding	- Sign_Up_Module --> *.java (High Level Language) 
+								IDEs -- Integrated Development Environment -- Eclipse - Visual Studio Code, Visual Studio, Pycharm, Intellj
+								Code the application and save it in a source code repository(GIT) Jenkins
+								
+						Application build 	--> It is a process of compiling the source code and creating artifacts(Binaries - *.war/*.jar/*.exec)
+										Build Tools ---> Maven/Gradle/Ant --> Jenkins
+						Perform Unit Testing  --> Automate Unit Testing (Using Maven Integration) Jenkins 
+						Promote the application for further testing (QA/UAT-Envi.) - Jenkins
+						Notify the Testing Team thru email.  Jenkins(Build Orchestration Tool)
+						
+			
+			
+			Continuous Integration :::	It is a capability of developers to continuously integrate the code for further testing.
+						Promote the application for further testing (QA/UAT-Envi.) - Jenkins
+									QA  -  Quality Assurance Testing
+									UAT -  User Acceptance Testing
+						Notify the Testing Team thru email.  Jenkins(Build Orchestration Tool)
+					
+					signin.java ==> 2500 lines of codes
+						10 lines of changes 
+			
+			Continuous Testing
+						QA  -  Quality Assurance Testing  --> TestNG/Selenium --> Jenkins 
+			
+			Continuous Delivery/ Deployment 
+				==>  It is just a process of copying the application artifacts from lower environment to higher environment
+								
+				--> These are refered to Production Release.
+				Continuous Delivery		===> It requires Manual approval for Prod. release
+				
+				Continuous Deployment	===> It is completely automated - No Approvals are needed to perform the prod release.
+				
+						Ansible/Jenkins/Docker/Kubernetes
+
+			Non-Prod Environments									Production Environment
+			
+				Dev - code - build - unit testing 
+				Test 
+					QA 
+					UAT 						======>					Prod_Environment
+					
+					
+			Deployment Window :::: 
+			
+			Continuous Delivery :::
+				Online Banking!!!! Prod Deployment Window --> 4 to 6 Hrs.
+						If deployment is successful 
+						If it failed????
+							Try to fix the issue within the deployment window 
+							If it is not possible to fix, then the changes will be reverted.
+							
+			Continuous Deployment :::
+			
+				Starting from Application Build, UT, Code promotion, QA, UAT, Prod Release ==> is completely Automated.
+			amazon.com
+			netflix 
+			
+			Continuous Monitoring
+					
+					-> Infra-Structure Monitoring - Jenkins
+								Prometheus/Grafana/					
+							
+					-> Application Monitoring
+								AppDynamics
+			
+
+			
+			Software Application ::
+			
+				Mobile/Web/Desktop Applications
+				
+			Legacy applications architecture : 
+					
+					Monolith Application Architecture  :::
+						
+							The Application Components are tightly coupled.
+							
+					Micro-Service Based Application Architecture :::
+					
+							The Application is splitted into various services.
+							It is loosely coupled.
+							
+			
+			
+			www.amazon.com - E_Commerce  ::::
+
+			Developers's Perspective ::::
+			
+						sign_up ==> --> 3 - tier Architecture
+										FrontEnd,Application_Logic,BackEnd(Database) SQL/ORACLE
+						
+			
+			Sign_up			---> (Micro-service) Developer will make the code change --> test --> QA/UAT/ --> Released to Prod.
+			Sign_In 
+			Search
+			Add to cart
+			place an order
+			payment
+			Confirm Order
+			Tracking 				
+			
+			mywebapp.html
+				<html>
+				
+					sign_up
+					sign_in
+					payment
+				
+				</html>
+				
+			sign_up.html 			
+				<html>				
+					sign_up				
+				</html>
+				
+			sign_in.html 			
+				<html>				
+					sign_in				
+				</html>
+
+
+
+Lab Prerequisites:::
+
+		1. Create Github account
+		2. Create AWS Free Tier Account
+		3. Install: 
+				Java
+				GIT
+				Python
+				Eclipse IDEs
+				Visual Studio Code
+				Terraform
+		4.Create Dockerhub account
+		
+		
+		https://github.com/
+		
+		What is github ????  --> is remote git repository ( Folders & Files )
+		
