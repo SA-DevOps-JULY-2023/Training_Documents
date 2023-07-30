@@ -1,0 +1,254 @@
+#######################
+Day 1 - 29th July 2023
+#######################
+
+--> What is the need for you to get into DevOps ????
+		combination of dev & operation 
+		to speed up delivery
+
+
+	Introduction to DevOps :::
+	
+	IT --> Develop Software Application 
+
+		Types of Software Application???
+				Desktop Application
+				Web Application
+				Mobile Application
+			
+		How these applications are developed ???
+		What is the process behind this ???
+		
+			Front-End & Back-End & Database/API / Using Programming Lang.
+			
+		Software Development Life Cycle - 'SDLC' Process/Methodologies
+		
+		
+		E_Commerce Application :: ==> www.amazon.com -- Web Application!!! 
+		
+		Software Development Life Cycle - 'SDLC' Process/Methodologies
+		
+			- Requirement Analysis
+			- Design
+			- Code/Development 
+			- Testing
+			- Deployment/Implement
+			- Maintainence/Monitoring
+			
+		Water-fall Model 											===> Linear in fashion.
+							The Whole application is developed and delivered as a single Application Project.
+		E_Commerce Application :::
+				Detailed Analysis --> 	9 Months / 
+				10 Functions/Modules to be created in the project  + 3 More func. 
+		Project1 - Core.
+			- Requirement Analysis
+			- Design
+			- Code/Development 
+			- Testing
+			- Deployment/Implement
+			- Maintainence/Monitoring
+		
+		Project2 - Enhancement.
+			- Requirement Analysis
+			- Design
+			- Code/Development 
+			- Testing
+			- Deployment/Implement
+			- Maintainence/Monitoring	
+
+
+		Agile Methodoligies :::
+							Each and every functions can be independently developed and tested.
+
+		E_Commerce Application :::
+				Detailed Analysis --> 	9 Months / 
+				10 Functions/Modules to be created in the project	+5 Func. 
+
+		Module/Iteration1:
+			- Requirement Analysis
+			- Design
+			- Code/Development 
+			- Testing
+			- Deployment/Implement
+			- Maintainence/Monitoring			
+			
+		Module/Iteration2:
+			- Requirement Analysis
+			- Design
+			- Code/Development 
+			- Testing
+			- Deployment/Implement
+			- Maintainence/Monitoring
+
+		Module/Iteration3:
+			- Requirement Analysis
+			- Design
+			- Code/Development 
+			- Testing
+			- Deployment/Implement
+			- Maintainence/Monitoring
+			
+		Module/Iteration-n:
+			- Requirement Analysis
+			- Design
+			- Code/Development 
+			- Testing
+			- Deployment/Implement
+			- Maintainence/Monitoring
+			
+			
+		Module/Iteration1.1:
+			- Requirement Analysis
+			- Design
+			- Code/Development 
+			- Testing
+			- Deployment/Implement
+			- Maintainence/Monitoring
+			
+				
+		Agile Methodologies can be used to achieve :::
+		
+					Continuous Development 
+					Continuous Integration 
+					Continuous Testing 
+					Continuous Delivery 		===> 10 Iterations 
+											---> Will be be promoted to Production Environment with manual Approvals.
+											---> i.e., this expects manual intervension/ Manual Approvals for Production Release.
+											
+		Continuous Deployment ---> Cannot be achieved using Agile Methodoligies!
+				===> It doesnt requires any manual intervension / Manual Approvals for Production Release.
+					 i.e., Starting from Application Build to Production Release - Everything is completely automated.
+											
+		Tele-Comm Domain :::
+			Service Provider1 --> Introduce a new offer/service to thier customers ASAP. --> IT
+			Service Provider2 --> Introduce a new offer/service to thier customers 
+			
+		
+		DevOps ::::::
+		
+			==> Is a software Development Strategy, which helps to promote the colloboration between the Development Team and Operation Team, in order to achieve Continuous Development, Continuous Integration, Continuous Testing, Continuous Delivery, Continuous Deployment and Continuous Monitoring, in a more automated fashion.
+			
+			i.e., Starting from Application Build to Production Release - Everything is completely automated.
+			
+		Pre-Requisites ::::
+		
+			Application Architecture :::
+			
+				Monolith Application Architecture
+								==> Tightly Couple application with hugh set of dependencies.
+								==> The Entire Application is developed and deployed as a whole application.
+											
+			
+				Micro-Service Based Application Architecture
+								==> These the loosely Coupled Applications.
+								==> 10 modules/Functions ==> 
+								==> Each function/Module is consider as a Service
+								
+		www.amazon.com ===>>> E_Commerce :::
+		
+		Sign_Up		===> Micro-Service1 ==> Developer1 --> Code, test, promote the code for further Testing ==> Released to Production
+		Sign_In		===> Micro-Service2
+		Search
+		Add to Cart
+		Place the Order 
+		Payment 
+		Confirm the Order 
+		Track
+		
+		Continuous Deployment 	
+			===> Starting from Application Build to Production Release - Everything is completely automated, without any downtime. 
+								
+			
+		Banking Sector :::		Stable 			Continuous Delivery 
+			Online Banking:
+			Online Credit Transations:
+			
+					Production Deployment Window ---> 4 - 6 Hrs. -->  DownTime 
+						Production Release ==>  Take Approval from all the Teams -> 
+												Failed ==> 1. Try to fix that issue with the given time.
+														   2. Revert the Changes
+
+		Continuous Deployment 	
+			===> Starting from Application Build to Production Release - Everything is completely automated, without any downtime. 
+			
+		Netflix
+		Facebook
+		google
+		amazon 
+		
+		DevOps ::::::
+		
+			==> Is a software Development Strategy, which helps to promote the collaboration between the Development Team and Operation Team, in order to achieve Continuous Development, Continuous Integration, Continuous Testing, Continuous Delivery, Continuous Deployment and Continuous Monitoring, in a more automated fashion.		
+		
+		Teams Involved in SDLC ::::
+		
+			DevOps Team :
+			
+				Infra-Structure Management Team
+				Development Team 
+				Testing Team
+				Release Management Team 
+				Production Support Team 
+				Production Monitoring Team 
+				Security Team 
+			
+		DevOps Stage :::		
+		
+		
+			Infra-Structure Management ::::
+					Provision the Infra-Structure 	
+							IAC Tools --> Infra structure As Code --> Terraform/CFT/ARM
+					Configure the Infra-Structure
+							IAC Tools --> Ansible/Chef/Puppet	
+		
+			Continuous Development :::
+					==> It is the capability of the Development Team to Continuously develop the Source Code. 
+						Source_Code ---> Java/C#/Python/NodeJS/Angular - High Level Lang.
+							IDEs - Integrated Development Environment - Eclipse IDEs / Visual Studio Code / Visual Studio / Pycharm
+							Version Control System like GIT - Repositories.
+						Code_Build 	---> Process of Compiling the Source_Code and Creating the Artifacts(Binaries - *.war/*.jar/*.exec)
+							Build tools - Maven/Gradle/Ant -- > Unit Testing Junit
+							Jenkins
+						
+			Continuous Integration 
+					==> It is the process of Continuously Integrating the code for further Testing.		Jenkins/Docker/Ansible 
+						Testing Environment -- QA(Quality Assurance Testing) / UAT (User Acceptance Testing) 
+						
+			Continuous Testing --> Jenkins -- TestNG / Selenium
+					==> It is a process of Continuously Testing the changes
+						QA Testing 
+						UAT 
+						
+			Continuous Delivery/Deployment --> Jenkins/Docker/Kubernetes/Ansible
+					==> Both Continuous Delivery/Deployment are used to release the product to Production Environment
+						How?
+						
+					Continuous Delivery ==> Will be be promoted to Production Environment with manual Approvals.
+					Continuous Deployment 
+						==> Starting from Application Build to Production Release - Everything is completely automated, without any downtime. 
+					
+			Continuous Monitoring
+			
+					==> Infra-Structure Monitoring	==> Jenkins 
+							--> Prometheus/Grafana/Nagios/Splunk/DataDog/DynaTrace							
+					==> Application Monitoring
+							--> AppDynamics
+							
+		
+		Environments::::		Servers/Virtual Machines
+		
+			Non-Prod Environment				==> 				Production Environment
+				DEV Environment
+				Test Environment
+					QA
+					UAT 						==>						Prod Environment
+					
+#######################
+Day 2 - 30th July 2023
+#######################
+
+		waterfall --> Agile --> DevOps --> DevSecOps --> GitOps --> SRE --> MLOps --> AIOPs
+
+		GITHUB ===> It is remote repository.
+			
+			
