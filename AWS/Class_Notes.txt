@@ -402,3 +402,127 @@ Day 3 - 28th July 2023
 			Phone Number
 			Credit/Debit Card -- > eligible for International Tracking. 
 				
+				
+#######################
+31st July 2023
+#######################		
+
+		Cloud Computing Fundamentals ::::
+		
+			Benefits of Cloud computing
+			Various Cloud Services 
+				IAAS
+				PAAS
+				SAAS
+				
+				
+		Cloud platform ---> Meant for my business 
+							Mail_Server 
+							Application_Server
+		Deployment Model ::
+		
+			Public Cloud 
+			
+			Private Cloud
+			
+			Hybrid Cloud 
+			
+			Community Cloud
+			
+			ALM --> Application LifeCycle Management Tool
+				Azure Board 
+				Jira 
+				
+		Working with AWS Platform ?
+		
+			1. Create a free tier !
+			2. Login to this AWS Console as a root user.
+			3. Access AWS Console.
+		
+		
+		
+		Cloud Platform!
+		
+			- Cloud Resources 
+				Compute Device -- Servers 
+						The AWS Servers are located in different geographical locations!
+								Regions
+									Availability Zones
+										Data centers
+											Collection Servers 
+													Virtual Machines (EC2 Instances)
+			
+			
+		Tools :::::::
+		
+			Self-Managed Services/Tools	(Open-Source Tools)
+			
+				git/jenkins/docker/K8s/Ansible/Terraform/Prometheus/Grafana/Maven 
+			
+			
+			
+			Managed Services/Tools --> Managed by Service Providers
+				
+				Azure DevOps Service :
+					Az Boards/Repos/Artifacts/Test/Pipelines
+				AWS :
+					Code Commit/Code Build/Code Pipeline/Code Deploy
+					
+					
+		In AWS --> You have create EC2 Instances (VM)
+			750 Hrs/Month --> 
+			
+			1 VM ==> run for 750 Hrs/Month 
+			10 VM ==> 75 Hrs
+			
+		Create EC2 Instance ::::
+		
+Summary :::
+		Launch AWS EC2 Instance!
+		
+		
+################
+1st August 2023
+################	
+
+		Working with AWS Services :::
+		
+		
+		EC2 Instances			===> Is a Virtual Machine!
+		
+			- Created a Linux Machine :: 
+				Linux is an Operating System - Open Source OS
+						Debain - Ubuntu 
+						Package Manager!
+			
+			- Connect to the EC2 Instance : Remote Server / VM 
+				- EC2 Instance Connect -- done thru browser 
+				- SSH Agents 
+					- Putty
+					- MobaXterm
+				- Terminals/Console/Command Prompt
+				
+				
+		EC2 Instance == > Virtual Machine 
+			IP Address ==> 
+				Public IP Address  --> This will change whenever the VM is restarted.
+				Private IP Address --> This is constant.
+				
+				
+		Using Public_IP_Address & Key pair we can establish connect to the remote server.
+		
+		
+			Amazon Linux - AMI 
+				The default user_ID - ec2-user 
+				
+			Ubuntu - AMI 
+				The default user_ID - ubuntu
+		
+		
+			- SSH Agents 		==> Is used to establish secure connection to the remote Linux servers
+				- MobaXterm
+					- Install Mobaxterm in your local Windows Machine.
+								https://mobaxterm.mobatek.net/download.html
+			
+			- 
+		
