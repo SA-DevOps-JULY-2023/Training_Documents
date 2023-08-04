@@ -524,5 +524,213 @@ Summary :::
 					- Install Mobaxterm in your local Windows Machine.
 								https://mobaxterm.mobatek.net/download.html
 			
-			- 
+
+			
+################
+3rd August 2023
+################	
+
+
+		How to install software packages in Linux Machines - VM in AWS 
+		AWS Services - Security Group,IAM,ECR,ECS,EKS,S3,EBS,....... 
 		
+		
+		Virtual Machines :::
+		
+			EC2 Instance:::
+			
+				- Ubuntu 
+					Package Management! - (Installation/Unstallation/Upgrade)
+					
+			Linux Distributions ::::
+				Linux is a open source Unix based Operating System:
+				Command Line Interface
+				
+				Distributions - the flavors of Linux OS 
+				
+					Fedora/RHEL/Centos/Ubuntu/
+					
+					Types of Package Managers ::::
+						Fedora(latest version) 											-	dnf 
+						AmazonLinux2(Previous Version)/Fedora(Old Version)/RHEL/Centos 	-	yum
+						debian/Ubuntu													- 	apt / apt-get
+
+					rpm
+					tar
+					curl
+				Package Manager ==> Used to Manage the package - (Installation/Unstallation/Upgrade)	
+		
+		
+		1. Launch AWS EC2 Instances !
+			- Install the Package!
+		
+		
+		Security groups --> Which is used to define the incoming/Inbound rules and Outgoing/Outbound rules traffic.
+		
+			Ubuntu Machine --> My WebApplication --> IP_Address:Port 
+			
+			Jenkins --> by default jenkins run in port 8080
+			
+		Linux Machine :::
+			Linux Commands :::
+			
+				Always the package managers can be executed using root user access!
+				
+			git --> Source Code Management Tool
+			
+			ubuntu 
+			
+				sudo -i
+				
+				apt update -y
+				apt install git -y
+				apt remove git -y 
+				
+				git --version 
+				
+			AmazonLinux2 (previous version)
+			
+				sudo -i
+				yum update -y
+				yum install git -y
+				yum remove git -y
+		
+			Security Group!
+			
+				port 22 -> 
+				How to create new security Group based on Applications.
+					Jenkins/Tomcat/Nginx 
+			
+			Next : Install 
+				Jenkins/Ansible
+				
+################
+4th August 2023
+################					
+				
+				
+			Install some tools and services :
+			
+				Package :
+					GIT -- Tools - using git cli command, we access git.
+					
+					jenkins/tomcat/nginx --> Tool --> run as a service - It is accessible thru web browser
+						It shd be enabled with its default port.
+						Jenkins by default runs in port 8080
+					
+					Install Jenkins :::		https://www.jenkins.io/doc/book/installing/
+						Jenkins is one of the build Orchestration Tool. 
+						Jenkins is a Master/Slave Architecture. 
+						
+					Installation of any tool :::
+					
+						1. Install Pre-requisites
+						2. Install the actual tool
+						3. Config the tool - post installation activities
+						
+Summary ::
+
+Launch Ubuntu Machine - 20.04
+
+Add Inbound rule in security Group.
+	8080
+	All Traffic ==> 
+
+Install Java :
+
+sudo apt update
+sudo apt install openjdk-17-jre
+java -version
+
+Install Jenkins :
+					
+				
+curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key | sudo tee \
+  /usr/share/keyrings/jenkins-keyring.asc > /dev/null
+  
+echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
+  https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
+  /etc/apt/sources.list.d/jenkins.list > /dev/null
+  
+sudo apt-get update
+
+sudo apt-get install jenkins					
+			
+jenkins --version 
+
+To Check the status of Jenkins Server :::
+
+systemctl status jenkins
+systemctl stop jenkins
+systemctl start jenkins
+systemctl restart jenkins
+systemctl enable jenkins 		==> To make jenkins as startup service
+
+To Access Jenkins ::
+
+	<external_IP_Addr>:8080
+			
+Jenkins Plugins are extension to Jenkins.		
+
+In future ::
+		Docker 
+		Ansible
+		Terraform
+		Prometheus
+		Grafana
+		Kubernetes
+		
+Working with EC2 Instances :::
+
+	Ubuntu 
+		Start/stop/terminate
+	Install/Update/remove the packages 
+	Manage Security Group 
+	How to install Jenkins kind of services by enabling the Ports.
+	
+EC2 Instance :::
+
+	Authentication :::
+	
+		- Password based
+		- Token based 
+		- Key based 
+		- Passwordless auth
+		- MFA 
+		
+	IAM Services ::::
+	
+		It is used to establish secured access to AWS Resources.
+		
+		RBAC - Role Based Access Control 
+		
+		
+		100 Members in my DEV_Team
+		
+		Developer_Group		--> Assign the required access at the group level.
+		
+		Lead_Group
+		
+		Appln_Owner_Group
+			
+				
+		https://198147585319.signin.aws.amazon.com/console
+		devopsuser1
+		
+		
+		S3 		==> This can be accessible using web url/Access point
+		
+		EBS 	==> This can be accessible using EC2 Instances 
+		
+		EFS 	==> This can be accessible using EC2 Instances as well as web url/Access point
+		
+		
+		Container Service :::
+		
+			ECS 
+			
+			ECR 
+			
+			EKS 
+			
+			IP -- Static IP / Dynamic IP
