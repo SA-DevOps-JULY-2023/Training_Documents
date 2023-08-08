@@ -731,6 +731,41 @@ EC2 Instance :::
 			
 			ECR 
 			
+################
+7th August 2023
+################
+
+		AWS Services 
+		
+		Assignment
+		
+		30 GB EBS 
+		
+		Cache Memory.
+		
+			ECS	
+			ECR 
+			EKS 
+		
+		AWS DevOps Services ::::
+		
+		
+		DevOps Tools/Service :::
+		
+			Open-Source DevOps Tools :
+				git, jenkins, Maven Integration, ansible, docker, kubernetes, terraform, maven, prometheus, grafana
+			
+			Managed Services : AWS/Azure/GCP :::
+				AWS :::
+				
+					Code Commit
+					Code Build 
+					Code Pipeline 
+					Code Artifacts 
+					Code Deploy 
+					Code Test 
+					
+						
 			EKS 
 			
 			IP -- Static IP / Dynamic IP
