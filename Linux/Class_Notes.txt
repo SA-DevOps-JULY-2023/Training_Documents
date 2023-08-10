@@ -1019,3 +1019,308 @@ EC2 Instance :::
 					press esc and type :wq 		# to write and quit
 					
 					press esc and q!			# Exit from the file without saving
+
+
+					
+################
+10th August 2023
+################
+
+			- Access to Machine 
+			- Manage the Users
+				Create Users 
+				Alter users
+				Grant Access to User to work on any resource/Application 
+			- Manage the Applications 
+				Install/Remove/Upgrade
+			- File Management 
+				- Create/Delete/Update 
+				- Grant access to files
+				- Revoke Access  files 
+			- Handling Remote Servers -- Working with Networking - Hybrid/single cloud/Multi-Cloud - AWS/AZure
+				- Establish connection to another Machine
+						SSH Based Connection
+				- What level of Authentication we create ?
+						Password based Authentication
+						Passwordless Authentication
+						Token Based Authentication
+						Key Based Authentication
+				- What level of Authorization we create ?
+			Automation -- Scripts 
+				- Shell Scripts 
+				
+				
+~~~~~~~~~~~
+
+			- File Management 
+				- Create/Delete/Update 
+				- Grant access to files
+				- Revoke Access  files 
+
+
+			- Create/Update 
+			
+			- Delete/remove file/dir :::
+			
+				rm file1.txt
+				rm -f file1.txt 
+				
+				rm -rf dir1 
+				
+				
+			Linux File Access Mode Levels :::
+			
+			-rw-r--r--
+				
+			----------
+			
+			drwxrwxrwx		
+			
+			
+			-			====> Denotes the type of component 	==> - / d 	i.e., file / directory
+			
+			 ---		====> Denotes the access at owner level ==>	rwx		i.e., read / write / execute 
+			
+			sample.sh 	root user is the owner
+			file.txt    root user is the owner 
+			
+			-rwx
+			-rw-
+				
+			sample1.sh 	root user is the owner  / devuser1
+			
+			-rwxr-xr--
+			
+			In general, 
+			
+				Owner 			devuser1 
+				Group users		devgroup1
+				Common users	testuser1	/ testgroup1
+		
+			File Access Mode :::
+			
+			----------
+			drwxrwxrwx
+			
+			
+			-rwxr-x--- and -rwxr-xr--
+			
+			chmod 777 file1
+
+			chmod 777 dir1/
+			
+			
+		Multiplie users ::::
+		
+		Linux User Management :::
+		
+			root user 	 ---> Admin level user
+			
+			default user ---> ubuntu / ec2-user 
+			
+		DevOps Team :::
+		
+			devopsadmin ::
+				- created 
+				- Enable access to this user
+		
+			To Create User in Linux :::
+			
+			Run te following commands as a root user :
+			
+				useradd devopsadmin 
+				useradd -m -d /home/devopsadmindir devopsadmin1 
+				
+				passwd devopsadmin 
+				
+				NEW PASSWORD:
+				RETYPE NEW PASSWORD:
+				
+			su - devopsadmin
+			
+			Jenkins_Server :::
+				default user ---> ec2-user 
+			docker 
+			ansible 
+				
+			useradd jenkinsadmin 
+				
+				/var/lib/jenkins $ ll  
+				
+			useradd dockeradmin 
+			useradd ansibleadmin 
+				chmod 
+				chown -R jenkinsadmin jenkinsadmin /var/lib/jenkins/
+				
+				[root@ip-172-31-40-188 mydir1]# chown devopsadmin myscript1.sh
+				
+				chown devopsadmin /root/mydir1/myscript1.sh
+				
+				cat /etc/group
+				cat /etc/passwd
+
+
+			User_ID 
+			Group_ID 
+			Service_ID 
+			
+			
+			Jenkins_Server :::
+			
+				create huge list of files/artifacts 
+				
+				Maintenance of Jenkins Server :::
+					- Periodically I need to delete all the outdated files & Artifacts.
+						- weekly basis
+						
+						/var/lib/jenkins/workspace/*
+		
+					Valid Service_ID to access this path ?	
+
+
+    2  yum update -y
+    3  clear
+    4  ls
+    5  mkdir mydir1
+    6  cd mkdir1
+    7  cd mydir1/
+    8  vi file1.txt
+    9  apt udpate -y
+   10  clear
+   11  echo "hello"
+   12  ls
+   13  clear
+   14  ls
+   15  ll
+   16  clear
+   17  ls
+   18  echo "rec1" >> file2.txt
+   19  echo "rec1" >> file3.txt
+   20  echo "rec1" >> file4.txt
+   21  ls
+   22  rm file4.txt
+   23  ls
+   24  rm -f file4.txt
+   25  ls
+   26  rm -f file3.txt
+   27  ls
+   28  mkdir sub-dir1
+   29  ls
+   30  rm sub-dir1/
+   31  rm -rf sub-dir1/
+   32  ls
+   33  clear
+   34  ls
+   35  mkdir sub-dir1
+   36  ls
+   37  ll
+   38  mkdir sub-dir2
+   39  ls
+   40  ll
+   41  clear
+   42  ll
+   43  touch file3.txt
+   44  ll
+   45  mkdir mydir3
+   46  ll
+   47  touch file5.sh
+   48  ll
+   49  clear
+   50  ll
+   51  chmod 777 file1.txt
+   52  ll
+   53  chmod 755 file1.txt
+   54  ll
+   55  chmod 555 file1.txt
+   56  ll
+   57  echo "asdfasd">> file1.txt
+   58  cat file1.txt
+   59  clear
+   60  ll
+   61  chmod 777 file2.txt
+   62  ll
+   63  chmod --+ file2.txt
+   64  clear
+   65  pwd
+   66  ll
+   67  chmod 777 *.txt
+   68  ll
+   69  chmod 755 *.txt
+   70  ll
+   71  echo "echo 'Hello'" > s1.sh
+   72  ll
+   73  chmod 777 s1.sh
+   74  ls
+   75  ./s1.sh
+   76  rm s1.sh
+   77  ls
+   78  clear
+   79  ls
+   80  echo "adsfad"
+   81  ll
+   82  echo "echo 'Hello'" >> myscript1.sh
+   83  ls
+   84  ll
+   85  chmod 744 myscript1.sh
+   86  ll
+   87  ./myscript1.sh
+   88  cat myscript1.sh
+   89  echo "echo 'Hellasdfasdfasdo'" >> myscript1.sh
+   90  echo "echo 'adfasdfasdfHellasdfasdfasdo'" >> myscript1.sh
+   91  echo "echo 'adfasdfasdfHelasdfasdlasdfasdfasdo'" >> myscript1.sh
+   92  echo "echo 'adfasdfasdfasdo'" >> myscript1.sh
+   93  ll
+   94  ./myscript1.sh
+   95  cat myscript1.sh
+   96  clear
+   97  cd /
+   98  pwd
+   99  ls
+  100  cd home
+  101  ls
+  102  cd ec2-user/
+  103  ls
+  104  pwd
+  105  ll
+  106  cd ..
+  107  ll
+  108  cd /
+  109  ll
+  110  clear
+  111  useradd devopsadmin
+  112  ls
+  113  cd /home/
+  114  pwd
+  115  ls
+  116  cd ~
+  117  useradd -m -d /home/devopsadmindir devopsadmin1
+  118  ls
+  119  cd /home/
+  120  ls
+  121  ll
+  122  cd ~
+  123  passwd devopsadmin
+  124  passwd devopsadmin1
+  125  clear
+  126  cat /etc/passwd
+  127  clear
+  128  su - devopsadmin
+  129  su - devopsadmin1
+  130  passwd devopsadmin1
+  131  su - devopsadmin
+  132  passwd ec2-user
+  133  visudo
+  134  clear
+  135  ls
+  136  cd mydir1/
+  137  ll
+  138  chown devopsadmin myscript1.sh
+  139  pwd
+  140  ll
+  141  visudo
+  142  cat /etc/passwd
+  143  cat /etc/groups
+  144  cat /etc/group
+  145  clear
+  146  cat /etc/group
+  147  history
