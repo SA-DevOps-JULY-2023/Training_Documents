@@ -1324,3 +1324,182 @@ EC2 Instance :::
   145  clear
   146  cat /etc/group
   147  history
+
+
+
+
+################
+11th August 2023
+################				
+				
+				User Management :::
+				
+					Password based Authentication
+					Key Based Authentication
+						SSH Keys 
+							Private key 
+							Public key 
+							Authorized Key 
+					Passwordless Authentication
+					Token based Authentication
+						-> Size 16 - 24 chars 
+				
+					
+
+				vi /etc/ssh/sshd_config
+				service sshd reload
+				
+				hostname, username, keys
+				
+				ssh-keygen 
+				
+				id_rsa  			--> Private key 
+				id_rsa.pub			--> public key
+		
+				ssh-copy-id devopsadmin@172.31.38.80	
+
+
+				
+
+				ssh devopsadmin@172.31.38.80
+				
+				VM in ur aws platform 
+				
+				mobaxterm to connect to ur VM ???
+				
+				hostname, username, keys(*.pem)
+				
+				
+			Remote Server Access ::::
+			
+				Source Machine				IP_Addr, (SSH - Port 22), userid, ssh-keys
+					Target Machine 			IP_Addr, (SSH - Port 22), userid, ssh-keys
+						
+				In Source_Machine ::
+				
+					su - devopsadmin
+					devopsadmin $ ssh-keygen
+					 give enter to go with default path 
+					 give enter 
+					 give enter
+					
+					you should able to see :
+						id_rsa
+						id_rsa.pub 
+					
+					ssh-copy-id <target_Machine_UserName>@<target_machine_private_ip>
+					ssh-copy-id devopsadmin@172.31.38.80
+					
+					yes
+					
+					enter
+				
+					ssh devopsadmin@172.31.38.80
+					
+					Copy the files from one server to another server!!!
+					
+					
+					scp filefromserver1.txt devopsadmin@172.31.38.80:/home/devopsadmin
+					
+					amazon-linux-extras install epel -y
+
+[devopsadmin@ip-172-31-40-188 ~]$ history
+    1  exit
+    2  pwd
+    3  ls
+    4  ls -a
+    5  ls
+    6  ls -a
+    7  exit
+    8  clear
+    9  ls -a
+   10  exit
+   11  clear
+   12  ls -a
+   13  ssh-keygen
+   14  ls -a
+   15  cd .ssh/
+   16  ls
+   17  clear
+   18  ls
+   19  cat id_rsa
+   20  cat id_rsa.pub
+   21  clear
+   22  ssh-copy-id devopsadmin@172.31.38.80
+   23  ls
+   24  cat id_rsa.pub
+   25  cat known_hosts
+   26  cd ~
+   27  clear
+   28  ssh devopsadmin@172.31.38.80
+   29  cd .ssh/
+   30  ll
+   31  cat id_rsa.pub
+   32  ssh devopsadmin@172.31.38.80
+   33  clear
+   34  ls
+   35  cd ~
+   36  ls
+   37  echo "rec1" >> filefromserver1.txt
+   38  ls
+   39  scp filefromserver1.txt devopsadmin@172.31.38.80:/home/devopsadmin
+   40  cat filefromserver1.txt
+   41  scp filefromserv.txt devopsadmin@172.31.38.80:/home/devopsadmin
+   42  cd .ssh/
+   43  cat id_rsa
+   44  ls
+   45  pwd
+   46  cd ~
+   47  pwd
+   48  cd /
+   49  pwd
+   50  ls
+   51  clear
+   52  amazon-linux-extras
+   53  clear
+   54  amazon-linux-extras
+   55  amazon-linux-extras install epel -y
+   56  exit
+   57  history
+
+***************************************************************************8
+
+
+					
+  139  pwd
+  140  ll
+  141  visudo
+  142  cat /etc/passwd
+  143  cat /etc/groups
+  144  cat /etc/group
+  145  clear
+  146  cat /etc/group
+  147  history
+  148  yum update -y
+  149  clear
+  150  su - devopsadmin
+  151  passwd devopsadmin
+  152  vi /etc/ssh/sshd_config
+  153  service sshd reload
+  154  su - devopsadmin
+  155  exit
+  156  vi /etc/ssh/sshd_config
+  157  service sshd reload
+  158  exit
+  159  clear
+  160  vi /etc/ssh/sshd_config
+  161  service sshd reload
+  162  clear
+  163  su - devopsadmin
+  164  amazon-linux-extras install epel -y
+  165  amazon-linux-extras install java-openjdk11 -y
+  166  python --version
+  167  ansible --version
+  168  amazon-linux-extras
+  169  amazon-linux-extras install ansible2
+  170  ansible --version
+  171  history
+  
+  aws
+  linux 
+  
