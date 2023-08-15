@@ -1503,3 +1503,159 @@ EC2 Instance :::
   aws
   linux 
   
+
+#################
+14th August 2023
+#################
+
+
+	Linux Shell Scripting :::
+	
+		Development Team --> 
+		
+			Development :::
+				
+				Programming Language ::
+				
+					Used to develop the Business Applications
+						D/M/W -
+						Eg.: Java/C#/Python/.Net
+					
+				Scripting Language ::
+					Light weight version of Programming Language
+
+					Used to perform some process automation:
+						Eg.: 
+							shell/python_script/java_script/vb_script/groovy/yaml..........
+							
+					On DevOps Perspective ::
+					
+						To Automate :
+							Continuous Developement to Monitoring...
+							
+							yaml/groovy/shell/python_script 
+							
+							
+				Micro_Service :::
+				
+				E_Commerce Application ::
+				
+				Sign_up ===> User Registration :::
+				
+					3-Tier Architecture :::
+
+						FrontEnd
+						Application_Logic --> 
+						BackEnd(DBase)
+
+			email_ID : asdfasdadfasdfs
+			
+			
+			###################
+
+
+			Client Side Scripting!
+			
+			
+			Linux :::
+			
+				To Fundamentals of Shell Scripting :::
+				
+				Software :::
+					Collection of Programs 
+						Program :
+							Set of Instructions  --- based on the high level language
+							 Programming/Scripting Language
+							 
+				Concepts ::::
+				
+					Data!
+						
+					1. Variables			x = 10
+					2. What type of variables ? 
+					3. How to handle it?
+						At runtime?
+						Once data is received the data ???
+						store the data !
+						
+							Variables
+							Alpha-Numeric x = 10
+								read x
+							Array x[10] = {1,2,3,4,5,6,7,8,9,0}
+								loops 
+								for/while/do-while loop
+								 read x[i] 
+								 
+							File Handling :
+								stored in the form of files 
+									create / write / read / delete / update
+							
+							Database : 
+								Tables - row/columns - relational - which help to handle random data.
+							
+							
+				shell scripts to interact with Linux Machine
+				
+				Python script to invoke shell script to manage jenkins server
+				
+				CLI 
+				
+				cmd prompt ???
+				
+					is used to interact with Operating System 
+					
+						Linux - bash	--> shell/bash ==> command/scripts
+						window - cmd    --> powershell
+						
+							Hybrid --> 
+						
+						
+				AWS Instances :::	--> Provisioning the servers 
+				
+						IAC Tools 	--> Terraform 	- Provisioning the servers  ->  HCL  
+									--> Ansible 	- To Config the servers		->  YAML
+									
+								Python scripting	==> Provisioning the servers / Config the servers	
+								
+								Shell Scripting 	==> Provisioning the servers / Config the servers
+								
+								
+Linux Shell Scripting examples ::::
+
+		Scripting is completely based upon your logical thinking!		
+		
+			echo "Hello"
+		
+		Calculate sum of two numbers !
+		
+			Declare two variables (a,b)
+			Assign values for each variable 
+			print a + b
+
+			Declare two variables (a,b)
+			Assign values for each variable 
+			print a + b
+
+			Declare two variables (a,b)
+			Assign values for each variable 
+			print a + b
+
+			Declare two variables (a,b)
+			Assign values for each variable 
+			print a + b			
+			
+			
+			Functions !
+			
+			sum()
+				Declare two variables (a,b)
+				Assign values for each variable 
+				print a + b	
+			
+			call sum() 
+			call sum()
+			
+	
+		
+
+
