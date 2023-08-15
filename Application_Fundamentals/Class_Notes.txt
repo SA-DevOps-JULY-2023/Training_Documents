@@ -1,0 +1,193 @@
+
+Module : 2
+#################
+15th August 2023
+#################
+
+Application Development Fundamentals :
+• Overview of Application Development
+• Various Types of Application
+• Introduction to Databases
+• Multi-tiered application architecture
+• Overview of Monolithic and Microservices
+
+
+	Applications are nothing but the domain 
+	
+		Banking Application 
+		Insurance Application 
+		Retail Application
+		
+	Software are collection of Programs :
+	
+	Program is the set of Instruction/Task
+	
+	
+	Types of 
+	
+	
+	Software :::		Software are collection of Programs :
+	
+		Application Software :
+		
+			Desktop Application
+			Mobile Application
+			Web Application
+				Banking Application 
+				Insurance Application 
+				Retail Application 
+		
+		System Software :
+		
+			Operating System - OS - W/M/L/A
+			Middleware Products
+			Micro-Chip level programming
+			Embedded Applications
+			
+		Underlying Hardware!
+		
+		
+		Based on Workload :::
+		
+			Web Application ::::		Static Web appln./ Dynamic web appln.
+			
+				Front_end / Application_Logic(C#.Net/Java/Python) / DataBase(SQL/ORACLE)		---> 3-Tier Architecture
+
+			private cloud / public cloud ??
+
+		
+		Monolith Application Architecture
+				(vs)
+		Micro-Service Based Application Architecture
+				
+					
+				Monolith Application Architecture  :::
+					
+						The Application Components are tightly coupled.
+						
+				Micro-Service Based Application Architecture :::
+				
+						The Application is splitted into various services.
+						It is loosely coupled.		
+						
+		
+		Insurance Domain ::: Legacy 
+		
+			Travel/Healthcare/personal/Children
+
+		DevOps Architect/Application Architects/Owners -- We have to do a detailed assessment about the business, process and tools
+		
+		On-Premises ==> Datacenter - Mainframe server 
+		
+		Cloud Adoption --> 
+		
+			Monolith Application --> tightly coupled.
+			
+				- Splitted into micro-services and that be migrated to cloud
+				- All the New applications should be directly developed in cloud based on micro-services architecture
+				- Effort that takes to convert from monolith to micro-services that is very very high & Costly.
+						Docker & Kubernetes 
+						
+				- Reverse Engineering :				
+						To recreate the same using java based web appln.
+						Code Conversion
+						
+				
+		script 		-- appln1.
+		
+			10 funcs		
+						
+		script 			-- appln2.
+					
+			2 funcs		+ 8 func			
+			
+		Micro-Service :::
+		
+		10 services
+		
+		Web_Application :::		Dynamic web appln.
+		
+		Module-1 :::
+		
+			- User_Registration 
+			
+				Application_Logic ::
+							user_name/user_Id/Email_Id/Contact_No/Password_Creation/Address
+					functions 
+						to validate the email - code function			
+			
+		Module-2 :::
+		
+			- User_Sigin
+
+				Application_Logic ::
+							Email_Id/Password	
+									to validate the email - code function
+									
+									
+		What is Database ????
+		
+			To maintain and manage the relational Data.
+				Table
+					Rows / Columns 
+					
+			Data : --> Is just a raw text - without any meaning
+
+			Information : --> Processed Data.
+			
+			What is Information ?
+			
+				INDIA ?
+				
+				INDIA is a Country :: 
+				
+			Storage :::
+			
+			INDIA is a Country	-	File 
+		
+		
+			Database -- It is a collection of Tables 
+			
+			Tables -- are collection of Rows and Columns
+			
+			
+			Name 		Country 
+			Swati		INDIA 
+			asd			PAKI
+			asd			USA
+			
+			Relational Database Management System - RDBMS :::
+			
+			
+Introduction to Java Concepts
+• Overview of Java and its Architecture
+• Compiling Source Code and Packaging Applications
+• Java Console based and Web based Applications
+• Deployment to Tomcat and Consuming Java Applications
+• OOPs Concept Practical Includes
+
+Practical Includes
+
+1. Create a Console based Java Application
+2. Create a Dynamic web Application and Deploy it to Tomcat
+Server			
+	
+	Continuous Improvement!!!!!!
+	
+	
+		The List of Tools to work in this module :::
+			
+			-	Window OS & Mac 			==> Dev Machine
+			
+			- 	Install :			Open Source -
+					- JDK 
+					- Eclipse IDE for Web Development 
+					- Tomcat Web Application Server 
+					- Visual Studio Code
+					- SQL Client 
+					- Python 
+					- GIT 
+					
+					
+	
+		
