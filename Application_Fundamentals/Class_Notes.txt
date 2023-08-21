@@ -189,5 +189,526 @@ Server
 					- GIT 
 					
 					
+#################
+17th August 2023
+#################	
+		
+		echo "Hello" >> file1.txt 
+		
+		Hello 
+		
+		echo "echo 'Hello' " >> ./file2.txt 
+		
+		home/devopsadmin $ echo "echo 'Hello' " >> ./file2.txt
+		
+		
+		home/devopsadmin $ echo "echo 'Hello' " >> home/devopsadmin/tempdir1/file2.txt
+		
+		home/devopsadmin/tempdir1/file2.txt
+		
+		./file2.txt 
+		
+		
+		./file2.txt 
+		
+		cat file2.txt 
+		
+		echo Hello 
+			
+
+
+		The List of Tools to work in this module :::
+			
+			-	Window OS & Mac 			==> Dev Machine
+			
+			- 	Install :			Open Source -
+					- JDK 
+							https://jdk.java.net/20/
+							
+							https://jdk.java.net/java-se-ri/11-MR2
+							
+							
+							downloads jdk package & extract 
+							define environment variable, to access that application across the machine
+													
+							
+					- Eclipse IDE for Web Development  - EE
+							https://www.eclipse.org/downloads/packages/release/kepler/sr2/eclipse-ide-java-ee-developers
+					
+					- Tomcat Web Application Server 
+					
+							https://tomcat.apache.org/download-80.cgi
+					
+					- Visual Studio Code
+					
+							https://code.visualstudio.com/download
+					
+					- SQL Client 
+					
+					- Python 
+					
+					- GIT 	
+			
+https://jdk.java.net/20/
+
+
+#################
+18th August 2023
+#################		
+
+			Java is a Object Oriented Programming Language.
+			
+			Programming 
+			
+				Applications ::::	
+					
+					Desktop/Mobile/Web 		===> 
+					
+				
+			Developers Role ::
+				
+				- Design of Application 
+				- Code
+				- Build 
+				- Test 
+				- Promote to Target Environments 
+			
+			
+			
+			DevOps Engineer Role :::
+
+				
+				--> Type of Programming Language 
+				--> Tools used to develop the Application 
+				--> Tools used to build the Application
+				--> Tools used to perform Automated Testing 
+			
+			Worst Case of DevOps Engineer ?
+			
+				Challenges ??
+				Drawback of DevOps  ???
+				
+			People! ==> are the main challenge!!!!
+			
+			DevOps is all about :	
+					People 
+					Process 	--> are meant for Continuous Improvement
+					Tools		-->  
+					
+			Individual member of DevOps Team ::: 
+					- Update yourself regularly.
+					- Always find the scope for automation.					
+					
+					DevOps - DevSecops - SRE - GitOps - MLOps - AIOps .....
+					
+			Java_Appln ==> approached to onboard their appln to devops. 
+			
+				Automate --> CI/Cd/CD/CT/CM
+				
+			
+			
+			DevOps Engineer Role :::
+
+				
+				--> Type of Programming Language 
+						Java --> How the java pgm is written
+							
+				--> Tools used to develop the Application 
+				--> Tools used to build the Application
+				--> Tools used to perform Automated Testing 			
+			
+			Java Programming :::
+			
+				Architecture ::
+				
+					Simple java program --> *.java ==> Desktop Application 
+					
+					Mirco-services based architecture
+					
+						All the dependencies :::
+						
+						Developer :::
+							*.java ===>
+							
+								Notepad to write the pgms ??
+								compile 
+								create binaries 
+
+								build 
+								test 
+								deploy
+								
+							IDE - Integrated Developement Environment 
+									Eclipse ???
+									- to write java pgm?					==> Code Editor
+									- compile program & create artifacts	==> Build Tool			javac *.java
+									- run the pgm 							==> Hosted Servers(tomcat)/terminals java pgm1
+			
+							Build --> What type of build tool we use ?
+							
+									ant/gradle/maven 
+									
+							MAVEN is a build tool ==> used to compile and create artifacts (binaries - *.war/*.jar)
+							
+							
+					Java --> is called as platform independent language
+							
+					Dev Environment --> I have create java application in windows.
+					
+						create once and run in any platform 
+						
+							Linux/Mac/Android/iOS
+				
+					JVM ==> 
+					
+					sample.java ==> 
+					
+					*.class files 
+				
+				Build Tool Maven
+				
+					Maven is build tool used to identify all the dependencies and plugins required
+						- To perform Automated Build 
+						- To perform Automated Unit Testing
+						- Automatically create the artifacts 
+						
+						
+					Install Maven in the build server 
+					
+						mvn == command we can execute maven build 
+						
+						Maven Architecture
+				
+							- Maven Folder Structure 
+							
+							- pom.xml 
+				
+				
+			--> Java Project Creation using Eclipse :::
+			
+			
+				Type of Projects ::::
+				
+					Simple Java Project :
+					
+						Java_Project 
+							src 
+								app1.java 
+								app2.java
+					
+					Maven Web Application Project 		with All the dependencies :::
+					
+						Java_web_App_Project
+							src
+								/main/java
+										*.java 
+								/test/java
+										*.java 
+							resources 
+								/html 
+								/css 
+								/bootstrap
+								
+							targets/
+								/*.war 
+								
+							pom.xml		==> Used to define all the dependencies and plugins used for Maven Application build
+							
+							
+									create artifacts --> what is name of artifact ?		signin.war
+														 what type of artifact ? war
+														 Automated Unit Testing 
+															JUnit 
+															TestNG 
+															Selenium
+															
+							Maven Goals ::::
+							
+								mvn 
+
+
+		Build Tool :
+
+		Maven Build Tool --> Used to build and Create the artifacts.
+
+		Why Maven ???
+
+
+		signup.java ===> build - plugins, dependencies, Unit testing, tools
+		pom.xml ==> Which defines the application artifacts, plugins and all the required depedencies
+
+
+		How maven download and use the plugins and all the required depedencies>>>
+		Maven Repositories.
+
+			Central repo --> Remote Repo --> Local Repo
+		
+		Maven Project Structure :::
+
+		MVN_Poject1
+			src 
+				main
+					java
+				test
+					java
+			target
+				artifacts *.war / *.jar
+			pom.xml 			==> defines the application artifacts, plugins and all the required depedencies
+			
+				By using Maven Archetypes
+			JRE_Libraries
+			MVN_Libraries
+
+
+		Maven Commands/goal:
+
+		Maven Goals :
+			● mvn clean - to clean the target folder.
+			● mvn compile - to compile the source code
+			● mvn test - to compile and execute junit test cases
+			● mvn package - to compile, test and package the application
+			● mvn install - to install the package to local repository.
+			● mvn deploy - to deploy the package from local repository to remote repository.
+
+
+					mvn clean package ??
+
+
+			MVN_Poject1
+				src 
+					main
+						java
+					test
+						java
+				target
+					artifacts *.war / *.jar
+					
+				pom.xml 			==> defines the application artifacts, plugins and all the required depedencies
+				
+			
+			Java Spring boot Application Frameworks :::
+			
+			
+					Using Maven we can create ::
+					
+			.Net Framework !!!
+				c#.Net
+				ASP.Net 
+				
+				
+				
+		Java Components ::
+		
+			variables ===> Is an identifier 
+						x = 500
+						
+					Datatype :::
+						
+						x = 500 		Integer / Numeric
+						x = 500.5		floating / decimal
+						x = "Hello"		Char / String 
+						x = "Hello123"	Alpha-Numeric
+					
+					int x = 5;
+					
+				
+				static / dynamic 
+				
+				public / private / protected 
+				
+			Arrays ===>		Is a group of values with same datatype 
+			
+					int x = 5;
+					int x[5] = {5,6,7,8,9};
+						indexed 
+								starts with 0/
+								
+					print x[3] ==> 8
+					print x[0] ==> 5
+					print x[4] ==> 9
+					print x[5] ==> 		Exception / Error ==> Out-of Index/Range Exception.
+					
+			Functions/Methods :::
+			
+				print "Hello" 
+				
+				string disp() {				// Function Definition
+					print "Hello"
+				}
+						
+					
+				disp();						// Function Invocation
+				
+				sum()						// function without argument
+				{
+					int a = 5;
+					int b = 6;
+					c = a + b;
+					return c;
+				}
+				
+				
+				sum();	// 11
+				
+				sum(int a, int b)						// function with arguments
+				{
+					c = a + b;
+					return c;
+				}				
+					
+				sum(5,6);		// 11
+				
+				sum(1,2);		// 3
+				
+				
+				
+			functions 
+			
+			Conditional Statements :::
+			
+				if Statements
+				switch case 
+				
+			Operators ==> 6 types of arithmetic operators ==> ==
+			Logical Operators 
+			
+			Looping statements :::
+			
+				for
+				while 
+				do while 
+			
+					int x[5] = {5,6,7,8,9};
+						index will start from 0
+						x[0] = 5;
+
+				Search for value 7 ?
+				
+					Sequential Search
+				
+				if x[0] == 7 
+				print 7
+				
+				
+			Aritifacts ::::
+			
+				Testing ==> *.war 
+				
+				Execute the artifacts ::::
+				
+			Dev Servers 
+
+			Build Servers 	
+						compile & Create *.war 
+			
+			Test Servers/Target server/Hosted Server 	===> Virtual Machines - VM - Hardware
+					Install Web Application Server - Tomcat/Nginx - software
+					
+					
+				Deploy *.war to Test Server 
+				
+				How to Test this application :::
+				
+					Web Application Server - Tomcat / Nginx
+				
+				
+			
+			Production Servers/Target server/Hosted Server
+				
+				
+				
+				
+
+			
+
+		Create a Maven Console Application
+		Create a Maven Web Application 
+		Create a Maven Springboot Application 	
+
+		
+
+					
+					
+					Web Application :::
+					
+						What the components / dependencies to create web Application ?
+						
+							3-tier 	==> front-end(html/css/bootstrap/php/jsp) / Application_Logic / Back_End(Dbase)
+							2-tier  ==> front-end / Application_Logic
+							1-tier  ==> Application_Logic
+			
+					Micro-Service ==> 
+					
+						Main_program ==> Interact with frontend 
+							sub-program1,2,3,4
+			
+		
+			./mysript.sh a b c 
+	
+	
+#################
+21st August 2023
+#################					
+				
+				
+			Create a Java Console :
+			Create a Java Web Application :	
+			
+			Maven Tool to create -> Console / Webapplications.
+			
+			
+		Create a Maven Console Application :
+				Desktop Application :::	
+						Group_ID
+							org.apache.maven.archetype
+						Artifact_ID
+							maven-archetype-simple
+						
+		Create a Maven Web Application 
+						Group_ID
+							org.apache.maven.archetype
+						Artifact_ID
+							maven-archetype-webapp
+							
+		Create a Maven Springboot Application 
+		
+		Create a Maven Console Application :		
+		Maven Repository :::		https://mvnrepository.com/
+		
+			Maven Remote / Central Repository  
+		
+			Eg.: 
+				<dependencies>
+					<dependency>
+					<groupId>junit</groupId>
+					<artifactId>junit</artifactId>
+					<version>3.8.1</version>
+					</dependency>
+				</dependencies>
+				
+			Maven Local Repository
+			
+			Java Project :::
+			
+				
+				Java_Package 
+					Class 				
+						signin.java 
+
+
+			Package => Collection of classes 
+			
+			Class	=> Collection of Functions/Methods/Variable
+
+		Create a Maven Dynamic Web Application :::
+		
+			
+		Create a Maven Springboot Application 		--> Web Application Framework!
+		
+		
+		Java Console Application :
+		Java Dynamic Web Application :
+		
+		SpringBoot Application :					
 	
 		
