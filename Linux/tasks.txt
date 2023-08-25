@@ -1,0 +1,124 @@
+				
+#################
+25th August 2023
+#################	
+
+
+			Assignment : Linux Assignments ??
+						1. create dir, copy, move the files. 
+						2. Prime no. or not.
+						3. welcome msg using echo.
+						
+					Script :::
+					
+						1. Script to install build tools in a server Linux server ?
+						
+							git 
+							maven
+							
+			Server Provisioning  IAC Tools
+			
+			Server Configuration
+							
+script 1 :					
+#!/bin/bash
+
+# Update package information
+sudo apt update
+
+# Install Git
+sudo apt install git -y
+
+sudo apt install maven -y
+
+# Check Git version
+git --version
+
+
+
+GITHUB :::  --> It is used to version the source code.
+
+
+script2 :
+
+	git clone 
+	mvn clean package    *.war_v2 -- before creating new version, take a bckup of older version - Archive. Artifactory Repository
+	
+	
+script3 : deployment1
+
+	SCP *.war to QA_test_server		*.war_v2 
+	
+script4 : 
+
+	QA_Testing - 
+	
+script4 : deployment3
+
+	SCP *.war to UAT_test_server
+	
+script5 : 
+
+	UAT_Testing - 	
+	
+script6 : 
+
+	PROD			 *.war_v2
+	
+
+
+Groovy 
+
+Yaml
+
+Python Scripts 	
+	
+
+			Implement all the tools that are required to exec.
+			
+			Upstream and Downstream Dependencies.
+			
+			I have master script.
+			
+		Tasks ::
+		
+			1. Write a shell script to install git and maven in Ubuntu Machine.
+			2. Write a script to take a backup of the artifacts to backup server. 
+			3. Install tomcat in the ubuntu machine.
+			
+			
+			a[5] = {2,3,8,4,5}
+
+			
+			a[2]
+			
+			
+			array=(Sample process seven)
+				
+			echo ${array[0]:1}		==> rocess
+					
+						
+					 
+					 
+		
+			
+			
+			
+			
+			
+			apt install git -y
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	
