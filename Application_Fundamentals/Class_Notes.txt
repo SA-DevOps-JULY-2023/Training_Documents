@@ -712,3 +712,144 @@ https://jdk.java.net/20/
 		SpringBoot Application :					
 	
 		
+#################
+22nd August 2023
+#################
+
+		- A Simple Java Console Application 
+		- A Java Dynamic Web Application 
+		
+		- A Java Maven console Application 
+		- A Java Maven Web Application
+		
+		- Maven Springboot Application.
+		
+		
+		In Eclipse Add Tomcat Server Configuration.
+		
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>www.loksaieta.com</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="jumbotron" style="background-color:white">
+      <img src="https://octodex.github.com/images/spidertocat.png" alt="Spidertocat"
+           class="img-responsive center-block" style="width:250px"/>
+      <h2 class="text-center">Hello Team</h2>
+      <p class="text-center">Application Modernization </p>
+  </div>
+</body>
+</html>
+
+
+
+
+	Application Testing:
+
+	Shift Left Approach 	
+	
+	dev --> qa --> uat --> Prod
+	
+#################
+24th August 2023
+#################	
+	
+		- Simple java program using Notepad/cmd prompt/vi editor
+		
+		- IDEs 
+	
+		- A Simple Java Console Application 
+		- A Java Dynamic Web Application 
+		
+		- A Java Maven console Application 
+		- A Java Maven Web Application	
+				
+		- Maven Springboot Application.		https://start.spring.io/
+		
+		- Testing
+			Junit
+			TestNG
+			Selenium
+	
+	
+		Environments :::
+		
+		Dev
+				1. Unit Testing :	
+				
+		Testing Environment:
+		
+			-> Test Data 
+			-> Test Scenarios 
+			-> Test Cases	
+		
+			QA Testing :
+
+				2. Integration Testing
+				3. Regression Testing
+				4. Performance Testing
+			
+			
+			UAT Testing :
+			
+				5. Acceptance Testing
+
+		
+		Production 
+	
+	
+				Sample.java ===> 
+				
+				dev1
+				dev2
+				dev3
+
+
+			Web application ::::
+			
+			User Login ::
+			
+				-	User_Name :
+				-	Password  :
+				
+					Login_Button	Cancel_Button
+				
+			Web Browser:
+			 chrome, IE, Edge, Firefox,.........
+			 Mobile 
+			
+			
+			Selenium Grid ==> 
+			
+				
+			Scenarios ::: 
+				1. Client side scripting		 
+						all the basic validations 
+							- User_Name --> length, chars, spl char, alpha-numeric content
+							- Password  --> length, chars, spl char, alpha-numeric content
+							
+				2. Server side Scripting
+							- Receive the inputs from user -> User_name,Password,Click_Event
+							
+							- Once login is successful, it will route to next page 
+							
+							- If it is not successful, it will route to error page
+							
+				Website	==> collection of web pages --- 1000s pages
+				
+				Automated Testing tools like selenium:::
+				
+				TestNG ==> Reporting Tool based on JUnit.
+
+				Selenium Test Scenarios :::
+				
+					Create a Selenium WebDriver instance
+					Configure browser if required
+					Navigate to the required web page
+					Locate the relevant web element				screen scraping!!!!
+					Perform action on the web element
+					Verify and validate the action
+
