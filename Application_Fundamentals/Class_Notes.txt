@@ -853,3 +853,267 @@ https://jdk.java.net/20/
 					Perform action on the web element
 					Verify and validate the action
 
+				
+				
+#################
+25th August 2023
+#################	
+
+
+			Assignment : Linux Assignments ??
+						1. create dir, copy, move the files. 
+						2. Prime no. or not.
+						3. welcome msg using echo.
+						
+					Script :::
+					
+						1. Script to install build tools in a server Linux server ?
+						
+							git 
+							maven
+							
+			Server Provisioning  IAC Tools
+			
+			Server Configuration
+							
+script 1 :					
+#!/bin/bash
+
+# Update package information
+sudo apt update
+
+# Install Git
+sudo apt install git -y
+
+sudo apt install maven -y
+
+# Check Git version
+git --version
+
+
+
+GITHUB :::  --> It is used to version the source code.
+
+
+script2 :
+
+	git clone 
+	mvn clean package    *.war_v2 -- before creating new version, take a bckup of older version - Archive. Artifactory Repository
+	
+	
+script3 : deployment1
+
+	SCP *.war to QA_test_server		*.war_v2 
+	
+script4 : 
+
+	QA_Testing - 
+	
+script4 : deployment3
+
+	SCP *.war to UAT_test_server
+	
+script5 : 
+
+	UAT_Testing - 	
+	
+script6 : 
+
+	PROD			 *.war_v2
+	
+
+
+Groovy 
+
+Yaml
+
+Python Scripts 	
+	
+
+			Implement all the tools that are required to exec.
+			
+			Upstream and Downstream Dependencies.
+			
+			I have master script.
+			
+		Tasks ::
+		
+			1. Write a shell script to install git and maven in Ubuntu Machine.
+			2. Write a script to take a backup of the artifacts to backup server. 
+			3. Install tomcat in the ubuntu machine.
+			
+			
+			a[5] = {2,3,8,4,5}
+
+			
+			a[2]
+			
+			
+			array=(Sample process seven)
+				
+			echo ${array[0]:1}		==> rocess
+								
+			apt install git -y
+			
+
+				
+#################
+28th August 2023
+#################	
+
+		Selenium Demo :
+
+		
+			Create a Selenium WebDriver instance
+			Configure browser if required
+			Navigate to the required web page
+			Locate the relevant web element				screen scraping!!!!
+			Perform action on the web element
+			Verify and validate the action
+
+
+		Jenkins Server :::
+			<public_ip>:8080
+			
+			
+			www.amazon.com
+			
+				In - Add to cart ==> Module 
+				
+				Login 
+				
+				search 
+				
+				add to cart 
+			
+
+
+
+
+
+
+
+
+
+			
+			
+			
+Install JDK
+Install Eclipse
+Download the chromedriver.exe – version should be same as the chrome already installed from this link - https://chromedriver.chromium.org/ - choose for windows
+Create new workspace
+Go to Help Menu -> Eclipse Market Place ==> Install TestNG in Eclipse.
+
+Create Maven Project with simple archetype ==> org.apache.architype group - maven-archetype-simple
+
+Create a folder in project call Drivers and copy the chormedriver.exe in it.
+Update pom.xml file with the required dependencies and plugins like selenium and testNG and compiler
+https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java
+
+
+Create package under src/test/java
+Create Class under this package 
+And all the test script as shown 
+Run as testNG
+
+
+
+package seleniumpkg1;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+public class Testloginpage {
+
+	@Test
+	public void login() {
+		System.setProperty("webdriver.chrome.driver", "./webdrivers/chromedriver.exe");
+		WebDriver driver=new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("http://1.2.3.8:8080/login?from=%2F");
+		WebElement username=driver.findElement(By.id("j_username"));
+		WebElement password=driver.findElement(By.name("j_password"));
+		WebElement login=driver.findElement(By.name("Submit"));
+		username.sendKeys("Loksai");
+		password.sendKeys("lokafdasdfsdfsdsai");
+		login.click();
+		String actualUrl="http://1.2.2.185.8:8080/";
+		String expectedUrl= driver.getCurrentUrl();
+		Assert.assertEquals(expectedUrl,actualUrl);
+	}
+}
+
+
+Create a Selenium WebDriver instance
+Configure browser if required
+Navigate to the required web page
+Locate the relevant web element
+Perform action on the web element
+Verify and validate the action
+
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>seleniumprojects</groupId>
+  <artifactId>seleniumdemo</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>seleniumdemo</name>
+  <description>seleniumdemo</description>
+ 
+  <dependencies>	  
+		  <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+		<dependency>
+		    <groupId>org.seleniumhq.selenium</groupId>
+		    <artifactId>selenium-java</artifactId>
+		    <version>4.10.0</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
+		<dependency>
+		    <groupId>org.testng</groupId>
+		    <artifactId>testng</artifactId>
+		    <version>7.8.0</version>
+		    <scope>test</scope>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-simple -->
+		<dependency>
+		    <groupId>org.slf4j</groupId>
+		    <artifactId>slf4j-simple</artifactId>
+		    <version>2.0.7</version>
+		    <scope>test</scope>
+		</dependency>
+  </dependencies>
+
+<build>
+  	<plugins>
+  		<plugin>
+  			<groupId>org.apache.maven.plugins</groupId>
+           	<artifactId>maven-compiler-plugin</artifactId>
+           	<version>3.6.1</version>
+           	<configuration>
+           		<source>1.8</source>
+           		<target>1.8</target>
+           	</configuration>
+  		</plugin>
+  		
+  		<plugin>
+  			<groupId>org.apache.maven.plugins</groupId>
+           	<artifactId>maven-surefire-plugin</artifactId>
+           	<version>2.20</version>
+           	<configuration>
+           	 	<suiteXmlFiles>
+           			<suiteXmlFile>testng.xml</suiteXmlFile>
+           			<!-- <suiteXmlFile>src/main/resources/testng.xml</suiteXmlFile> -->
+           		</suiteXmlFiles>
+           	</configuration>
+  		</plugin>
+  	</plugins>  
+  </build> 
+   
+  
+</project>
+
+			
