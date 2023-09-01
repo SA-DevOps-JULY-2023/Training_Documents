@@ -1,0 +1,147 @@
+#################
+1st Sep 2023
+#################
+
+      MODULE - 3
+			
+		Developement Activities :::
+		
+		In DevOps Workflow :
+		
+			Coding 
+				Commit the code to source code repository(GITHUB)
+				
+			DevOps Automation :		CI/CD Pipeline --> 
+					Compile code 
+					Create Artifacts 
+					Unit Testing 
+					
+					Promote to QA Environment
+					QA Testing 
+					
+					Promote to UAT Environment
+					UAT Testing
+					
+					Promote to PROD Environment
+					PROD Testing
+					Production Monitoring
+					
+			Continuous Integration
+			Continuous Testing 
+			Continuous Delivery & Deployment
+			Continuous Monitoring
+			
+
+
+	1. Version Control System using GIT :
+			
+		
+		Continuous Developement :::
+		
+				Source Code ::
+					How the source code is managed ????
+					
+					The Source Code should be maintained in a Common Location/Folder where all team members can able to access.
+					
+						This is to ensure high availabilty of source code changes.
+						
+						Shared Folder 
+						Share Drives 
+					
+				Folder - Java_Web_Application :
+
+					index.html 
+					
+					<html>
+					-asdfsd
+					-afasdf
+					-adfasdf
+					-asdfasdfsd
+					</html>
+			
+		
+				save -- it just save the file as a static content.
+			
+				Incremental Changes ::
+
+				index.html 
+				
+					<html>
+					-asdfsd
+					-a333333333fasdf
+					-3333333333333333adfasdf
+					-asdfasdfsd
+					-33333333
+					-333333333333					
+					-333333333
+					-333333333333333
+					</html>	
+
+					Testing the new changes ... 
+					
+				Version Control System :::
+				
+					- Used to version control the source code. 
+					- Used to track the source code changes.
+					
+						index.html_V1.0 --(Tag/version_Number)
+						index.html_V1.1	
+						index.html_V1.2				
+						index.html_V1.3					
+						index.html_V1.4				
+						index.html_V1.5			
+		
+			Coding 
+				Commit the code to source code repository(GITHUB)
+				
+			DevOps Automation :		CI/CD Pipeline --> Script --> groovy/yaml  
+					Compile code 
+					Create Artifacts 
+					Unit Testing 
+					
+					Promote to QA Environment
+					QA Testing 
+					
+					Promote to UAT Environment
+					UAT Testing
+					
+					Promote to PROD Environment
+					PROD Testing
+					
+					
+			Version Control System :::
+			
+				Types of Version Control System :::
+				
+					Local VCS 
+					Centralized VCS 
+					Distributed VCS 
+					
+					
+			GIT :::
+					Is open source Distributed Version Control System.
+					Used to Track the Source Code Changes 
+					Used to Version control the Source Code Changes 
+					Used to perform Parallel Development.
+
+	
+			
+			Local Machine :					Remote Servers :
+			
+				GIT Client 						GIT - github 
+				
+			Github
+			
+			gitlab
+			Azure Repo 
+			AWS Code Commit 
+			bit bucket 
+				
+		
+			Repository :::
+			
+				Is just the collection of Folders and Files.
+	
+			In your local Machine 
+				
+						Install GIT Client
