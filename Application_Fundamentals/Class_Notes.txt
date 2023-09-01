@@ -1116,4 +1116,259 @@ Verify and validate the action
   
 </project>
 
+
+#################
+29th August 2023
+#################	
+
+		OOP ==> Object Oriented Programming! 
+		
+			Java Code Coverage(JaCoCo) :::
+				
+			Class 
+			Object 
 			
+
+		Funtamentals of Python 
+		
+			Install of Python
+			
+			Create Python Console Application.
+			Create Python Web Application.
+			
+			
+			Scripting Languages ::: shell/python_script/groovy/yaml for DevOps.
+			
+			Install of Python :::
+			
+				Visual Studio Code IDE
+			
+				Python scripts ===> 
+				
+					Eclipse IDE --> for Java based application ::
+					
+					Desktop
+					Mobile 
+					Web Application 
+					
+				IDE --> PyCharm IDE 
+					-->	Visual Studio Code IDE 
+							Install Python Extension
+							
+				Tools --> Install Python 
+							IDLE - Utility to work with python.
+							https://www.python.org/downloads/			
+		
+		
+				a[5] ==> {4,5,6,7,8}
+				
+				a[1] ==> 5
+				a[3] ==> 7
+
+
+#################
+31st August 2023
+#################	
+
+			Python Web Application Development :::
+			
+			Web Application Framework :: 
+			_flask_
+
+			Web Application :::
+				Front_End 
+				Back_End
+				Application_Logic
+				
+			IDEs - Pycharm -
+			IDLE - Command Line Interface 
+			Eclipse IDE -- Java application 
+			
+			Create Web Application Development using Python:
+			
+*************************************	
+		Pre-requisites 
+			
+			
+		Python scripts ===> 
+		
+			Eclipse IDE --> for Java based application ::
+			
+			Desktop
+			Mobile 
+			Web Application 
+			
+		IDE --> PyCharm IDE 
+			-->	Visual Studio Code IDE 
+					Install Python Extension
+					
+		Tools --> Install Python 
+					IDLE - Utility to work with python.
+					https://www.python.org/downloads/
+					
+		Python :::
+		
+			Web Application Framework
+				- Django
+				- Flask
+
+	Open Visual Studio Code 
+	Create Project Folder :
+	
+	Open New Terminal :
+		
+		
+		Install : 	Web Application Framework
+			pip install flask
+	
+		Create app.py 
+
+from flask import Flask, render_template
+
+app = Flask(__name__)
+
+@app.route('/')
+
+def sample():
+	return render_template("sample.html")
+
+if "__name__" == "__main__":
+	app.run(debug=True)
+
+
+
+		Create "templates" folder at root level :::
+				Create Html files :: eg. sample.html 
+				
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>www.loksaieta.com</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="jumbotron" style="background-color:white">
+	  <img src="https://octodex.github.com/images/spidertocat.png" alt="Spidertocat"
+		   class="img-responsive center-block" style="width:250px"/>
+	  <h2 class="text-center">Hello Everyone</h2>
+	  <p class="text-center"> SA 11 - Python Demo...</p>
+  </div>
+</body>
+</html>	
+
+		set FLASK_APP=sample
+	
+		python -m flask run	
+
+
+#################
+31st August 2023
+#################
+
+		Structured Query Language - SQL 
+		
+		
+		Database
+		Data 
+		Database Management System ?
+		Relational DBMS ?
+		
+		Data vs Information 
+		
+		Data Manage/Handling ???
+		
+		Variable ???
+		
+			"Hello"	==> 5 characters - 1Byte(8bits) ==> stored in a memory location!
+			
+			Variable ==> called as Identifier 
+
+				int a = 5;
+			
+			Group of Data are managed by Array Variables
+			
+			File system --> Sequential / Indexed 
+			
+			Batch Application 
+					(vs)
+			Online Application 
+			
+			Database Management System:
+			
+			Data are stored in the form of Database :
+			
+			Database is a collection of Tables 
+			
+			In Table, the data are stored in the form of Rows & Columns
+			
+		Employee_DataBase:
+		
+			Employee_Base_Table
+			Employee_Project_Details
+			Employee_Salary
+	
+			Employee_Base_Table:
+			
+				Emp_ID		Emp_Name	Emp_Email		Emp_Addr	Emp_Mobile_No	Emp_DOB			Emp_DOJ		Dept
+				E1001		xyz			xyz@abc.com		asdfasdf	1231231231		12/12/1997		12/1/2052	EMP 
+				E1002		xyz			xyzz@abc.com	asdfasdf	1231251231		12/1/1997		12/1/1997	HR
+				E1003		hgfh876878	xyz2			asdfasdf	1jhjg61231		12/1/1997		12/1/1997	FIN		
+			
+			Data Integrity:::::
+			
+			Constraints ::	Conditions
+			
+			Unique 
+			Not-Null
+			Check
+			Primary-Key Constraint ==> (both Unique & Non-Null Constraints)
+			Default 
+			Index 
+			
+			Emp_ID,Email_Id,Mobile_No -- Unique 
+			
+			
+			Employee_Base_Table:
+			
+				Emp_ID		Emp_Name	Emp_Email		Emp_Addr	Emp_Mobile_No	Emp_DOB			Emp_DOJ		Dept
+				E1001		xyz			xyz@abc.com		asdfasdf	1231231231		12/12/1997		12/1/2052	EMP 
+				E1002		xyz			xyzz@abc.com	asdfasdf	1231251231		12/1/1997		12/1/1997	HR
+				E1003		hgfh876878	xyz2			asdfasdf	1jhjg61231		12/1/1997		12/1/1997	FIN						
+
+			Employee_Salary:
+			
+				Emp_ID		Emp_Name	Basic_pay		HRA			Gross_Pay		Net_Pay			Accn_No	
+				E1001		xyz			10000			0			0				0				adfasdfasdf123123
+				E1010		asdfasdf	123123			23123		12312312		82342347686		868713231212			
+
+			Employee_Project_Details:
+
+				Proj_Name	Dept		Emp_Name		Emp_ID		Start_Date		End_Date		Manager_ID		
+				adfasdfs	IT			xyz				E1001		sfasdf			asdfasdf		sdfasdfasdfsdfsdfsdf
+				
+			
+			Referential Integrity Constraint :::
+			
+				Before Insert/Update the record into child tables we need to confirm the record exist in parent table. 
+				Before Delete the record from parent table, we need to confirm the record does not exist in any child table.
+			
+				
+			
+			How to create the Database Objects ::
+			
+			We need Database Engine : Oracle/MySQL/ 
+				Structured Query Language - SQL 		to work in RDBMS 
+				
+			SQL :::
+			
+			DDL - Data Definition Language 
+					Create,Alter,Rename,Drop,Trancate.........
+			DML - Data Manipulation Language
+					Insert,Update,Delete,Select
+			DCL - Data Control Langage
+					Grant,Revoke,.... 
+			TCL	- Transaction Control Language 
+					Commit,RollBack,....
+					
+								
