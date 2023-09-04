@@ -145,3 +145,139 @@
 			In your local Machine 
 				
 						Install GIT Client
+		
+#################
+4th Sep. 2023
+#################	
+
+
+			GIT :::
+			
+				Installation and Management of GIT Repositories.
+				Misc GIT Commands 
+				GIT Branching Techniques
+				GIT Repository Handling
+				
+				
+			In Windows :
+			
+				GIT Bash
+				GIT Cmd
+				GIT GUI
+				
+			c: d: e:
+			
+			e:
+				mkdir SA-DGP-July
+					cd SA-DGP-July 
+						mkdir repo1
+						mkdir repo1
+		
+			e: 
+				SA-DGP-July
+					Repo1
+					Repo2
+					Repo3
+		
+		Misc GIT Commands :
+		
+		Repository : collection of Folders and Files.
+		
+		
+		Local Machine																		Remote Server 
+		
+		Working Directory	--> Staging Area	--> Local Repository						Remote Repository
+		
+						index.html_V1.0 --(Tag/version_Number/commit_ID)
+						index.html_V1.1	
+						index.html_V1.2				
+						index.html_V1.3					
+						index.html_V1.4				
+						index.html_V1.5			
+		
+		
+			index.html ==> 
+			
+				asdfasdfasdfsdf
+				asdfasdfasdffas
+				dfassdf
+				asdfasdfsd
+		
+		GIT File WorkFlow ::
+		
+			Developers WorkLoad :::
+			
+			-	New Project					
+			
+			- 	Enhancement Project 		--> Handle Incremental Changes!
+			-	Bugfix
+		
+		
+		Misc GIT Commands :
+		
+		git add 		==> Used to the changes from working directory to staging area.
+		git commit		==> Used to commit the changes from staging area to Local Repository.
+		git push		==> Used to publish/push the changes from local repository to Remote Repository.
+		
+		git fetch/pull	==> Both git fetch and pull are used to handle the incremental Changes from remote repository.
+		
+						==> git fetch is just used to check for any incremental changes in remote repository. If there is any changes exist, it will fetch the changes from remote repository into local repository. NOT working Directory.
+							
+						==> git pull is used to check for any incremental changes in remote repository. If there is any changes exist, 	it will fetch the changes from remote repository into local repository and update the changes in working Directory as well.
+						
+		git clone		==>	Used to clone/copy the entire remote git repository to local machine.
+							This is always recommended to be the one time activity.
+							
+		fork			==> Used to copy a remote repository to another remote repository
+						
+	
+		
+		Create New Repository in Local Machine using GIT.	
+
+		git init 		==> Used to initialize a new git repository in local machine.
+							Create GIT_DIR and a default branch called master.
+		
+		git status		==> Used to track the status of git repository
+
+		git config ==> Used to setup the default configuration for Author Name and Email ID.
+		
+			Local Configuration : 	applicable only for a specific repository 
+
+			git config user.name "Loksai"
+			git config user.email "Loksai@qww.com"			
+			
+			Global Configuration :	applicable for all the repositories 
+			
+			git config --global user.name "Loksai"
+			git config --global user.email "Loksaieta@qww.com"		
+		
+		git add <file_name>
+		
+		git commit -m "Commit_Message"
+		
+		
+		git config ==> Used to setup the default configuration for Author Name and Email ID.
+		
+			Local Configuration : 	applicable only for a specific repository 
+
+			git config user.name "Loksai"
+			git config user.email "Loksai@qww.com"			
+			
+			Global Configuration :	applicable for all the repositories 
+			
+			git config --global user.name "Loksai"
+			git config --global user.email "Loksaieta@qww.com"
+			
+			git add :::
+			
+				git add <file_name>
+			
+				git add <file_name> <file_name>
+				
+				git add *.html 
+				
+				git add .						# Add all the files from working dir. to staging area.
+				
+				
+				git commit -m "Commit_Message"	
+				
