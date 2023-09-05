@@ -383,3 +383,310 @@
   602  ls
   603  git log
   604  history
+
+
+#################
+5th Sep. 2023
+#################
+
+
+		Git Misc Command :::
+		
+		git add :
+		
+		
+		file1.txt 
+		
+		
+		added the changes to staging area --> 
+		
+			git rm --cached s1.txt	===> Used to remove the changes/files just from staging area.
+			
+			git rm -f s1.txt		===> Used to remove the changes/files from both stagin area as well as from working Dir.
+			
+			
+		git log ::
+
+			git log 
+			
+			git log --oneline
+			
+			git log -2
+			
+			git log --oneline -2
+			
+			git log --stat -2
+		
+		git show <commit_id>
+			
+			
+		git diff ::
+			
+			git diff 			==> used to compare and get the diff between the committed file and the file modified in working dir.
+			
+			git diff --cached 	==> used to compare and get the diff between the committed file and the file added in staging area.
+			
+			git diff <commit_id> <commit_id>
+			
+			
+		working dir									staging area												local repo (cm1,cm2,cm3,....)
+			
+		git diff (working dir & local repo)
+
+		git diff --cached ( staging area & Local repo)
+		
+		git diff <commit_id> <commit_id> ( between the commits in local repo)
+		
+		
+		
+		git ignore ::: == It is used to ignore the files from tracking. 
+		
+		Local_Machine :																				Remote Server (Repository)
+		
+		Java_Web_Appln_Project:												Pushed to remote repo.									
+			src 
+				*.java 
+				*.class
+			src/resource 
+				*.html
+				*.jsp
+				*.css 
+			target						==> can be ignored 
+				*.war					==> can be ignored
+			application.properties		==> can be ignored
+			mysql_credentials.json
+				db_username/password
+			
+			
+		git ignore ::::
+		
+			target/
+			
+			
+		git reset & revert ::
+		
+			==> It is used to undo the changes. 
+			
+		git reset :::
+		
+			- It is used to undo the changes for the repository.
+			- It will never create any new commit commit point.
+			- We should avoid using git reset in shared repository(remote repo.)
+			
+		
+		git reset --soft 		==> This will undo the changes from repository by moving the HEAD pointer to the previous commit point.
+									This is remove the changes from local repository, but the changes remains in staging area as well as in working directory.
+			
+		*git reset --mixed		==> This will undo the changes from repository by moving the HEAD pointer to the previous commit point.
+									This is remove the changes from local repository as well as from staging area. But, the changes remains in working directory.			
+			
+		git reset --hard		==> This will undo the changes from repository by moving the HEAD pointer to the previous commit point.
+									This is remove the changes from local repository, staging area as well as from the working directory.		
+		
+
+
+		git reset <commit_id>	==> This will use --mixed option by default.
+				
+		syntax :
+				git reset <commit_id> <type>
+				
+				cm5				latest commit - HEAD 
+				cm4
+				cm3
+				cm2
+				cm1
+				
+			git reset cm4 --soft 
+		
+				cm4				latest commit - HEAD 
+				cm3
+				cm2
+				cm1		
+		
+		
+			git reset cm1 --soft 	
+
+				cm1				latest commit - HEAD 
+				
+				
+  501  cd e:
+  502  cd SA-DGP-JULY/
+  503  clear
+  504  ls
+  505  mkdir myproj1
+  506  cd myproj1/
+  507  git init
+  508  echo "rec1" >> f1.txt
+  509  git status
+  510  git add .
+  511  git status
+  512  git add .
+  513  ls
+  514  echo "rec2" >> f1.txt
+  515  cat f1.txt
+  516  git status
+  517  git add .
+  518  git status
+  519  ls
+  520  git add .
+  521  git commit -m "created f1.txt"
+  522  git log
+  523  ls
+  524  echo "rec1" >> s1.txt
+  525  git status
+  526  git add .
+  527  git status
+  528  ls
+  529  clear
+  530  ls
+  531  git status
+  532  git log
+  533  git rm --cached s1.txt
+  534  git status
+  535  ls
+  536  git add .
+  537  git status
+  538  ls
+  539  git rm -f s1.txt
+  540  git status
+  541  ls
+  542  clear
+  543  git log
+  544  echo "rec1" >> s1.txt
+  545  git add .
+  546  git commit -m "cm1"
+  547  echo "rec1" >> s2.txt
+  548  git add .
+  549  git commit -m "cm2"
+  550  echo "rec1" >> s3.txt
+  551  git add .
+  552  git commit -m "cm3"
+  553  echo "rec2" >> s3.txt
+  554  git add .
+  555  git commit -m "cm4"
+  556  clear
+  557  git log
+  558  git log --oneline
+  559  git show 47579b7
+  560  git show b703f69
+  561  git show 1eab4c8
+  562  git show 63e7fa3
+  563  git log -2
+  564  git log
+  565  git log -2
+  566  git log -3
+  567  git log --oneline -3
+  568  git log --stat
+  569  clear
+  570  ls
+  571  git status
+  572  echo "record3" >> s3.txt
+  573  git diff
+  574  git status
+  575  git add .
+  576  git diff --cached
+  577  git diff
+  578  git commit -m "Updated s3.txt"
+  579  git log --oneline
+  580  git diff c4e211f 1eab4c8
+  581  git diff 1eab4c8 c4e2
+  582  ls
+  583  cat s3.txt
+  584  git log --oneline
+  585  git show c42211
+  586  ckear
+  587  clear
+  588  git log --oneline
+  589  git show c4e211f
+  590  cd ..
+  591  mkdir myproj2
+  592  cd myproj2/
+  593  git init
+  594  ls -a
+  595  vi .gitignore
+  596  cat .gitignore
+  597  git status
+  598  git add .
+  599  git commit -m "Initial Commit for .gitignore"
+  600  git log --oneline
+  601  git status
+  602  echo "rec1" >> f1.txt
+  603  git status
+  604  echo "rec1" >> f2.txt
+  605  git status
+  606  echo "rec1" >> s1.doc
+  607  ls
+  608  git status
+  609  echo "rec1" >> sample.txt
+  610  git status
+  611  git log
+  612  clear
+  613  clear
+  614  cd ..
+  615  mkdir myproj3
+  616  clear
+  617  cd myproj3/
+  618  clear
+  619  git init
+  620  echo "rec1" >> f1.txt
+  621  git add .
+  622  git commit -m "CM1"
+  623  echo "rec1" >> f2.txt
+  624  git add .
+  625  git commit -m "CM2"
+  626  echo "rec1" >> f3.txt
+  627  git add .
+  628  git commit -m "CM3"
+  629  echo "rec1" >> f4.txt
+  630  git add .
+  631  git commit -m "CM4"
+  632* echo "rec1" >> f.txt
+  633  git add .
+  634  git commit -m "CM5"
+  635  clear
+  636  git log --oneline
+  637  ls
+  638  git status
+  639  git ls-files
+  640  git reset --soft 20a9e28
+  641  git status
+  642  git ls-files
+  643  ls
+  644  git log --oneline
+  645  git commit -m "CM5.1"
+  646  git status
+  647  git log --oneline
+  648  ls
+  649  git ls-files
+  650  git reset --mixed 20a9e28
+  651  git status
+  652  ls
+  653  git ls-files
+  654  git log --oneline
+  655  git status
+  656  git add .
+  657  git commit -m "CM5.2"
+  658  clear
+  659  git log
+  660  clear
+  661  git log --oneline
+  662  ls
+  663  git ls-files
+  664  git status
+  665  git reset --hard 20a9e28
+  666  git status
+  667  git ls-files
+  668  ls
+  669  git log --oneline
+  670  clear
+  671  git log --oneline
+  672  git reset --hard e409f7f
+  673  ls
+  674  git ls-files
+  675  git status
+  676  git log -oneline
+  677  git log --oneline
+  678  clear
+  679  git log --oneline
+  680  ls
+  681  history
