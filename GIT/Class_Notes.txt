@@ -281,3 +281,105 @@
 				
 				git commit -m "Commit_Message"	
 				
+  503  cd e:
+  504  mkdir SA-DGP-JULY
+  505  cd SA-DGP-JULY/
+  506  pwd
+  507  git --version
+  508  ls
+  509  echo "asdf" >> s1.txt
+  510  ls
+  511  clear
+  512  pwd
+  513  mkdir testrepo1
+  514  cd testrepo1/
+  515  pwd
+  516  ls
+  517  ls -a
+  518  git init
+  519  ls
+  520  ls -a
+  521  cd .git/
+  522  ls
+  523  cd ..
+  524  clear
+  525  ls
+  526  git status
+  527  echo "rec1" >> file1.txt
+  528  git status
+  529  git add file1.txt
+  530  git status
+  531  git commit -m "Created file1.txt"
+  532  git log
+  533  ls
+  534  git status
+  535  echo "rec1" >> file2.txt
+  536  ls
+  537  git status
+  538  git add file2.txt
+  539  git status
+  540  git commit -m "created file2.txt"
+  541  git status
+  542  git log
+  543  git config user.name "Loksai"
+  544  echo "rec1" >> file3.txt
+  545  git add file3.txt
+  546  git commit -m "created file3.txt"
+  547  git log
+  548  cd ..
+  549  mkdir testrepo2
+  550  cd testrepo2/
+  551  git status
+  552  git init
+  553  ls -a
+  554  git status
+  555  echo "rec2" >> f1.txt
+  556  git add f1.txt
+  557  git commit -m "Created f1.txt"
+  558  git log
+  559  git config --global user.name "Loksai"
+  560  git config --global user.email "Loksaieta@qww.com"
+  561  echo "rec2" >> f2.txt
+  562  git add f2.txt
+  563  git commit -m "Created f2.txt"
+  564  git log
+  565  cd ..
+  566  clear
+  567  mkdir testrepo3
+  568  cd testrepo3/
+  569  git init
+  570  git status
+  571  ls
+  572  echo "rec" >> s1.txt
+  573  git status
+  574  git add s1.txt
+  575  git status
+  576  git commit -m "initial commit"
+  577  git status
+  578  git log
+  579  clear
+  580  ls
+  581  echo "rec1" >> w1.java
+  582  ls
+  583  git status
+  584  echo "rec1" >> w2.java
+  585  echo "rec1" >> w2.doc
+  586  echo "rec1" >> w4.html
+  587  git status
+  588  echo "rec1" >> w5.html
+  589  echo "rec1" >> w4.jsp
+  590  echo "rec1" >> w7.jsp
+  591  clear
+  592  ls
+  593  git status
+  594  git add w1.java w2.doc
+  595  git status
+  596  git add *.html
+  597  git status
+  598  git add .
+  599  git status
+  600  git commit -m "Created temp files"
+  601  git log
+  602  ls
+  603  git log
+  604  history
