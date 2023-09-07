@@ -690,3 +690,360 @@
   679  git log --oneline
   680  ls
   681  history
+
+
+#################
+7th Sep. 2023
+#################
+
+
+		git revert :::
+		
+			It is used to undo the changes.
+			It is used to revert a specific commit.
+			revert will create a new commit point.
+			
+			Without losing the track of changes we can revert.
+			It is recommended in shared repositories.
+			I want to safely undo the changes.
+			Keeps the track of commits.
+
+		git revert <commit_id>
+
+		git rm -f <file_name> 
+		
+		git rm --cached <file_name>
+		
+		_________________
+		
+		git commit ?
+		
+			git commit -m 
+			
+		development ==> 
+		
+		Release_ID/Number 
+		CR_Number
+		
+		SEP2023-INS
+
+				
+				git commit -m "SEP2023-INS - Created signin logic"
+				
+		Branching Techniques :::
+		
+			It is used to perform parallel development.
+			To maintain the integrity of master Branch.
+			
+		Enhancement Project :::
+		
+		Existing Repository ==> default branch called master/main (Production copy)
+		
+		myprogrepo1: (master) index.html
+						cm1,cm2,c3
+			feature1 : 			index.html
+						cm1,cm2,c3,f1cm1,f1cm2,f1cm3,.............
+						
+						
+		GIT Branching Strategies/Process/Rules/Protocols ::::
+		
+		Scenario 1:
+		
+			my_webapp_proj1:
+					master 		--> cm1,cm2,cm3
+									cm1,cm2,cm3,f1cm1,f1cm2,f1cm3			# Upon Merge 
+					
+					feature1 	--> cm1,cm2,cm3,f1cm1,f1cm2,f1cm3
+										After thorough testing merge the changes to master.
+				
+		Scenario 2:
+		
+			my_webapp_proj1:
+					master 		--> cm1,cm2,cm3
+									cm1,cm2,cm3,f1cm1,f1cm2,f1cm3,f2cm1,f2cm2,f3cm3,f2cm4		# Upon merging Dev_Branch
+									 
+						Dev_Branch	--> cm1,cm2,cm3,f1cm1,f1cm2,f1cm3,f2cm1,f2cm2,f3cm3,f2cm4
+							feature1 	--> cm1,cm2,cm3,f1cm1,f1cm2,f1cm3,.....					
+							feature2	--> cm1,cm2,cm3,f2cm1,f2cm2,f3cm3,f2cm4,....
+							
+		Scenario 3:
+		
+			my_webapp_proj1:
+					master 		--> cm1,cm2,cm3
+									cm1,cm2,cm3,Dev_Branch1,Dev_Branch2							# Upon merging Integration_Branch	
+									
+						Integration_Branch: cm1,cm2,cm3,Dev_Branch1,Dev_Branch2
+							Dev_Branch1	--> cm1,cm2,cm3,f1cm1,f1cm2,f1cm3,f2cm1,f2cm2,f3cm3,f2cm4
+								feature1 	--> cm1,cm2,cm3,f1cm1,f1cm2,f1cm3,.....					
+								feature2	--> cm1,cm2,cm3,f2cm1,f2cm2,f3cm3,f2cm4,....
+								
+							Dev_Branch2	--> cm1,cm2,cm3,f1cm1,f1cm2,f1cm3,f2cm1,f2cm2,f3cm3,f2cm4
+								feature1 	--> cm1,cm2,cm3,f1cm1,f1cm2,f1cm3,.....					
+								feature2	--> cm1,cm2,cm3,f2cm1,f2cm2,f3cm3,f2cm4,....
+								
+		Scenario 4:
+		
+			my_webapp_proj1:
+					master 		--> cm1,cm2,cm3
+									cm1,cm2,cm3,Team1,Team2									# Upon merging Release_Branch	
+									
+						Release_Branch: --> cm1,cm2,cm3,Team1,Team2								
+						
+							Integration_Branch: cm1,cm2,cm3,Dev_Branch1,Dev_Branch2						Team1
+								Dev_Branch1	--> cm1,cm2,cm3,f1cm1,f1cm2,f1cm3,f2cm1,f2cm2,f3cm3,f2cm4
+									feature1 	--> cm1,cm2,cm3,f1cm1,f1cm2,f1cm3,.....					
+									feature2	--> cm1,cm2,cm3,f2cm1,f2cm2,f3cm3,f2cm4,....
+									
+								Dev_Branch2	--> cm1,cm2,cm3,f1cm1,f1cm2,f1cm3,f2cm1,f2cm2,f3cm3,f2cm4
+									feature1 	--> cm1,cm2,cm3,f1cm1,f1cm2,f1cm3,.....					
+									feature2	--> cm1,cm2,cm3,f2cm1,f2cm2,f3cm3,f2cm4,....
+
+							Integration_Branch: cm1,cm2,cm3,Dev_Branch1,Dev_Branch2						Team2
+								Dev_Branch1	--> cm1,cm2,cm3,f1cm1,f1cm2,f1cm3,f2cm1,f2cm2,f3cm3,f2cm4
+									feature1 	--> cm1,cm2,cm3,f1cm1,f1cm2,f1cm3,.....					
+									feature2	--> cm1,cm2,cm3,f2cm1,f2cm2,f3cm3,f2cm4,....
+									
+								Dev_Branch2	--> cm1,cm2,cm3,f1cm1,f1cm2,f1cm3,f2cm1,f2cm2,f3cm3,f2cm4
+									feature1 	--> cm1,cm2,cm3,f1cm1,f1cm2,f1cm3,.....					
+									feature2	--> cm1,cm2,cm3,f2cm1,f2cm2,f3cm3,f2cm4,....
+									
+		
+		Create Branches :::
+		
+		
+		samplerepo1:		
+					master 	--> cm1,cm2,cm3 
+					
+					feature1
+					feature2
+					feature3 
+		
+				git switch -c <branch_name> 
+				
+				git branch <branch_name>
+				
+				git checkout -b <branch_name>
+				
+				
+				git Merge :::		Used to merge the changes from the current branch to target branch
+				
+						git merge <branch_name>		# this branch name should you the current branch
+						
+						git merge feature1 			# Execute the git Merge Command from the target branch.
+						
+							git switch master 
+							
+							git merge feature
+							
+				master 
+				
+						feature1	
+						
+						feature4 	
+						
+				MERGE Conflict :::
+				
+					Occurs when we try to merge the changes from multiple branches into the same target branch,file and same record. 
+					
+					
+				RESOLVE Merge Conflict :::
+				
+					How to resolve Merge Conflict ???
+					
+						1. Identify the file that is causing merge conflict.
+						2. Review the file content.
+						3. Decide which Record / who's changes has to be maintained.
+						4. Make necessary changes in the file.
+						5. Add and Commit the Latest Changes.
+						
+						
+				Prevent the Merge Conflict :::
+				
+					How to prevent the Merge Conflict ???
+							
+							Before Merge, do a detailed review of the changes.
+							With proper approval.
+							
+							
+					GIT Commands :::
+					
+							git rebase 
+							git squash
+
+
+  682  cd ..
+  683  mkdir samplerepo1
+  684  cd samplerepo1/
+  685  ls
+  686  clear
+  687  git init
+  688  echo "rec1" >> f1.txt
+  689  git add .
+  690  git commit -m "CM1"
+  691  echo "rec1" >> f2.txt
+  692  git add .
+  693  git commit -m "CM2"
+  694  echo "rec1" >> f3.txt
+  695  git add .
+  696  git commit -m "CM3"
+  697  echo "rec1" >> f4.txt
+  698  git add .
+  699  git commit -m "CM4"
+  700  echo "rec1" >> f5.txt
+  701  git add .
+  702  git commit -m "CM5"
+  703  clear
+  704  git log
+  705  q
+  706  clear
+  707  git log --oneline
+  708  ls
+  709  git ls-files
+  710  git status
+  711  git show bd6385a
+  712  git log --oneline
+  713  git revert bd6385a
+  714  git log --oneline
+  715  git show 865a581
+  716  ls
+  717  git ls-files
+  718  git log --oneline
+  719  git show bd6385a
+  720  ls
+  721  git revert 865a581
+  722  git log --oneline
+  723  ls
+  724  git ls-files
+  725  cat f3.txt
+  726  ls -a
+  727  git status
+  728  ls
+  729  echo "resc" >> f1.txt
+  730  clear
+  731  git status
+  732  git add
+  733  git add .
+  734  clear
+  735  git status
+  736  git rm --cached f1.txt
+  737  git status
+  738  ls
+  739  cat f1.txt
+  740  git add .
+  741  git status
+  742  cat f1.txt
+  743  git rm -f f1.txt
+  744  ls
+  745  clear
+  746  git log --oneline
+  747  echo "rec1" >> s1.txt
+  748  echo "rec1" >> s1.txt
+  749  echo "rec1" >> s1.txt
+  750  echo "rec1" >> s1.txt
+  751  echo "rec1" >> s1.txt
+  752  echo "rec1" >> s1.txt
+  753  clear
+  754  git status
+  755  git commit -m "adfasdfasdf"
+  756  clear
+  757  git status
+  758  git log --oneline
+  759  git add s1.txt
+  760  git commit -m "aasdfasdfasdfasdf"
+  761  clear
+  762  git log --oneline
+  763  git commit -m "sep2023-created s1.txt"
+  764  git commit --amend -m "sep2023-created s1.txt"
+  765  git log --oneline
+  766  git branch
+  767  ls
+  768  clear
+  769  cd ..
+  770  mkdir samplerepo2
+  771  clear
+  772  cd samplerepo2/
+  773  clear
+  774  git init
+  775  git branch
+  776  git status
+  777  echo "rec1" >> s1.txt
+  778  git add .
+  779  git commit -m "cm1 from master"
+  780  echo "rec1" >> s2.txt
+  781  git add .
+  782  git commit -m "cm2 from master"
+  783  echo "rec1" >> s3.txt
+  784  git add .
+  785  git commit -m "cm3 from master"
+  786  clear
+  787  git log --oneline
+  788  git status
+  789  git branch
+  790  git switch -c feature1
+  791  git log --oneline
+  792  git switch master
+  793  git branch
+  794  git branch feature2
+  795  git checkout -b feature3
+  796  git branch
+  797  git log --oneline
+  798  clear
+  799  git switch master
+  800  git log --oneline
+  801  ls
+  802  git switch feature1
+  803  git log --oneline
+  804  ls
+  805  clear
+  806  ls
+  807  echo "rec1" >> q1.txt
+  808  git add .
+  809  git commit -m "f1cm1"
+  810  git log --oneline
+  811  ls
+  812  git switch master
+  813  ls
+  814  git log --oneline
+  815  clear
+  816  git switch feature1
+  817  ls
+  818  git log --oneline
+  819  git switch master
+  820  git merge feature1
+  821  git log --oneline
+  822  ls
+  823  git branch feature4
+  824  git log --oneline
+  825  git switch feature4
+  826  git log --oneline
+  827  ls
+  828  clear
+  829  ls
+  830  cat q1.txt
+  831  echo "record2 from feature4"  >> q1.txt
+  832  cat q1.txt
+  833  git add .
+  834  git commit -m "f4CM1"
+  835  git log --oneline
+  836  git switch feature1
+  837  cat q1.txt
+  838  echo "record2 from feature1" >> q1.txt
+  839  cat q1.txt
+  840  git add .
+  841  git commit -m "f1CM2"
+  842  git log --oneline
+  843  git switch master
+  844  git log --oneline
+  845  cat q1.txt
+  846  git merge feature1
+  847  git log --oneline
+  848  cat q1.txt
+  849  git merge feature4
+  850  cat q1.txt
+  851  vi q1.txt
+  852  git add .
+  853  git commit -m "Resolved Merge Conflict"
+  854  git log --oneline
+  855  ls
+  856  cat q1.txt
+  857  history
