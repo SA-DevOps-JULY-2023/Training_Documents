@@ -1236,3 +1236,70 @@ Next ::
 				git push 
 
 				Jenkins Module 
+				
+#################
+11th Sep. 2023
+#################			
+				
+				
+			Working with GITHUB
+			
+				git clone 
+				
+				git fetch / pull 
+				
+				git remote 
+				
+				git push 
+
+				Jenkins Module 
+			
+				git add 		==> Used to the changes from working directory to staging area.
+				git commit		==> Used to commit the changes from staging area to Local Repository.
+				git push		==> Used to publish/push the changes from local repository to Remote Repository.
+				
+				git fetch/pull	==> Both git fetch and pull are used to handle the incremental Changes from remote repository.
+				
+								==> git fetch is just used to check for any incremental changes in remote repository. If there is any changes exist, it will fetch the changes from remote repository into local repository. NOT working Directory.
+									
+								==> git pull is used to check for any incremental changes in remote repository. If there is any changes exist, 	it will fetch the changes from remote repository into local repository and update the changes in working Directory as well.
+								git pull = git fetch + git merge
+								
+				git clone		==>	Used to clone/copy the entire remote git repository to local machine.
+									This is always recommended to be the one time activity.
+									
+				fork			==> Used to copy a remote repository to another remote repository
+				
+				
+				
+				Developers' Workload 
+				
+					New Project 
+					
+					Enhancement Project 
+					Bug fix
+								
+				git clone https://github.com/SA-DevOps-JULY-2023/testrepo1.git
+				
+				git push 
+				
+					git credentials :::
+						user_id & password
+							user id : loksaieta
+							Access Token : sdY
+				
+				git fetch / pull 
+				
+				git remote -v 
+				git remote add origin https://github.com/SA-DevOps-JULY-2023/temprepo2.git
+				git remote remove origin https://github.com/SA-DevOps-JULY-2023/temprepo2.git
+				
+				
+				New Project :::
+				
+					git init 
+					git add .
+					git commit -m "CM1"
+					git remote add origin https://github.com/SA-DevOps-JULY-2023/temprepo2.git
+					git push -u origin master
+					
