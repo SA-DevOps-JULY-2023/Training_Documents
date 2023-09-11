@@ -1047,3 +1047,192 @@
   855  ls
   856  cat q1.txt
   857  history
+
+
+#################
+8th Sep. 2023
+#################
+
+		Git Merge Options :
+		
+			git Rebase 
+			
+			git Squash 
+			
+		git stash
+
+		Handle git Remote Repository - github
+		
+
+		Git Merge Options :
+		
+			git Rebase 		==> Used to keep the current branch in-sync with target branch 
+								It is used to maintain the linear commit history.
+								Before any merge action, we should rebase.
+								
+			Repo1 :
+			
+				master 		==> cm1,cm2,cm3
+				
+								cm1,cm2,cm3,f1cm1,f1cm2,f1cm3	
+
+								cm1,cm2,cm3,f1cm1,f1cm2,f1cm3,f2cm1,f2cm2,f2cm3
+				
+				feature1	==>	cm1,cm2,cm3									s1.txt
+								cm1,cm2,cm3,f1cm1,f1cm2,f1cm3
+								
+					git switch master 
+					
+					git merge feature1 
+					
+			
+				feature2	==>	cm1,cm2,cm3			
+								cm1,cm2,cm3,f2cm1,f2cm2,f2cm3,4,5,6,7,8,9,...................,n
+					
+					git rebase master 										# this should be executed from the current branch
+								cm1,cm2,cm3,f1cm1,f1cm2,f1cm3,f2cm1,f2cm2,f2cm3
+					
+					git switch master 
+					
+					git merge feature2 										# this should be executed from the target branch		
+					
+					
+			
+			
+			git Squash :::
+			
+				It is used to combine the commit points and create a new commit point.
+				
+				
+			Code Change :::
+			
+				java program :
+				
+					6 func. ==> 
+					
+					func1 ==> cm1,2,3,4,5,6,7,8,9	==> func1changes
+					func2 ==> cm1,2,3,4,5,6,7,8,9	==> func2changes
+					
+					
+			While working on the current branch: (Before Merge)
+			
+						::: git rebase -i HEAD~6		
+			
+				
+			
+			While Merging to target branch :
+			
+						git merge --squash feature1
+						
+						git commit -m "Commit_Message"
+				
+				
+				
+		Scenario 4:
+		
+			my_webapp_proj1:
+					master 		--> cm1,cm2,cm3
+									cm1,cm2,cm3,cm4									# Upon merging Release_Branch	
+									
+						Release_Branch: --> cm1,cm2,cm3,Team1changes,Team2changes
+						
+							Integration_Branch: cm1,cm2,cm3,Dev_Branch1,Dev_Branch2						Team1
+								Dev_Branch1	--> cm1,cm2,cm3,f1cm1,f1cm2,f1cm3,f2cm1,f2cm2,f3cm3,f2cm4
+									feature1 	--> cm1,cm2,cm3,f1cm1,f1cm2,f1cm3,.....					
+									feature2	--> cm1,cm2,cm3,f2cm1,f2cm2,f3cm3,f2cm4,....
+									
+								Dev_Branch2	--> cm1,cm2,cm3,f1cm1,f1cm2,f1cm3,f2cm1,f2cm2,f3cm3,f2cm4
+									feature1 	--> cm1,cm2,cm3,f1cm1,f1cm2,f1cm3,.....					
+									feature2	--> cm1,cm2,cm3,f2cm1,f2cm2,f3cm3,f2cm4,....
+
+							Integration_Branch: cm1,cm2,cm3,Dev_Branch1,Dev_Branch2						Team2
+								Dev_Branch1	--> cm1,cm2,cm3,f1cm1,f1cm2,f1cm3,f2cm1,f2cm2,f3cm3,f2cm4
+									feature1 	--> cm1,cm2,cm3,f1cm1,f1cm2,f1cm3,.....					
+									feature2	--> cm1,cm2,cm3,f2cm1,f2cm2,f3cm3,f2cm4,....
+									
+								Dev_Branch2	--> cm1,cm2,cm3,f1cm1,f1cm2,f1cm3,f2cm1,f2cm2,f3cm3,f2cm4
+									feature1 	--> cm1,cm2,cm3,f1cm1,f1cm2,f1cm3,.....					
+									feature2	--> cm1,cm2,cm3,f2cm1,f2cm2,f3cm3,f2cm4,....				
+				
+				
+				
+			cherrypick ::::
+
+			git cherry-pick Team1changes Team2changes
+			
+				syntax: 
+				
+						git cherry-pick <commit_id>
+						
+						
+				master :	cm1 
+				
+							cm1,f1cm1,f1cm2,f1cm3,f1cm4,f1cm4	## Upon Merge 
+							
+							cm1,f1cm3 							## Upon Cherry-pick
+							
+					feature1 
+							cm1,f1cm1,f1cm2,f1cm3,f1cm4,f1cm4 
+							
+						git switch master 
+
+						git merge feature1 ===> 
+						
+						git cherry-pick ebdad16
+						
+			GIT STASH :::
+				
+				It is used to save the uncommitted changes in a temporary area.
+				
+				
+				git stash ==> Move the staged but uncommitted contents to temporary area.
+				
+				git stash list 	==> used to get the list of stashed entries
+				
+				git stash save "valid message" 
+						
+				git stash show <stash_id>
+				
+				git stash apply 	
+					==> apply the latest/specific entry from the stash list to the staging area of that branch
+				
+				git stash pop 		
+					==> apply the latest/specific entry from the stash list to the staging area of that branch, by removing that entry from stash list.
+				
+				git stash drop 		==> delete the latest/specific entry from the stash list
+				
+				git stash clear		==> delete the all the enteries from the stash list
+				
+				
+				git add .
+				
+				git stash 
+				
+				git stash branch <temp_branch_name>
+				
+			GIT Remote Repository ::::
+			
+				Create remote repository
+			
+					pull Request :::
+			
+				git clone 
+				
+				git fetch / pull 
+				
+				git remote 
+				
+				git push 
+			
+			
+Next ::
+			
+				git clone 
+				
+				git fetch / pull 
+				
+				git remote 
+				
+				git push 
+
+				Jenkins Module 
