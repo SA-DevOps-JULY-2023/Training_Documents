@@ -1,0 +1,83 @@
+				
+#################
+11th Sep. 2023
+#################		
+
+			Build Orchestration Tool - Jenkins
+			
+			Jenkins is one of the open source build orchestration tool :
+				Uses Master/Slave Architecture :::
+				
+			Developer's Perspective
+				- are just consumers.
+						
+			DevOps Perspective
+			
+				Administrator :::
+				
+				- Installation of jenkins 
+				- Manage the plugins 
+				- User Management 
+				- Credential Management
+				- Tools Management 
+				- Jenkins Master/Slave - Node Configuration and Management
+				- Security Management 
+				- Backup & Recovery 
+				- Upgrade
+				- Create jenkins CI/CD Pipelines Project to onboard application
+				- Troubleshooting
+				
+				
+			Jenkins Architecture :::
+				
+				Jenkins Master / Slave Architecture :::
+				
+				Jenkins_Master 				VM 	==> To create Jenkins CI/CD Pipeline Jobs & Schedule the jobs
+					Jenkins_Slave-Node1		VM	==> Java Appln. Build ==> git, jdk, maven	# Application Build Server
+					Slave-Node2				VM	==> Python Appln. Build ==> git, python	# Application Build Server
+					Slave-Node3				VM	==> C# Appln. Build ==> git, jdk, maven	# Application Build Server
+					
+Install Jenkins ::  https://www.jenkins.io/doc/book/installing/linux/
+
+Launch Ubuntu Machine - 20.04
+
+Add Inbound rule in security Group.
+	8080
+	All Traffic ==> 
+
+Install Java :
+
+sudo -i
+sudo apt update
+sudo apt install openjdk-17-jre
+java -version
+
+Install Jenkins :
+					
+				
+curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key | sudo tee \
+  /usr/share/keyrings/jenkins-keyring.asc > /dev/null
+  
+echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
+  https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
+  /etc/apt/sources.list.d/jenkins.list > /dev/null
+  
+sudo apt-get update
+ 
+sudo apt-get install jenkins -y
+			
+jenkins --version 
+
+To Check the status of Jenkins Server :::
+
+systemctl status jenkins
+systemctl stop jenkins
+systemctl start jenkins
+systemctl restart jenkins
+systemctl enable jenkins 		==> To make jenkins as startup service
+
+To Access Jenkins ::
+
+	<external_IP_Addr>:8080
+			
+Jenkins Plugins are extension to Jenkins.			
