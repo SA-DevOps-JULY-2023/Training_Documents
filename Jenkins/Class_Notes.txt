@@ -289,3 +289,274 @@ In Jenkins Master - Add Node Configuration
 		Goto Manage Jenkins - Add New Node Configuration
 
 #**************************************************************************************************
+
+#################
+14th Sep. 2023
+#################	
+
+
+
+pipeline {
+    agent { label 'javaslave1' }
+    
+    tools {
+        maven "maven_3.6.3"
+    }
+    
+    stages {
+        stage('SCM_Checkout') {
+            steps {
+                echo 'SCM Checkout'
+				git 'https://github.com/LoksaiETA/Java-mvn-app2.git'
+            }
+        }
+        stage('App_Build') {
+            steps {
+                echo 'Perform Maven Build'
+				sh 'mvn -Dmaven.test.failure.ignore=true clean package'
+            }
+        }
+        stage('Deploy to QA Environment') {
+            steps {
+				script {
+					sshPublisher(publishers: [sshPublisherDesc(configName: 'QA-Server', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: '', execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '.', remoteDirectorySDF: false, removePrefix: 'target/', sourceFiles: 'target/mvn-hello-world.war')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])
+				}
+            }
+        }
+    }
+}
+
+
+		CI/CD 
+		
+			Environments ::
+			
+			DEV 
+				Jenkins_Build_Server 
+				
+			
+			TEST 
+				QA_Server 			==> 	jdk, tomcat 			
+				UAT 
+				
+			PROD 
+				
+		How to promote the code to higher environments.
+		How to Schedule Automated Build and Deployments and notifications.
+
+
+		Remote_Server 1 & 2 		
+		
+		Remote_Server 1 & 2
+		
+			Ansible is a CM Tool
+		
+			Ansible server 			===> 	target_machine1,2,3,4,5,6
+			 create ssh_keys 
+			  ssh-copy -- public 						authorized_keys
+			
+			
+		DevOps team :	
+			jenkins_Master 
+				Slave1 
+			using SSH Conn.
+			
+				private and public 				
+				ssh_keygen ??
+				
+				
+				Jenkins_Master
+						Jenkins_Slave-Node1
+						
+				QA_Server 
+					
+
+			Deployment :
+				It is process of copying the artifact from source to target server.
+				
+				Source_Server - Jenkins_Slave-Node1
+					/home/devopsadmin/workspace/SAJULY-Pipeline-Project/target/mvn-hello-world.war  ===>
+					
+				Target_Server - QA_Server
+					/opt/tomcat/webapps/
+				
+				
+				Jenkins_Slave-Node1																					QA_Server
+					/home/devopsadmin/workspace/SAJULY-Pipeline-Project/target/mvn-hello-world.war 		===>			/opt/tomcat/webapps/  
+				
+
+
+
+
+
+######################Install TOMCAT Application Server on Ubuntu :::
+sudo -i
+
+sudo apt update -y
+sudo apt install openjdk-11-jre -y 
+java -version
+
+#edit /etc/profile & add JAVA_HOME
+
+#/usr/lib/jvm/java-11-openjdk-amd64/
+
+vi /etc/profile
+
+export JAVA_HOME="/usr/lib/jvm/java-11-openjdk-amd64"
+PATH=$PATH:$HOME/bin:$JAVA_HOME/bin
+
+source /etc/profile
+
+Install Tomcat ::  https://tomcat.apache.org/download-80.cgi
+
+#https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.93/bin/apache-tomcat-8.5.93.tar.gz
+
+cd /opt
+
+wget https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.93/bin/apache-tomcat-8.5.93.tar.gz
+
+tar -xvzf /opt/apache-tomcat-8.5.93.tar.gz
+
+mv apache-tomcat-8.5.93 tomcat
+
+#Start Tomcat Server:
+#Goto:
+
+cd /opt/tomcat/bin
+./startup.sh
+
+###########################################
+
+#Add User : 
+
+#useradd -m -d /home/devopsadmin devopsadmin
+#useradd devopsadmin
+
+useradd devopsadmin -s /bin/bash -m -d /home/devopsadmin
+
+su - devopsadmin
+
+#ssh-keygen
+
+#for Ubuntu ::
+ssh-keygen -t rsa -b 4096 -m PEM
+
+
+ls ~/.ssh 
+
+#You should see following two files:
+
+#id_rsa - private key
+#id_rsa.pub - public
+
+
+cat id_rsa.pub > authorized_keys
+
+chown -R devopsadmin /home/devopsadmin/.ssh
+chmod 600 /home/devopsadmin/.ssh/authorized_keys
+chmod 700 /home/devopsadmin/.ssh
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#make devopsadmin user as a owner to tomcat dir :
+
+chown -R devopsadmin /opt/tomcat
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+	Go to Jenkins - Manage Jenkins - Plugins Manager - 
+		Search for Publish over SSH Plugins in Availables Tab.
+			Select, install with restart option.
+		
+		
+
+pipeline {
+
+    agent { label 'java-slave1' }
+	
+    tools {
+        maven "maven-3.6.3"
+    }	
+	
+    stages {
+        stage('SCM Checkout') {
+            steps {
+                echo 'Hello World'
+				git 'https://github.com/LoksaiETA/Java-mvn-app2.git'
+            }
+        }
+        stage('Build') {
+            steps {
+                echo 'Perform Maven Build'
+				sh 'mvn -Dmaven.test.failure.ignore=true clean package'
+            }
+        }
+        stage('Deploy to QA Server') {
+            steps {
+				script {
+                    sshPublisher(publishers: [sshPublisherDesc(configName: 'QA-Server', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: '', execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '.', remoteDirectorySDF: false, removePrefix: 'target/', sourceFiles: 'target/mvn-hello-world.war')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])
+				}
+            }
+        }
+    }
+}				
+	
+
+
+Automate the Jenkins Job Execution :::
+
+		Build Triggers :::
+		
+			- Build Periodic
+					Is used to schedule the job based on cron tab.
+					
+			- github webhook
+				It is used to trigger the jenkins job, whenever there is any changes happened in the src_code.
+				Create- Web hook configuration in github repo.				
+				
+			Payload URL :	http://3.110.102.185:8080/github-webhook/			
+			
+			
+			- Poll SCM 
+				It is used to trigger the jenkins job, based on the schedule and if there is any changes happened in the src_code.
+				Define  Cron Tab.
+				
+			Test Cycle :::
+			
+				8am
+				12pm
+				3pm
+				
+				
+Email Notifications :::::
+
+		Gmail Account ::::
+		
+			valid / active Gmail Account 
+				
+				MFA 
+				Create App Password
+				
+
+
+Email Notification Plugins :::
+
+SMTP Server :
+smtp.gmail.com
+
+SMTP Authentication
+
+SMTP Port :: 465
+
+Login to Gmail :::
+
+Click Account Settings
+
+select Security 
+
+MFA --> mobile#
+App Password = 16
+What ? window
+Which Appln - email				
+			
+			
