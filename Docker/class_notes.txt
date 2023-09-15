@@ -1,0 +1,163 @@
+							
+#################
+15th Sep. 2023
+#################	
+
+		DevOps ::
+		
+			CI/Cd/CD
+			
+		Virtual Machines :::
+		Virtualization ?
+		
+		VMs in AWS Cloud Platform !!!!
+		
+			Regions 
+				Availability Zones(Data Centers)
+					Server1,2,3,4,5,6
+					
+		Virtual Machines ::
+				- Hardware Level Virtualization
+				- Used to run the Operating System.
+				- VM consume lot of space and time to bootup.
+				
+		Containerization ::
+				- OS level Virtualization
+				- Used to run the applications. NOT and Operating System.
+				- It is light-weight when compared to VMs.
+				- It consume less volume and faster.
+				- Each Container run in its own address space, and it is completely isolated from other containers and base OS.
+				- It uses the underlying properties of base OS.
+					like Namespaces & Control Groups.
+					
+					
+		Consider Containerization ::
+		
+			Two Perspectives ::
+			
+			Infra-Structure Perspective :
+			
+				Jenkins_Master ::	VM 
+						Slave1			Java 
+						Slave2			Python 
+						Slave3			.Net  
+						Slave4			Angular 
+						Slave5			NodeJS 
+						
+						
+				Jenkins_Master ::	VM 
+						Build_Server :: VM 
+							Container Engine 
+								C1				Java 
+								C2              Python 
+								C3              .Net  
+								C4              Angular
+								C5              NodeJS 
+			
+			
+			
+			Development/Deployment Perspective :
+			
+					
+			
+				Create the source code ::
+					Build 					Compiled and created artifacts ::: mywebapp1.war
+					Test the war file.		==> openjdk11, tomcat8.5 	==> mywebapp1.war - successfully executed and tested. 
+					Eclipse --> jdk, 
+							    tomcat 				
+					
+					Deploy to QA_Server 	==> jdk1.8, tomcat8.0		==> mywebapp1.war ?
+			
+					
+					Deploy to UAT_Server 	==> jdk1.8, tomcat8.0		==> mywebapp1.war ?
+					
+					
+					Deploy to PROD_Server 	==> jdk1.8, tomcat8.0		==> mywebapp1.war ?
+					
+					
+					Containerization :::
+						Create the source code ::
+							Build 					Compiled and created artifacts ::: mywebapp1.war
+							Test the war file.		==> openjdk11, tomcat8.5 	==> mywebapp1.war - successfully executed and tested.	
+
+								Create a Application Package ==> (mywebapp1.war,openjdk11,tomcat8.5)		==> mywebapp1pkg
+									Container Image/Package 
+						
+								Deploy the package to QA_Server 	==> mywebapp1pkg		==> (mywebapp1.war,openjdk11,tomcat8.5)
+										Container Engine 
+											C1				mywebapp1pkg (mywebapp1.war,openjdk11,tomcat8.5)
+											C2              mywebapp2pkg
+											C3              mywebapp3pkg
+											C4              mywebapp4pkg
+											C5              mywebapp5pkg				
+								
+								Deploy to UAT_Server 	==> jdk1.8, tomcat8.0		==> mywebapp1.war ?
+								
+								
+								Deploy to PROD_Server 	==> jdk1.8, tomcat8.0		==> mywebapp1.war ?						
+										
+
+					DevOps :: Docker & Kubernetes.
+	
+				Terminologies :::
+				
+					Containerization :
+						It is the process of packaging the application along with its dependencies.
+					
+					Namespace (NS)			--> Used to create independent process to the containers
+					Control Groups (CG)		--> Used to create the level of isolation to run the containers in the namespace.
+					
+					Container Engine 		--> Used to create the container Images, Run the Container, Manage the Container resources.
+												It acts as an interface between the underlying OS and the Containers.
+					Image					--> Images are the static file, that defines the application and its depedencies.
+												Image are Non-Executable.
+					Container				--> Containers are Executable unit of Image. 
+					Container Registry		--> It is used to Store and Manage the Container Images.
+												dockerhub - is the default container registry for Container Images.
+												www.hub.docker.com
+					Container Repository	--> These are the subset of Container Registry.
+					
+					
+				About Container Registry 
+				
+				Installation of Container Engine.  https://docs.docker.com/engine/install/
+				
+						In your slave machine : Ubuntu
+						
+							sudo -i
+							apt update -y
+							apt install docker.io -y
+							
+							docker --version
+							
+					Virtual Machine :::
+						Install the Container Engine 
+							Docker 
+							
+						AWS 	--> ECS,ECR,EKS
+						
+						Azure 	--> ACS,ACR,AKS
+						
+						GCP 	--> GCS,GCR,GKS
+					
+				Container Orchestration Tool ::::
+				
+					It is used to orchestrate the containers and ensure high availability of containers.
+					
+						For Docker Containers --> Docker Swarm 
+						
+						Kubernetes --> Opensource Container Orchestration Tool 
+				
+				Working with Container Images and Containers::
+				
+					Docker CLI Commands :::
+
+						docker --version 
+						
+						docker images 	==> Get the list of container images 
+						
+						docker ps		==> Get the list of running containers
+						
+						docker ps -a 	==> Get the list of running as well as stopped containers.
+					
+					
