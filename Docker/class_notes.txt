@@ -454,3 +454,217 @@
    54  cd ~
    55  history
 					
+
+#################
+21st Sep. 2023
+#################	
+
+
+		How to create Docker container Images:
+		How to publish the images to docker registry
+		
+		Docker Compose 
+		Container Orchestration Tools :
+		
+			Docker Swarm 
+			Kubernetes 
+			
+		
+
+		How to create Docker container Images:
+
+					
+			Naming Container Images ::::
+			
+				loksaieta/mydebiangit-img:v1.0
+				
+				loksaieta/mydebiangit-img:latest
+	
+			- Docker Commit 
+			
+			- Docker Build 				
+			
+
+			- Docker Commit :::
+			
+				It is used to create a new Image based on the container.
+				
+			docker run -it --name=mvnbuildcontainer --mount source=sadevopsvol,destination=/sadevopsvol centos 
+			
+			mvnbuildcontainer:
+			
+			/# ls 
+			/# git 
+			/# jdk 
+			/# maven 
+			
+			/# exit 
+			
+			docker start 
+			
+			Based on this container ID we can create new image.		==> mvnappbuiderimg ==> publish this to docker registry
+			
+			
+						
+			docker commit abdb913e0a19 loksaieta/sajulyimg1:v1.0
+			
+			
+			- Docker Build 				using Dockerfile we can build new images.	
+
+					mywebapp1.war ==> (mywebapp1.war,jdk,tomcat) --> mywebappimg.
+
+
+				Create Dockerfile :
+				
+				docker build -t loksaieta/sajulyimg1:v1.1 .
+				
+				Dockerfile is the collection of Instructions to build the container image.
+				
+				
+				Create an Image :
+					
+				Dockerfile :
+				
+					FROM debian
+					RUN apt-get update -y
+					RUN apt-get install git -y 
+					
+
+			How to publish the images to docker registry ???
+			
+				docker cli command 
+				
+				docker login -u loksaieta
+				
+				Access Token --> dXk
+				
+				docker push loksaieta/sajulyimg1:v1.1
+				
+			
+			Developer --> Eclipse IDE --> Create Src_code --> Push_the_Change to github_repository
+			
+			Jenkins 
+					  SCM_Checkout	--> Application_Build(*.war)	--> Docker_Build(App_Img)	--> Publish_to_Docker_Resigtry
+						
+					  --> Pull the image into QA_Server 	--> Run Container in QA
+					  
+					  --> Pull the image into UAT_Server 	--> Run Container in UAT
+					  
+					  --> Pull the image into PROD_Server 	--> Run Container in PROD		container1 
+					  
+			
+			VM --> PROD Server1,2,3  ==> amazon-app1.war 
+			Load Balancers 
+			
+					Usage :::
+					
+						100000
+			
+			Container Orchestration Tools :
+					Are used to ensure high availability of Containers.
+					Create the Replicas of Containers.
+					replicas - 5 
+					
+				Docker Swarm --> 
+						Is the Container Orchestration Tool used to Orchestrate only the Docker Containers.
+						
+				Kubernetes 
+						Is the Container Orchestration Tool used to Orchestrate any type of Containers.
+					  
+			Micro-Service Based Appln. deployments using Containers :::::
+			
+			
+			High Availability of Application :::
+					Servers & Resources which are responsible to to run the applications should available. 
+					
+					VM & Containers 
+			
+				
+			Docker Compose :::
+			
+					It is used to run multiple Containers as a Service.  Why to run multiple containers as a service ????
+					
+					
+			
+			Web Application : E_Commerce
+			
+			www.amazon.com - E_Commerce  ::::
+
+			Developers's Perspective ::::
+			
+						sign_up ==> --> 3 - tier Architecture
+										FrontEnd,Application_Logic,BackEnd(Database) SQL/ORACLE		
+											C1,C2,C3
+											
+											docker run 
+						
+			
+			Sign_up			---> (Micro-service) Developer will make the code change --> test --> QA/UAT/ --> Released to Prod.		
+
+			Docker Compose & Docker Swarm :::
+			
+			Docker Swarm --> 
+					Is the Container Orchestration Tool used to Orchestrate only the Docker Containers.	Ensure High Availability of Container.		
+			Docker Compose :::			
+					It is used to run multiple Containers as a Service.
+					
+			Service1(C1,C2,C3)	--> 
+			
+			
+			Kubernetes :::
+			
+			Build :::
+				Dockerfile :
+				
+					FROM debian
+					RUN apt-get update -y
+					RUN apt-get install git -y 	
+
+			Docker File Instructions:::
+			
+			
+			Want to have a Container to build their application :::
+			
+				Jenkin_Master 
+					Jenkins_Slave
+									C1,C2,C3,C4,C5,C6
+									
+				Dockerfile :
+				
+					FROM debian
+					RUN apt-get update -y
+					RUN apt-get install git -y 	
+
+
+				Instructions ::
+				
+				FROM  	--> Used to specify the base image. 
+				
+				RUN 	--> Used to run the package managers to manage the package within the container.
+				
+				COPY	--> Used to copy the files from host machine into the container volume/Dir. 
+				
+				CP		--> Used to copy the files with the container volumes/dir.
+				
+				WORKDIR --> Used to identify the current working directory.
+				
+				ENV 	--> Used to Create Environment Variables
+				
+				EXPOSE	--> It is used to Expose the Container Port. 
+				
+				CMD		--> Used to specific the default/start-up command to run the container. 
+							This allow users to pass any commands at runtime. 
+				
+				ENTRYPOINT	--> Used to specific the default/start-up command to run the container.
+								This Will not allow users to pass any commands at runtime. 
+				
+				
+				
+Next :::
+
+			Dockerfile :
+		
+			Jenkins 
+					  SCM_Checkout	--> Application_Build(*.war)	--> Docker_Build(App_Img)	--> Publish_to_Docker_Resigtry
+						
+					  --> Pull the image into QA_Server 	--> Run Container in QA	
