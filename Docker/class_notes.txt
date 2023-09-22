@@ -668,3 +668,122 @@ Next :::
 					  SCM_Checkout	--> Application_Build(*.war)	--> Docker_Build(App_Img)	--> Publish_to_Docker_Resigtry
 						
 					  --> Pull the image into QA_Server 	--> Run Container in QA	
+
+
+			
+#################
+22nd Sep. 2023
+#################	
+		
+			Requirement :::
+			
+			
+			1. Java Maven web application.
+				Create Jenkins pipeline to perform automated build and publish the application image to Dockerhub registry.
+				
+				
+			Pre-requisites :::
+				- source code should be present in github repo.
+				- Infra-Structure :
+					- Tools: 
+						GIT 
+						jenkins 
+						jdk 
+						maven 
+						docker
+						
+					- Servers :
+						Jenkins_Master						==> git,jdk,jenkins 		
+															==> It is create the build pipeline & Schedule the job to node.
+							Java_Appln_Build_Server			==> git,jdk,maven,docker	
+															==> It is used to build the Application and build Container image
+															==> Push the images to Container Registry.
+							
+			Implementation :::
+
+			Create a Workflow of CI/CD Pipeline :::
+			
+			CI Pipeline ::::
+			
+				SCM_Checkout 
+				Build_Application	
+				
+				Build_Application_Image
+				
+				Publish_to_Docker_Registry
+				
+			Critical Technical Requirements ::::
+			
+				Before creating the actual pipeline script :
+				
+					- Jenkins_Master & Node Configuration is successful
+							usermod -aG docker devopsadmin
+							User_ID in build server with SSH Keys
+							Config the Node in Jenkins_Master
+							
+					- Access to Dockerhub from Jenkins.
+							Configure the Dockhub credentials in Jenkins_Master
+								- Create Access Token in Dockerhub
+							- Login to Dockerhub
+							- Publish_to_Docker_Registry
+			
+			
+			Create CI Pipeline Script :::			
+			
+				SCM_Checkout 	-->		Build_Application		-->		Build_Application_Image		--> 	Publish_to_Docker_Registry
+			
+			
+
+
+pipeline {
+
+    agent { label 'slave1' }
+	
+    tools {
+        maven "maven-3.6.3"
+    }
+
+	environment {	
+		DOCKERHUB_CREDENTIALS=credentials('dockerloginid')
+	}
+	
+    stages {
+        stage('SCM_Checkout') {
+            steps {
+                echo 'Perform SCM Checkout'
+				git 'https://github.com/LoksaiETA/devops-java-webapp.git'
+            }
+        }
+        stage('Application_Build') {
+            steps {
+                echo 'Perform Maven Build'
+				sh 'mvn -Dmaven.test.failure.ignore=true clean package'
+            }
+        }
+        stage('Build Docker Image') {
+            steps {
+				sh 'docker version'
+				sh "docker build -t loksaieta/loksai-eta-app:${BUILD_NUMBER} ."
+				sh 'docker image list'
+				sh "docker tag loksaieta/loksai-eta-app:${BUILD_NUMBER} loksaieta/loksai-eta-app:latest"
+            }
+        }
+		stage('Login2DockerHub') {
+
+			steps {
+				sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
+			}
+		}
+		stage('Publish_to_Docker_Registry') {
+			steps {
+				sh "docker push loksaieta/loksai-eta-app:latest"
+			}
+		}
+    }
+}								
+	
+	
+Next :::
+
+		Kubernetes :
+		Deploy the Images in the target environments using Kubernetes.
