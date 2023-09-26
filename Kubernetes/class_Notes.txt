@@ -122,3 +122,79 @@ Architecture of Kubernetes
 						running 
 						failed 
 						successful
+#################
+26th Sep. 2023
+#################	
+
+			Installation of Kubernetes
+			Working with Kubernetes Objects :
+				PODS 
+				Deployment Controller Object 
+			Kubernetes Services
+			Kubernetes Namespaces 
+
+			Installation and Configuration of Kubernetes Master & Kubernetes Worker Nodes :::
+			
+				- Minikube.
+				
+				Enterprise level :
+				- Managed Services(EKS/AKS/GKS)
+				
+				- Open source kubernetes 
+						Kubeadm 
+						
+							-> Pre-requisites :::
+									
+									Launch VMs - Host_Machines -- KM,(KWN1,2,3,...)
+									
+									3GB RAM 
+									2 CPUs 
+									
+									All the Nodes should have full network assess. 
+									There should not be any firewall restriction. 
+									All the required ports should be enabled.
+									
+									
+									
+									To be install in all the nodes - Master & Workernodes.
+										Setup Host_Machine Names -- KM,(KWN1,2,3,...)
+										docker 
+										ContainerD ==> CRI - Container Runtime Interface 
+										kubeadm,kubectl,kubelet
+									
+									To be executed only in Master 
+										kubeadm init to initialize Kubernetes master 
+									
+									To be executed only in WorkerNodes
+										kubeadm join to join the workernodes kubernetes Master 
+										
+									
+									
+						deployment -> pod --> container --> application --> write 100 records to a database.
+								completed around 30 records 
+								
+						Controller Manager 
+						
+						deployment -> new pod --> resume. 
+		
+			Working with Kubernetes Objects :
+				PODS 
+				Deployment Controller Object 
+
+			Kubernetes Services :::
+			
+				NodePort Service ==> It is used to expose the pod to internet.		== Generate the NodePort.
+				
+				Using the External IP Address of the Node and the NodePort, we can access the application that is running inside the pod thru web browser.
+
+
+Summary : 
+
+			Installation of Kubernetes
+			Working with Kubernetes Objects :
+				PODS 
+
+Next ::				
+			Deployment Controller Object  high - availability of pods, autoscale, upgrade, rollback(undo) the changes  
+				Kubernetes Services
+				Kubernetes Namespaces 
