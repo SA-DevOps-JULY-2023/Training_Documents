@@ -324,6 +324,94 @@ nginx-deploy-58cbc576c5-r64ql   1/1     Running   0          34s
 				
 			00:00  kubectl set image deploy nginx-deploy nginx-container=nginx:1.9.1
 			10000 replicas 
+   54  kubectl get nodes
+   55  kubectl get pods --all-namespaces
+   56  clear
+   57  kubectl get pods
+   58  vi nginx-pod.yaml
+   59  kubectl create -f nginx-pod.yaml
+   60  kubectl get pods
+   61  kubectl get pods -o wide
+   62  clear
+   63  kubectl get pods -o yaml
+   64  kubectl describe pod nginx-pod
+   65  clear
+   66  kubectl get pods -o yaml
+   67  clear
+   68  kubectl get pods -o wide
+   69  ls
+   70  kubectl exec -it nginx-pod -- /bin/sh
+   71  kubectl get svc
+   72  kubectl expose pod nginx-pod --type=NodePort --port=80
+   73  kubectl get svc
+   74  kubectl get pods -o wide
+   75  clear
+   76  kubectl get pods --all-namespaces
+   77  clear
+   78  kubectl get nodes
+   79  kubectl get pods
+   80  ls
+   81  clear
+   82  vi nginx-deploy.yaml
+   83  clear
+   84  ls
+   85  kubectl get pos
+   86  kubectl get pods
+   87  clear
+   88  kubectl get pods -o wide
+   89  kubectl create -f nginx-deploy.yaml
+   90  kubectl get pods -o wide
+   91  kubectl get rc
+   92  kubectl get rs
+   93  kubectl get deploy -l app=nginx-app
+   94  kubectl get rs -l app=nginx-app
+   95  kubectl get po -l app=nginx-app
+   96  kubectl describe deploy nginx-deploy
+   97  kubectl set image deploy nginx-deploy nginx-container=nginx:1.91 --record
+   98  kubectl describe deploy nginx-deploy
+   99  kubectl rollout status deployment/nginx-deploy
+  100  kubectl rollout history deployment/nginx-deploy
+  101  kubectl get po -l app=nginx-app
+  102  kubectl rollout undo deployment/nginx-deploy
+  103  kubectl rollout status deployment/nginx-deploy
+  104  kubectl get po -l app=nginx-app
+  105  kubectl describe deploy nginx-deploy
+  106  kubectl set image deploy nginx-deploy nginx-container=nginx:1.9.1
+  107  kubectl rollout status deployment/nginx-deploy
+  108  kubectl get po -l app=nginx-app
+  109  kubectl describe deploy nginx-deploy
+  110  kubectl get po -l app=nginx-app
+  111  kubectl scale deployment nginx-deploy --replicas=8
+  112  kubectl get po -l app=nginx-app
+  113  kubectl scale deployment nginx-deploy --replicas=2
+  114  kubectl get po -l app=nginx-app
+  115  kubectl scale deployment nginx-deploy --replicas=8
+  116  kubectl get po -l app=nginx-app -o wide
+  117  kubectl get svc
+  118  clear
+  119  kubectl get ns
+  120  kubectl get pods
+  121  kubectl get pods -owide
+  122  clear
+  123  kubectl get pods --all-namespaces
+  124  kubectl create ns DEV
+  125  kubectl create ns dev
+  126  clear
+  127  kubectl get ns
+  128  kubectl create ns qa
+  129  kubectl create ns uat
+  130  kubectl get ns
+  131  ls
+  132  cp nginx-pod.yaml nginx-pod1.yaml
+  133  ls
+  134  vi nginx-pod1.yaml
+  135  ls
+  136  kubectl create -f nginx-pod1.yaml
+  137  clear
+  138  kubectl get pods
+  139  kubectl get pods --all-namespaces
+  140  clear
+  141  history
 			
 Kubernetes :::	
 		What is Container Orchestration 
