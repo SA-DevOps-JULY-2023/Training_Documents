@@ -198,3 +198,145 @@ Next ::
 			Deployment Controller Object  high - availability of pods, autoscale, upgrade, rollback(undo) the changes  
 				Kubernetes Services
 				Kubernetes Namespaces 
+
+#################
+28th Sep. 2023
+#################				
+
+			Deployment Controller Object  high - availability of pods, autoscale, upgrade, rollback(undo) the changes  
+				Kubernetes Services
+				Kubernetes Namespaces 
+				
+				
+			Deployment Controller object:
+			
+			pods --> 7
+
+			Kubernetes_Master
+				Kubernetes_Cluster
+					Kubernetes_Worknode1
+					Kubernetes_Worknode2
+			
+			Kubernetes_Master
+				Kubernetes_Cluster1
+					Kubernetes_Worknode1
+					Kubernetes_Worknode2
+					Kubernetes_Worknode3
+					Kubernetes_Worknode4						
+				Kubernetes_Cluster2
+					Kubernetes_Worknode1
+					Kubernetes_Worknode2
+					Kubernetes_Worknode3
+					Kubernetes_Worknode4			
+				Kubernetes_Cluster3
+					Kubernetes_Worknode1
+					Kubernetes_Worknode2
+					Kubernetes_Worknode3
+					
+			Kubernetes_Master	
+				Kubernetes_Master1
+					Kubernetes_Cluster1
+						Kubernetes_Worknode1
+						Kubernetes_Worknode2
+						Kubernetes_Worknode3
+						Kubernetes_Worknode4						
+					Kubernetes_Cluster2
+						Kubernetes_Worknode1
+						Kubernetes_Worknode2
+						Kubernetes_Worknode3
+						Kubernetes_Worknode4			
+					Kubernetes_Cluster3
+						Kubernetes_Worknode1
+						Kubernetes_Worknode2
+						Kubernetes_Worknode3			
+				Kubernetes_Master2
+					Kubernetes_Cluster1
+						Kubernetes_Worknode1
+						Kubernetes_Worknode2
+						Kubernetes_Worknode3
+						Kubernetes_Worknode4						
+					Kubernetes_Cluster2
+						Kubernetes_Worknode1
+						Kubernetes_Worknode2
+						Kubernetes_Worknode3
+						Kubernetes_Worknode4			
+					Kubernetes_Cluster3
+						Kubernetes_Worknode1
+						Kubernetes_Worknode2
+						Kubernetes_Worknode3
+
+
+			Deployment Controller object:::
+			
+				Pod :::
+				
+				Deployment ::: 
+				
+					mywebapp.war ==> myweappimg:v1.0	==> Published to Docker_hub.
+					mywebapp.war ==> myweappimg:v1.1	==> Published to Docker_hub.
+					mywebapp.war ==> myweappimg:v1.2	==> Published to Docker_hub.
+					mywebapp.war ==> myweappimg:v1.3	==> Published to Docker_hub.
+					mywebapp.war ==> myweappimg:v1.4	==> Published to Docker_hub.
+					mywebapp.war ==> myweappimg:v1.5	==> Published to Docker_hub. pod is up an running
+				
+				Upgrade
+				Revert/Undo the Change 
+				Replicas of Pod 
+					Auto-Scaling Capability of Kubernetes 
+						Scale-Up
+						Scale-Down
+				
+
+				StrategyType:           RollingUpdate ***Default Deployment Strategy
+				
+				Services :::
+					ClusterIP 	(Default Service)
+					NodePort 	- It is used to expose the pods to internet.
+					Load Balancer
+				
+				
+				1 copy of Pod --> 	nginx:1.7.9			===>> nginx:1.9.1
+				
+				3 copy of Pod --> 	nginx:1.7.9			===>> nginx:1.9.1
+				1 of 3 ==> Upgraded first. If it is successful then only it will upgrade the remaining pods.
+				
+nginx-deploy-5bdd559bcc-7f6rv   1/1     Running   0          3m15s
+nginx-deploy-5bdd559bcc-9pk2z   1/1     Running   0          3m15s
+nginx-deploy-5bdd559bcc-wth8t   1/1     Running   0          3m15s
+
+
+nginx-deploy-58cbc576c5-7mlks   1/1     Running   0          54s
+nginx-deploy-58cbc576c5-g5h47   1/1     Running   0          44s
+nginx-deploy-58cbc576c5-r64ql   1/1     Running   0          34s
+				
+			Kubernetes Services
+				
+				Services :::
+					ClusterIP 	(Default Service)
+					NodePort 	- It is used to expose the pods to internet.
+					Load Balancer		
+
+					
+			Kubernetes Namespaces 			==> Logical Partitioning of the Cluster.
+					Can be created based on the Application / Environments.
+
+				kubectl get nodes  ==> 
+				
+			00:00  kubectl set image deploy nginx-deploy nginx-container=nginx:1.9.1
+			10000 replicas 
+			
+Kubernetes :::	
+		What is Container Orchestration 
+		Type of Container Orchestration Tools
+		Kubernetes 
+		Kubernetes Architecture 
+		Create Pod 
+		Deployments***
+		Namespaces 
+		Services - NodePort Service.
+		
+		
+			
+			
+
+			
