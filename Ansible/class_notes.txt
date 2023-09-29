@@ -1,0 +1,7729 @@
+DevOps Training :
+Start Date : 24th July 2023
+
+#######################
+Day 1 - 25th July 2023 
+#######################
+
+	Module - 1 :	Intro. to DevOps.
+	
+	Software --> What it is ?
+			- Any Computer Application/Programs 
+			
+	
+	How Software is Developed?
+	What are the various process involved in Software Developement?
+	What is the Software Development LifeCycle ?
+	
+	Sofware :::
+	
+		- Application Software
+			Banking/Healthcare/E-Commerce,.....
+		- System Software 
+			Operating System/Middleware products
+			Micro-chip level programming/Embedded Application 
+			
+	Software Developement Life Cycle - (SDLC)
+		
+		- Requirement Analysis
+		- Design Phase 
+		- Coding/Implementation
+		- Testing 
+		- Deployment
+		- Maintenance/Monitoring
+		
+	Application :::
+	
+		Desktop Application 
+		Web Application 
+		Mobile Application 
+		
+		
+	Software Developement Life Cycle - (SDLC)
+		
+		- Requirement Analysis
+		- Design Phase 
+		- Coding/Implementation
+		- Testing 
+		- Deployment
+		- Maintenance/Monitoring	
+		
+		
+	Waterfall Model ::: Is a Traditional/Legacy SDLC Process/Model 
+						It is Linear in fashion --> Means the process is in sequential.
+		
+	
+E_Commerce Application -> 
+
+		6 Months, 10+2 Modules/Function, tools, supportive components 
+
+		
+	Waterfall::
+	
+	Core_Project1:
+		- Requirement Analysis
+		- Design Phase 
+		- Coding/Implementation
+		- Testing 
+		- Deployment
+		- Maintenance/Monitoring
+	
+		
+	Enhancement_Project1:
+		- Requirement Analysis
+		- Design Phase 
+		- Coding/Implementation
+		- Testing 
+		- Deployment
+		- Maintenance/Monitoring	
+		
+	
+	Agile Methodology :::::		The entire project is splitted into various Modules/Iterations in Agile.
+
+E_Commerce Application -> 
+
+		6 Months, 10+2 Modules/Function, tools, supportive components 	
+		
+		
+	Module/Iteration1:	
+	
+		- Requirement Analysis
+		- Design Phase 
+		- Coding/Implementation
+		- Testing 
+		- Deployment
+		- Maintenance/Monitoring	
+
+	Module/Iteration2:	
+	
+		- Requirement Analysis
+		- Design Phase 
+		- Coding/Implementation
+		- Testing 
+		- Deployment
+		- Maintenance/Monitoring
+
+	Module/Iteration3:	
+	
+		- Requirement Analysis
+		- Design Phase 
+		- Coding/Implementation
+		- Testing 
+		- Deployment
+		- Maintenance/Monitoring
+
+
+	Module/Iteration-n:	
+	
+		- Requirement Analysis
+		- Design Phase 
+		- Coding/Implementation
+		- Testing 
+		- Deployment
+		- Maintenance/Monitoring
+		
+	Agile Methodology can be used to achieve :
+		Continuous Development 
+		Continuous Integration
+		Continuous Delivery 		--> Requires Manual Approval for Prod release.
+		
+		Continuous Deployment 		--> Doesnt require any manual intervention/Approval for prod release.
+		
+	We cannot Achieve Continuous Deployment using Agile.
+	
+	
+	DevOps ::::
+	
+		DevOps is a Software Development Strategy/Process, which helps to promote collaboration with the teams like Development Team and Operations Team to achieve Continuous Developement, Continuous Integration, Continuous Testing, Continuous Delivery, Continuous Deployment and Continuous Monitoring, in an automated fashion.	
+	
+		- Requirement Analysis
+		- Design Phase 
+		- Coding/Implementation
+		- Testing 
+		- Deployment
+		- Maintenance/Monitoring
+		
+	Terminologies :::
+	
+		Teams Involved in the SDLC process ?
+		
+			IT - is responsible:
+		
+					- Infra-Structure Provision Team 
+					- Application Development Team - Application Owners/Architects/Leads/Developer
+					- Testing Team - UT/QA/UAT/..... 
+					- Release Management Team - For timely prod release
+					- Production Support Team 
+					- Production Monitoring Team
+						Infra-Structure/Application
+					- Security Team
+				
+			Why DevOps:::: ????	
+				
+			Tele-comm Domain - Service Providers1 ==> Introduce a New Offer/Service to their customers 
+			Tele-comm Domain - Service Providers2 ==> 
+
+		Environments:::
+		
+			Developer 	--> to do development I need Developement Environments
+			Tester 		--> Test Environments
+			Release		--> Production Environments
+			
+			Non-Prod Environments									Production Environment
+			
+				Dev - code - build - unit testing 
+				Test 
+					QA 
+					UAT 						======>					Prod_Environment
+		
+		What is the role of DevOps Team ??? where they fit in  SDLC Process ??
+		
+				DevOps Team:
+					- Infra-Structure Provision Team 
+					- Application Development Team - Application Owners/Architects/Leads/Developer
+					- Testing Team - UT/QA/UAT/..... 
+					- Release Management Team - For timely prod release
+					- Production Support Team 
+					- Production Monitoring Team
+						Infra-Structure/Application
+					- Security Team	
+
+			DevOps is all about People, Process and Tools
+		
+		DevOps Team:
+				DevOps Associate
+				Sr. DevOps Associate
+				DevOps Engineers
+				DevOps Lead 
+				Sr. DevOps Lead 
+				DevOps Architects
+				DevOps Consultants 
+				SRE 
+		
+		
+		
+		DevOps Need - Scripting Knowledge. 
+						Python, Shell, Groovy, Yaml 
+						
+					- Should know how the Applications are Developed, Built, Tested & Deployed.
+		
+Next :		
+		DevOps Stages ::::
+
+#######################
+Day 2 - 27th July 2023 
+#######################		
+
+			DevOps is a Software Development Strategy/Process, which helps to promote collaboration with the teams like Development Team and Operations Team and automate the end-to-end Software development process.
+		
+			
+			
+			Infra-Structure Provision & Configuration :::: 
+					Infra-Structure As Code - IAC Tools 	Jenkins ---> 
+							Terraform		==> Provision/Create the virtual Machines/servers
+							Ansible 		==> Configuration Management ==> Install/Remove/Upgrade any tools 
+							
+							
+							
+							
+			Continuous Development
+			
+			Sofware Development :::
+			
+				Developers --> Coding --> Java/C#/Python/Angular/NodeJS		==> Used to Develop Business Logics.
+							Eg.: www.amazon.com - E_Commerce 
+						Coding	- Sign_Up_Module --> *.java (High Level Language) 
+								IDEs -- Integrated Development Environment -- Eclipse - Visual Studio Code, Visual Studio, Pycharm, Intellj
+								Code the application and save it in a source code repository(GIT) Jenkins
+								
+						Application build 	--> It is a process of compiling the source code and creating artifacts(Binaries - *.war/*.jar/*.exec)
+										Build Tools ---> Maven/Gradle/Ant --> Jenkins
+						Perform Unit Testing  --> Automate Unit Testing (Using Maven Integration) Jenkins 
+						Promote the application for further testing (QA/UAT-Envi.) - Jenkins
+						Notify the Testing Team thru email.  Jenkins(Build Orchestration Tool)
+						
+			
+			
+			Continuous Integration :::	It is a capability of developers to continuously integrate the code for further testing.
+						Promote the application for further testing (QA/UAT-Envi.) - Jenkins
+									QA  -  Quality Assurance Testing
+									UAT -  User Acceptance Testing
+						Notify the Testing Team thru email.  Jenkins(Build Orchestration Tool)
+					
+					signin.java ==> 2500 lines of codes
+						10 lines of changes 
+			
+			Continuous Testing
+						QA  -  Quality Assurance Testing  --> TestNG/Selenium --> Jenkins 
+			
+			Continuous Delivery/ Deployment 
+				==>  It is just a process of copying the application artifacts from lower environment to higher environment
+								
+				--> These are refered to Production Release.
+				Continuous Delivery		===> It requires Manual approval for Prod. release
+				
+				Continuous Deployment	===> It is completely automated - No Approvals are needed to perform the prod release.
+				
+						Ansible/Jenkins/Docker/Kubernetes
+
+			Non-Prod Environments									Production Environment
+			
+				Dev - code - build - unit testing 
+				Test 
+					QA 
+					UAT 						======>					Prod_Environment
+					
+					
+			Deployment Window :::: 
+			
+			Continuous Delivery :::
+				Online Banking!!!! Prod Deployment Window --> 4 to 6 Hrs.
+						If deployment is successful 
+						If it failed????
+							Try to fix the issue within the deployment window 
+							If it is not possible to fix, then the changes will be reverted.
+							
+			Continuous Deployment :::
+			
+				Starting from Application Build, UT, Code promotion, QA, UAT, Prod Release ==> is completely Automated.
+			amazon.com
+			netflix 
+			
+			Continuous Monitoring
+					
+					-> Infra-Structure Monitoring - Jenkins
+								Prometheus/Grafana/					
+							
+					-> Application Monitoring
+								AppDynamics
+			
+
+			
+			Software Application ::
+			
+				Mobile/Web/Desktop Applications
+				
+			Legacy applications architecture : 
+					
+					Monolith Application Architecture  :::
+						
+							The Application Components are tightly coupled.
+							
+					Micro-Service Based Application Architecture :::
+					
+							The Application is splitted into various services.
+							It is loosely coupled.
+							
+			
+			
+			www.amazon.com - E_Commerce  ::::
+
+			Developers's Perspective ::::
+			
+						sign_up ==> --> 3 - tier Architecture
+										FrontEnd,Application_Logic,BackEnd(Database) SQL/ORACLE
+						
+			
+			Sign_up			---> (Micro-service) Developer will make the code change --> test --> QA/UAT/ --> Released to Prod.
+			Sign_In 
+			Search
+			Add to cart
+			place an order
+			payment
+			Confirm Order
+			Tracking 				
+			
+			mywebapp.html
+				<html>
+				
+					sign_up
+					sign_in
+					payment
+				
+				</html>
+				
+			sign_up.html 			
+				<html>				
+					sign_up				
+				</html>
+				
+			sign_in.html 			
+				<html>				
+					sign_in				
+				</html>
+
+
+
+Lab Prerequisites:::
+
+		1. Create Github account
+		2. Create AWS Free Tier Account
+		3. Install: 
+				Java
+				GIT
+				Python
+				Eclipse IDEs
+				Visual Studio Code
+				Terraform
+		4.Create Dockerhub account
+
+
+#######################
+Day 3 - 28th July 2023 
+#######################			
+		
+		https://github.com/
+		
+		What is github ????  --> is remote git repository ( Folders & Files )
+		
+		
+		Fundamentals of AWS ::::
+		
+		Environments ????		Infra-Structure / Computing Devices / Servers / Virtual Machines.
+		
+			Non-Prod Environments(Business Hours)					Production Environment (24/7)
+			
+				Dev - code - build - unit testing 
+				Test 
+					QA 
+					UAT 						======>					Prod_Environment
+					
+					
+		Cloud Platform :::
+				Fundamentals of Cloud Computing! 
+				
+				
+		On-Premises ==> My own Infra-Structure.
+		
+		
+		Create AWS Free Tier Account :::
+		
+			Unique Email ID 
+			Phone Number
+			Credit/Debit Card -- > eligible for International Tracking. 
+				
+				
+#######################
+31st July 2023
+#######################		
+
+		Cloud Computing Fundamentals ::::
+		
+			Benefits of Cloud computing
+			Various Cloud Services 
+				IAAS
+				PAAS
+				SAAS
+				
+				
+		Cloud platform ---> Meant for my business 
+							Mail_Server 
+							Application_Server
+		Deployment Model ::
+		
+			Public Cloud 
+			
+			Private Cloud
+			
+			Hybrid Cloud 
+			
+			Community Cloud
+			
+			ALM --> Application LifeCycle Management Tool
+				Azure Board 
+				Jira 
+				
+		Working with AWS Platform ?
+		
+			1. Create a free tier !
+			2. Login to this AWS Console as a root user.
+			3. Access AWS Console.
+		
+		
+		
+		Cloud Platform!
+		
+			- Cloud Resources 
+				Compute Device -- Servers 
+						The AWS Servers are located in different geographical locations!
+								Regions
+									Availability Zones
+										Data centers
+											Collection Servers 
+													Virtual Machines (EC2 Instances)
+			
+			
+		Tools :::::::
+		
+			Self-Managed Services/Tools	(Open-Source Tools)
+			
+				git/jenkins/docker/K8s/Ansible/Terraform/Prometheus/Grafana/Maven 
+			
+			
+			
+			Managed Services/Tools --> Managed by Service Providers
+				
+				Azure DevOps Service :
+					Az Boards/Repos/Artifacts/Test/Pipelines
+				AWS :
+					Code Commit/Code Build/Code Pipeline/Code Deploy
+					
+					
+		In AWS --> You have create EC2 Instances (VM)
+			750 Hrs/Month --> 
+			
+			1 VM ==> run for 750 Hrs/Month 
+			10 VM ==> 75 Hrs
+			
+		Create EC2 Instance ::::
+		
+Summary :::
+		Launch AWS EC2 Instance!
+		
+		
+################
+1st August 2023
+################	
+
+		Working with AWS Services :::
+		
+		
+		EC2 Instances			===> Is a Virtual Machine!
+		
+			- Created a Linux Machine :: 
+				Linux is an Operating System - Open Source OS
+						Debain - Ubuntu 
+						Package Manager!
+			
+			- Connect to the EC2 Instance : Remote Server / VM 
+				- EC2 Instance Connect -- done thru browser 
+				- SSH Agents 
+					- Putty
+					- MobaXterm
+				- Terminals/Console/Command Prompt
+				
+				
+		EC2 Instance == > Virtual Machine 
+			IP Address ==> 
+				Public IP Address  --> This will change whenever the VM is restarted.
+				Private IP Address --> This is constant.
+				
+				
+		Using Public_IP_Address & Key pair we can establish connect to the remote server.
+		
+		
+			Amazon Linux - AMI 
+				The default user_ID - ec2-user 
+				
+			Ubuntu - AMI 
+				The default user_ID - ubuntu
+		
+		
+			- SSH Agents 		==> Is used to establish secure connection to the remote Linux servers
+				- MobaXterm
+					- Install Mobaxterm in your local Windows Machine.
+								https://mobaxterm.mobatek.net/download.html
+			
+
+			
+################
+3rd August 2023
+################	
+
+
+		How to install software packages in Linux Machines - VM in AWS 
+		AWS Services - Security Group,IAM,ECR,ECS,EKS,S3,EBS,....... 
+		
+		
+		Virtual Machines :::
+		
+			EC2 Instance:::
+			
+				- Ubuntu 
+					Package Management! - (Installation/Unstallation/Upgrade)
+					
+			Linux Distributions ::::
+				Linux is a open source Unix based Operating System:
+				Command Line Interface
+				
+				Distributions - the flavors of Linux OS 
+				
+					Fedora/RHEL/Centos/Ubuntu/
+					
+					Types of Package Managers ::::
+						Fedora(latest version) 											-	dnf 
+						AmazonLinux2(Previous Version)/Fedora(Old Version)/RHEL/Centos 	-	yum
+						debian/Ubuntu													- 	apt / apt-get
+
+					rpm
+					tar
+					curl
+				Package Manager ==> Used to Manage the package - (Installation/Unstallation/Upgrade)	
+		
+		
+		1. Launch AWS EC2 Instances !
+			- Install the Package!
+		
+		
+		Security groups --> Which is used to define the incoming/Inbound rules and Outgoing/Outbound rules traffic.
+		
+			Ubuntu Machine --> My WebApplication --> IP_Address:Port 
+			
+			Jenkins --> by default jenkins run in port 8080
+			
+		Linux Machine :::
+			Linux Commands :::
+			
+				Always the package managers can be executed using root user access!
+				
+			git --> Source Code Management Tool
+			
+			ubuntu 
+			
+				sudo -i
+				
+				apt update -y
+				apt install git -y
+				apt remove git -y 
+				
+				git --version 
+				
+			AmazonLinux2 (previous version)
+			
+				sudo -i
+				yum update -y
+				yum install git -y
+				yum remove git -y
+		
+			Security Group!
+			
+				port 22 -> 
+				How to create new security Group based on Applications.
+					Jenkins/Tomcat/Nginx 
+			
+			Next : Install 
+				Jenkins/Ansible
+				
+################
+4th August 2023
+################					
+				
+				
+			Install some tools and services :
+			
+				Package :
+					GIT -- Tools - using git cli command, we access git.
+					
+					jenkins/tomcat/nginx --> Tool --> run as a service - It is accessible thru web browser
+						It shd be enabled with its default port.
+						Jenkins by default runs in port 8080
+					
+					Install Jenkins :::		https://www.jenkins.io/doc/book/installing/
+						Jenkins is one of the build Orchestration Tool. 
+						Jenkins is a Master/Slave Architecture. 
+						
+					Installation of any tool :::
+					
+						1. Install Pre-requisites
+						2. Install the actual tool
+						3. Config the tool - post installation activities
+						
+Summary ::
+
+Launch Ubuntu Machine - 20.04
+
+Add Inbound rule in security Group.
+	8080
+	All Traffic ==> 
+
+Install Java :
+
+sudo apt update
+sudo apt install openjdk-17-jre
+java -version
+
+Install Jenkins :
+					
+				
+curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key | sudo tee \
+  /usr/share/keyrings/jenkins-keyring.asc > /dev/null
+  
+echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
+  https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
+  /etc/apt/sources.list.d/jenkins.list > /dev/null
+  
+sudo apt-get update
+ 
+sudo apt-get install jenkins -y
+			
+jenkins --version 
+
+To Check the status of Jenkins Server :::
+
+systemctl status jenkins
+systemctl stop jenkins
+systemctl start jenkins
+systemctl restart jenkins
+systemctl enable jenkins 		==> To make jenkins as startup service
+
+To Access Jenkins ::
+
+	<external_IP_Addr>:8080
+			
+Jenkins Plugins are extension to Jenkins.		
+
+In future ::
+		Docker 
+		Ansible
+		Terraform
+		Prometheus
+		Grafana
+		Kubernetes
+		
+Working with EC2 Instances :::
+
+	Ubuntu 
+		Start/stop/terminate
+	Install/Update/remove the packages 
+	Manage Security Group 
+	How to install Jenkins kind of services by enabling the Ports.
+	
+EC2 Instance :::
+
+	Authentication :::
+	
+		- Password based
+		- Token based 
+		- Key based 
+		- Passwordless auth
+		- MFA 
+		
+	IAM Services ::::
+	
+		It is used to establish secured access to AWS Resources.
+		
+		RBAC - Role Based Access Control 
+		
+		
+		100 Members in my DEV_Team
+		
+		Developer_Group		--> Assign the required access at the group level.
+		
+		Lead_Group
+		
+		Appln_Owner_Group
+			
+				
+		https://198147585319.signin.aws.amazon.com/console
+		devopsuser1
+		
+		
+		S3 		==> This can be accessible using web url/Access point
+		
+		EBS 	==> This can be accessible using EC2 Instances 
+		
+		EFS 	==> This can be accessible using EC2 Instances as well as web url/Access point
+		
+		
+		Container Service :::
+		
+			ECS 
+			
+			ECR 
+			
+			EKS 
+			
+			IP -- Static IP / Dynamic IP
+			
+################
+7th August 2023
+################
+
+		AWS Services 
+		
+		Assignment
+		
+		30 GB EBS 
+		
+		Cache Memory.
+		
+			ECS	
+			ECR 
+			EKS 
+		
+		AWS DevOps Services ::::
+		
+		
+		DevOps Tools/Service :::
+		
+			Open-Source DevOps Tools :
+				git, jenkins, Maven Integration, ansible, docker, kubernetes, terraform, maven, prometheus, grafana
+			
+			Managed Services : AWS/Azure/GCP :::
+				AWS :::
+				
+					Code Commit
+					Code Build 
+					Code Pipeline 
+					Code Artifacts 
+					Code Deploy 
+					Code Test 
+					
+			
+				
+				
+################
+8th August 2023
+################
+
+
+		Linux Fundamentals :::::
+		
+		
+		Environments :::
+		
+		DEV (VM)
+		QA1,2,3,4  (VM)
+		UAT	(VM)						===> PROD -- End User (Static)
+														Load Balancer
+														Ingress 
+														
+														
+		Linux Fundamentals :::::
+		
+			Operating System :::
+			
+			Windows 
+			Android 
+			MacOS
+			Linux 
+			
+		Linux is one of the Light weight operating systems 
+			It is very much reliable when compared to other OS
+			It is Open-Source, with less resource utilization
+			It is Command Line Interface - CLI 
+			
+		Linux Distributions :
+			RHEL 
+			Centos 
+			Debain/Ubuntu - Support GUI
+			Fedora 
+			
+		Shell Scripts --> 
+			Collection of Linux Commands. 
+			
+		What is actually Expected form any Operating System ???
+		
+			- Access to Machine 
+			- Manage the Users
+				Create Users 
+				Alter users
+				Grant Access to User to work on any resource/Application 
+			- Manage the Applications 
+				Install/Remove/Upgrade
+			- File Management 
+				- Create/Delete/Update 
+				- Grant access to files
+				- Revoke Access  files 
+			- Handling Remote Servers -- Working with Networking - Hybrid/single cloud/Multi-Cloud - AWS/AZure
+				- Establish connection to another Machine
+						SSH Based Connection
+				- What level of Authentication we create ?
+						Password based Authentication
+						Passwordless Authentication
+						Token Based Authentication
+						Key Based Authentication
+				- What level of Authorization we create ?
+			Automation -- Scripts 
+				- Shell Scripts 
+				
+			
+			
+			
+		- Linux Misc. Action/Commands 
+		
+			System Update!
+			
+			IAAS (or) PAAS ???
+			
+		Package Udpates -- Security Patches/tools Patches
+		
+		
+		Package Managers ::: apt/yum/dnf
+			apt update -y
+			yum update -y 
+			dnf update -y
+
+		Linux Distributions :
+			RHEL 							yum update -y 
+			Centos 							yum update -y 
+			Debain/Ubuntu - Support GUI		apt update -y			
+			Fedora 							dnf update -y	
+						
+		root user :		--> In Linux Machines, only root user id will have complete access to the system to work with pkg mgmt.
+		
+			sudo -i 
+			hostname -i
+			ip addr 
+			
+		- Manage the Applications 
+			Install/Remove/Upgrade
+			
+		- File/Directory Management  
+		
+			Linux CLI Commands 
+				
+				- Explore the System Directories
+				- create a dir
+				- Create Files 
+				- Working with Files
+				
+			Linux -- The core of Linux OS - kernel / Namespaces 
+				
+		
+		pwd 
+		ls 
+		cd <dir_name>
+		cd ..
+				
+   50  hostname -i
+   51  ip addr
+   52  clear
+   53  history
+   54  cear
+   55  clear
+   56  apt update -y
+   57  apt install git
+   58  clear
+   59  pwd
+   60  ls
+   61  cd /
+   62  pwd
+   63  ls
+   64  cd etc/
+   65  ls
+   66  clear
+   67  ls
+   68  cd ..
+   69  clear
+   70  ls
+   71  cd opt
+   72  ls
+   73  cd var
+   74  cd ..
+   75  cd var/
+   76  ls
+   77  cd lib/
+   78  ls
+   79  cd jenkins/
+   80  ls
+   81  which java
+   82  which jenkins
+   83  cd /usr/bin
+   84  ls
+   85  clear
+   86  cd /
+   87  clear
+   88  cd /usr/lib
+   89  ls
+   90  clear
+   91  cd ~
+   92  clear
+   93  ls
+   94  mkdir demodir1
+   95  ls
+   96  cd demodir1/
+   97  ls
+   98  cd ..
+   99  ll
+  100  clear
+  101  ls
+  102  cd demodir1/
+  103  ls
+  104  cd ..
+  105  cd demodir1/
+  106  pwd
+  107  mkdir sub-dir1
+  108  ls
+  109  echo "Hello Everyone"
+  110  echo "Hello Everyone" >> file1.txt
+  111  ls
+  112  cat file1.txt
+  113  echo "Hello Team" >> file1.txt
+  114  cat file1.txt
+  115  clear
+  116  ls
+  117  cat file1.txt
+  118  echo "dummy record" > file1.txt
+  119  cat file1.txt
+  120  echo "Hello Team" >> file1.txt
+  121  clear
+  122  cat file1.txt
+  123  echo "Hello Everyone" > file1.txt
+  124  cat file1.txt
+  125  touch  file2.txt
+  126  ls
+  127  cat file2.txt
+  128  clear
+  129  vi file3.txt
+  130  ls
+  131  cat file3.txt
+  132  vi file4.txt
+  133  cat file4
+  134  cat file4.txt
+  135  clear
+  136  ls
+  137  cat file4.txt
+  138  vi file4.txt
+  139  cat file4.txt
+  140  ls
+  141  cp file4.txt file4-bkup.txt
+  142  ls
+  143  clear
+  144  cat file4
+  145  cat file4.txt
+  146  cat file4-bkup.txt
+  147  clear
+  148  ls
+  149  cd sub-dir1/
+  150  ls
+  151  cd ..
+  152  ls
+  153  cp file4-bkup.txt sub-dir1/
+  154  cd sub-dir1/
+  155  ls
+  156  pwd
+  157  cd ..
+  158  ls
+  159  mkdir sub-dir2
+  160  ls
+  161  cd sub-dir2/
+  162  ls
+  163  cd ..
+  164  ls
+  165  mv file4-bkup.txt sub-dir2
+  166  ls
+  167  cd sub-dir2/
+  168  ls
+  170  history
+		
+			
+		
+		
+			Create/Edit files using vi editor 
+			
+				$ vi file2.txt
+					press i 					# to get into insert mode
+				  asdfasdfasdf
+					
+					press esc and type :wq 		# to write and quit
+					
+					press esc and q!			# Exit from the file without saving
+					
+################
+10th August 2023
+################
+
+			- Access to Machine 
+			- Manage the Users
+				Create Users 
+				Alter users
+				Grant Access to User to work on any resource/Application 
+			- Manage the Applications 
+				Install/Remove/Upgrade
+			- File Management 
+				- Create/Delete/Update 
+				- Grant access to files
+				- Revoke Access  files 
+			- Handling Remote Servers -- Working with Networking - Hybrid/single cloud/Multi-Cloud - AWS/AZure
+				- Establish connection to another Machine
+						SSH Based Connection
+				- What level of Authentication we create ?
+						Password based Authentication
+						Passwordless Authentication
+						Token Based Authentication
+						Key Based Authentication
+				- What level of Authorization we create ?
+			Automation -- Scripts 
+				- Shell Scripts 
+				
+				
+~~~~~~~~~~~
+
+			- File Management 
+				- Create/Delete/Update 
+				- Grant access to files
+				- Revoke Access  files 
+
+
+			- Create/Update 
+			
+			- Delete/remove file/dir :::
+			
+				rm file1.txt
+				rm -f file1.txt 
+				
+				rm -rf dir1 
+				
+				
+			Linux File Access Mode Levels :::
+			
+			-rw-r--r--
+				
+			----------
+			
+			drwxrwxrwx		
+			
+			
+			-			====> Denotes the type of component 	==> - / d 	i.e., file / directory
+			
+			 ---		====> Denotes the access at owner level ==>	rwx		i.e., read / write / execute 
+			
+			sample.sh 	root user is the owner
+			file.txt    root user is the owner 
+			
+			-rwx
+			-rw-
+				
+			sample1.sh 	root user is the owner  / devuser1
+			
+			-rwxr-xr--
+			
+			In general, 
+			
+				Owner 			devuser1 
+				Group users		devgroup1
+				Common users	testuser1	/ testgroup1
+		
+			File Access Mode :::
+			
+			----------
+			drwxrwxrwx
+			
+			
+			-rwxr-x--- and -rwxr-xr--
+			
+			chmod 777 file1
+
+			chmod 777 dir1/
+			
+			
+		Multiplie users ::::
+		
+		Linux User Management :::
+		
+			root user 	 ---> Admin level user
+			
+			default user ---> ubuntu / ec2-user 
+			
+		DevOps Team :::
+		
+			devopsadmin ::
+				- created 
+				- Enable access to this user
+		
+			To Create User in Linux :::
+			
+			Run te following commands as a root user :
+			
+				useradd devopsadmin 
+				useradd -m -d /home/devopsadmindir devopsadmin1 
+				
+				passwd devopsadmin 
+				
+				NEW PASSWORD:
+				RETYPE NEW PASSWORD:
+				
+			su - devopsadmin
+			
+			Jenkins_Server :::
+				default user ---> ec2-user 
+			docker 
+			ansible 
+				
+			useradd jenkinsadmin 
+				
+				/var/lib/jenkins $ ll  
+				
+			useradd dockeradmin 
+			useradd ansibleadmin 
+				chmod 
+				chown -R jenkinsadmin jenkinsadmin /var/lib/jenkins/
+				
+				[root@ip-172-31-40-188 mydir1]# chown devopsadmin myscript1.sh
+				
+				chown devopsadmin /root/mydir1/myscript1.sh
+				
+				cat /etc/group
+				cat /etc/passwd
+
+
+			User_ID 
+			Group_ID 
+			Service_ID 
+			
+			
+			Jenkins_Server :::
+			
+				create huge list of files/artifacts 
+				
+				Maintenance of Jenkins Server :::
+					- Periodically I need to delete all the outdated files & Artifacts.
+						- weekly basis
+						
+						/var/lib/jenkins/workspace/*
+		
+					Valid Service_ID to access this path ?	
+
+################
+11th August 2023
+################				
+				
+				User Management :::
+				
+					Password based Authentication
+					Key Based Authentication
+						SSH Keys 
+							Private key 
+							Public key 
+							Authorized Key 
+					Passwordless Authentication
+					Token based Authentication
+						-> Size 16 - 24 chars 
+				
+					
+
+				vi /etc/ssh/sshd_config
+				service sshd reload
+				
+				hostname, username, keys
+				
+				ssh-keygen 
+				
+				id_rsa  			--> Private key 
+				id_rsa.pub			--> public key
+		
+				ssh-copy-id devopsadmin@172.31.38.80	
+
+
+				
+
+				ssh devopsadmin@172.31.38.80
+				
+				VM in ur aws platform 
+				
+				mobaxterm to connect to ur VM ???
+				
+				hostname, username, keys(*.pem)
+				
+				
+			Remote Server Access ::::
+			
+				Source Machine				IP_Addr, (SSH - Port 22), userid, ssh-keys
+					Target Machine 			IP_Addr, (SSH - Port 22), userid, ssh-keys
+						
+				In Source_Machine ::
+				
+					su - devopsadmin
+					devopsadmin $ ssh-keygen
+					 give enter to go with default path 
+					 give enter 
+					 give enter
+					
+					you should able to see :
+						id_rsa
+						id_rsa.pub 
+					
+					ssh-copy-id <target_Machine_UserName>@<target_machine_private_ip>
+					ssh-copy-id devopsadmin@172.31.38.80
+					
+					yes
+					
+					enter
+				
+					ssh devopsadmin@172.31.38.80
+					
+					Copy the files from one server to another server!!!
+					
+					
+					scp filefromserver1.txt devopsadmin@172.31.38.80:/home/devopsadmin
+					
+					amazon-linux-extras install epel -y
+
+[devopsadmin@ip-172-31-40-188 ~]$ history
+    1  exit
+    2  pwd
+    3  ls
+    4  ls -a
+    5  ls
+    6  ls -a    7  exit
+    8  clear
+    9  ls -a
+   10  exit
+   11  clear
+   12  ls -a
+   13  ssh-keygen
+   14  ls -a
+   15  cd .ssh/
+   16  ls
+   17  clear
+   18  ls
+   19  cat id_rsa
+   20  cat id_rsa.pub
+   21  clear
+   22  ssh-copy-id devopsadmin@172.31.38.80
+   23  ls
+   24  cat id_rsa.pub
+   25  cat known_hosts
+   26  cd ~
+   27  clear
+   28  ssh devopsadmin@172.31.38.80
+   29  cd .ssh/
+   30  ll
+   31  cat id_rsa.pub
+   32  ssh devopsadmin@172.31.38.80
+   33  clear
+   34  ls
+   35  cd ~
+   36  ls
+   37  echo "rec1" >> filefromserver1.txt
+   38  ls
+   39  scp filefromserver1.txt devopsadmin@172.31.38.80:/home/devopsadmin
+   40  cat filefromserver1.txt
+   41  scp filefromserv.txt devopsadmin@172.31.38.80:/home/devopsadmin
+   42  cd .ssh/
+   43  cat id_rsa
+   44  ls
+   45  pwd
+   46  cd ~
+   47  pwd
+   48  cd /
+   49  pwd
+   50  ls
+   51  clear
+   52  amazon-linux-extras
+   53  clear
+   54  amazon-linux-extras
+   55  amazon-linux-extras install epel -y
+   56  exit
+   57  history
+
+***************************************************************************8
+
+
+					
+  139  pwd
+  140  ll
+  141  visudo
+  142  cat /etc/passwd
+  143  cat /etc/groups
+  144  cat /etc/group
+  145  clear
+  146  cat /etc/group
+  147  history
+  148  yum update -y
+  149  clear
+  150  su - devopsadmin
+  151  passwd devopsadmin
+  152  vi /etc/ssh/sshd_config
+  153  service sshd reload
+  154  su - devopsadmin
+  155  exit
+  156  vi /etc/ssh/sshd_config
+  157  service sshd reload
+  158  exit
+  159  clear
+  160  vi /etc/ssh/sshd_config
+  161  service sshd reload
+  162  clear
+  163  su - devopsadmin
+  164  amazon-linux-extras install epel -y
+  165  amazon-linux-extras install java-openjdk11 -y
+  166  python --version
+  167  ansible --version
+  168  amazon-linux-extras
+  169  amazon-linux-extras install ansible2
+  170  ansible --version
+  171  history
+  
+  aws
+  linux 
+ 
+ 
+#################
+14th August 2023
+#################
+
+
+	Linux Shell Scripting :::
+	
+		Development Team --> 
+		
+			Development :::
+				
+				Programming Language ::
+				
+					Used to develop the Business Applications
+						D/M/W -
+						Eg.: Java/C#/Python/.Net
+					
+				Scripting Language ::
+					Light weight version of Programming Language
+
+					Used to perform some process automation:
+						Eg.: 
+							shell/python_script/java_script/vb_script/groovy/yaml..........
+							
+					On DevOps Perspective ::
+					
+						To Automate :
+							Continuous Developement to Monitoring...
+							
+							yaml/groovy/shell/python_script 
+							
+							
+				Micro_Service :::
+				
+				E_Commerce Application ::
+				
+				Sign_up ===> User Registration :::
+				
+					3-Tier Architecture :::
+
+						FrontEnd
+						Application_Logic --> 
+						BackEnd(DBase)
+
+			email_ID : asdfasdadfasdfs
+			
+			
+			###################
+
+
+			Client Side Scripting!
+			
+			
+			Linux :::
+			
+				To Fundamentals of Shell Scripting :::
+				
+				Software :::
+					Collection of Programs 
+						Program :
+							Set of Instructions  --- based on the high level language
+							 Programming/Scripting Language
+							 
+				Concepts ::::
+				
+					Data!
+						
+					1. Variables			x = 10
+					2. What type of variables ? 
+					3. How to handle it?
+						At runtime?
+						Once data is received the data ???
+						store the data !
+						
+							Variables
+							Alpha-Numeric x = 10
+								read x
+							Array x[10] = {1,2,3,4,5,6,7,8,9,0}
+								loops 
+								for/while/do-while loop
+								 read x[i] 
+								 
+							File Handling :
+								stored in the form of files 
+									create / write / read / delete / update
+							
+							Database : 
+								Tables - row/columns - relational - which help to handle random data.
+							
+							
+				shell scripts to interact with Linux Machine
+				
+				Python script to invoke shell script to manage jenkins server
+				
+				CLI 
+				
+				cmd prompt ???
+				
+					is used to interact with Operating System 
+					
+						Linux - bash	--> shell/bash ==> command/scripts
+						window - cmd    --> powershell
+						
+							Hybrid --> 
+						
+						
+				AWS Instances :::	--> Provisioning the servers 
+				
+						IAC Tools 	--> Terraform 	- Provisioning the servers  ->  HCL  
+									--> Ansible 	- To Config the servers		->  YAML
+									
+								Python scripting	==> Provisioning the servers / Config the servers	
+								
+								Shell Scripting 	==> Provisioning the servers / Config the servers
+								
+								
+Linux Shell Scripting examples ::::
+
+		Scripting is completely based upon your logical thinking!		
+		
+			echo "Hello"
+		
+		Calculate sum of two numbers !
+		
+			Declare two variables (a,b)
+			Assign values for each variable 
+			print a + b
+
+			Declare two variables (a,b)
+			Assign values for each variable 
+			print a + b
+
+			Declare two variables (a,b)
+			Assign values for each variable 
+			print a + b
+
+			Declare two variables (a,b)
+			Assign values for each variable 
+			print a + b			
+			
+			
+			Functions !
+			
+			sum()
+				Declare two variables (a,b)
+				Assign values for each variable 
+				print a + b	
+			
+			call sum() 
+			call sum()
+			
+	
+		
+
+Create a script file as sample1.sh
+
+#!/bin/bash
+#
+echo "Hello World"
+
+save & exit 
+esc:wq
+
+$ ll
+
+chmod 755 sample1.sh
+
+./sample1.sh
+
+								
+								
+				
+							
+				
+					
+							
+				
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+###############################################################################################################################################
+###############################################################################################################################################
+###############################################################################################################################################					
+
+
+	Linux Scripting Language :::
+
+	Linux or any OS ::: 	Terminal ===> CLI used to interact with OS.
+
+
+	> echo "rec1" >> file.txt  thousand files ???
+	> echo "rec1" >> file.txt 
+
+	Automation Scripts :::
+
+		echo "rec1" >> file.txt
+
+
+	Progamming Lang.	===>  	It is used to develop the business application.
+					It is where developer write the business Logics.
+					It include Application Development Frameworks - build, compile , test, create artifacts.
+					E.g.: JAVA, C#.Net, C, C++, Python, NodeJS.... used to create Application pgms/software.
+						int sno = 1001;
+
+	
+	3-tier Application ::
+
+		Front End - UI	--> 	HTML ///
+
+		Business Logic ==> Used to recv. the user request and process the request using database. --> Application Programming.
+
+		BackEnd	- Database --> store the user information - MYSQL/ORACLE
+
+
+	Scripting Lang. 	===>	It is lightweight entity when compared to Progamming Lang.
+					It is used to create some process automation.
+					It is NOT for application Development.
+					E.g.: VBScripts, JavaScripts, python-script, shell, yaml, groovy scripts 
+						sno = 1001
+						sname = asdfasd
+		
+					Client/Server Side Scripting
+
+
+
+echo == output -- used to print the statement
+print
+println
+cout
+
+
+	Linux Script :::
+
+		Building Blocks :::
+
+		Data!
+
+			variables     		a = 5 ===> c:/memory loc.
+			type - datatype
+			size - int,string,float
+			Array ==> mobile_number[38] = 12312313,........,38
+			Validation :::
+				IF, switch case statement
+			Iteration - Loops :::
+				for, while, do-while
+			Store the data ::
+				Flat files -- 
+					craete, open, read, write, udpate, delete 
+
+				Database 		used to organize the relation data 	
+					Relational Database Management System
+					Rows and Columns 
+					Stud#	Stud_Name	Contact#
+					S101	2342342342	ajhscasdhbashdfbasdf
+			Remote Servers 
+					
+		
+
+	Shell Script :: DevOps Perspective :::
+
+		Installation of Tools & Services
+		Managing the Users and Credentials
+		Manage the Servers/Storage Volumes
+		Automate the process :
+			build, deployment, backup & Recovery....
+
+		Fundamental Knowldege about shell scripting
+
+	Sample Scripts :::
+
+		
+
+
+
+
+
+Programming Lang / Scripting Lang. 
+
+	Algorithm 	: 	Step by step process to perform a task.
+				Can be written in high level lang.(English)
+
+	Psudo Code	:	It is also same like algorithm, but it is not written in high level lang.(English)
+				It is written based on the specific programming/scripting Lang. 
+
+	program/script 	:	The actual source code written based on the algorithm
+				Should be written by following the proper syntax of programming/scripting Lang.
+
+
+Req. Analysis
+Design
+Code
+
+shell 
+
+	Read the input value 1
+	Read the input value 2
+	Calculate c as sum of inp1 and inp2
+	display the value of c
+
+
+Write an algorithm to calc sum of three numbers? 56 45 43
+
+Write an algorithm to calc sum of n numbers? 
+	n = 10 
+	1,2,3,4,5,6,7,8,9,0
+	n = 5
+	1,2,3,4,5
+
+Write an algorithm to find the given number is a prime number or not? 50 ==> 
+	The Number divisible by 1 or by itself.
+
+Write an algorithm to reverse the given string of characters?  Star ==> rats
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Source Code:
+
+#!/bin/bash
+#
+echo "Hello World"
+
+save this file as myfirstscript.sh
+
+	./myfirstscript.sh
+	sh myfirstscript.sh
+	bash myfirstscript.sh
+
+File/Dir Access Management :::
+chmod 			change the File/Dir Permission/Access Mode
+
+vi scriptfile1.sh
+
+chmod 755 scriptfile1.sh
+
+ls -alrt 
+
+Eg.: chmod 744 myfirstscript.sh
+
+chown			Change the Ownership
+
+Eg.:	chown user1:user1 myfirstscritp.sh
+
+
+chown <owner_id>:<group_id> myfirstscript.sh
+
+Should not be used  : 777
+
+Script/
+
+
+###############################################################################################################################################
+###############################################################################################################################################
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+A simple script to print the calender month by default.
+
+Source Code:
+
+#!/bin/bash
+#	     
+echo "The Month is"
+cal # cal command displays current month by default
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+AWS Cloud Platform :::
+
+	Ubuntu AMI
+	Amazon Linux 2 AMI
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+calc. sum of two number ???
+
+	read the input values 
+
+a  = 12
+
+b  = 12
+
+c = $a + $b
+
+echo "$c"
+
+	
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+echo "hello"
+
+echo "$var1"
+
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+A simple script to read user input and perform operations with them.
+
+Source Code:
+
+#!/bin/bash
+#
+
+echo -n "Enter number 1 : " # -n option supresses newline
+read NUM1 # Read the user input from Standard Input and store in Variable NUM1
+
+echo -n "Enter number 2 : "
+read NUM2
+
+SUM=$(($NUM1 + $NUM2)) # Arithmetic expansion using double parentheses
+echo "The sum is $SUM"
+
+SUM=`expr $NUM1 + $NUM2` # Arithmetic expansion using backticks. 
+			#Usage of expr command to evaluate the expression
+echo "The sum is $SUM"
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+A script to show usage of if condition
+
+#Operators :: 6 Operators
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Source Code:
+
+#!/bin/bash
+
+NUM1=1 # variabe assignment
+NUM2=2
+
+if [ $NUM1 -gt $NUM2 ] # -gt is to test integer numbers
+then
+    echo "NUM1 > NUM2"
+fi
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+A script to show usage of if else condition
+
+Source Code:
+
+#!/bin/bash
+
+NUM1=2 # Variabe assignment
+NUM2=5
+
+if [ $NUM1 -lt $NUM2 ]  # -lt is to test integer numbers
+then
+    echo "NUM1 < NUM2"
+else
+    echo "NUM1 > NUM2"
+fi
+
+
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+A script to show usage of else if condition
+
+Source Code:
+
+#!/bin/bash
+#
+
+echo -n "Enter a number: "
+read NUM
+
+if [ $NUM -gt 0 ]
+then
+    echo "$NUM is +ve"
+elif [ $NUM -lt 0 ]
+then
+    echo "$NUM is -ve"
+else
+    echo "$NUM is 0"
+fi
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+echo "done"
+
+syntax of if then elif else statement
+
+operators ::: 
+Arithmetic ==>  + - * / %
+Logical
+Relational
+bitwise 
+
+
+== > < != >= <=
+
+-eq -gt -lt -ne -ge -le
+
+
+comparison/conditional/Relational
+
+
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+A script to demonstrate case statement
+
+Source Code:  a e i o u
+
+#!/bin/bash
+
+echo -n "Enter a character: "
+read CHAR
+
+case $CHAR in
+	a) echo "You entered $CHAR which is a vowel";;  # ;; Terminates each option
+	e) echo "You entered $CHAR which is a vowel";;
+	i) echo "You entered $CHAR which is a vowel";;
+	o) echo "You entered $CHAR which is a vowel";;
+	u) echo "You entered $CHAR which is a vowel";;
+	*) echo "You entered $CHAR which is not a vowel";; # Defaults to everything else
+esac
+
+echo "What if you enter upper case letters!!?, Check the next example"
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+A script to demonstrate case statement
+
+Source Code:
+
+#!/bin/bash
+
+echo -n "Enter a character: "
+read CHAR
+
+case $CHAR in
+	a | A) # Test for both Lower or Upper case letter
+		# You may write commands in this fashion too!!, means multiline commands
+		echo "You entered $CHAR which is a vowel"
+		;; # Terminates each option
+	e | E) 
+		echo "You entered $CHAR which is a vowel"
+		;;
+	i | I) 
+		echo "You entered $CHAR which is a vowel"
+		;;
+	o | O) 
+		echo "You entered $CHAR which is a vowel"
+		;;
+	u | U) 
+		echo "You entered $CHAR which is a vowel"
+		;;
+	*)  # Defaults to everything else
+		echo "You entered $CHAR which is not a vowel"
+		;;
+esac
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+A script to demonstrate case statement
+
+Source Code:
+
+#!/bin/bash
+
+echo -n "Oceans are larger than lakes (True or False) : "
+read USER_INPUT
+
+case $USER_INPUT in
+	"TRUE"| "True" | "true")
+		echo "Yes you are right"
+		;; # Terminates each option
+	"FALSE" | "Fasle" | "false")
+		echo "No your are wrong"
+		;;
+	*)  # Defaults to everything else
+		echo "Please enter either True or False"
+		;;
+esac
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+A simple script to show usage of string compare operator = and !=
+
+Source Code:
+
+#!/bin/bash
+
+STR1="Hello"
+STR2="Hello"
+
+if [ ${STR1} == ${STR2} ]
+then
+    echo "Strings match"
+else
+    echo "Strings don't match"
+fi
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+A simple script to show usage of string compare operator -z and -n
+
+Source Code:
+
+#!/bin/bash
+
+STR1="Hello"
+STR2="Hello"
+
+if [ -z "${STR1}" ]
+then
+    echo "String1 is empty"
+else
+    echo "String1 is NOT empty"
+fi
+
+echo ":$STR:"
+if [ -n "${STR2}" ]
+then
+    echo "String2 is NOT empty"
+else
+    echo "String2 is empty"
+fi
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+A simple script to show usage of logical operators
+
+Source Code:
+
+#!/bin/bash
+
+echo -n "Enter a NUM: "
+read NUM
+
+# Check whether a number is between 10 and 20 (Using AND -a operator)
+if [ $NUM -ge 10 -a $NUM -le 20 ]
+then
+    echo "$NUM is between 10 and 20"
+else
+    echo "$NUM is NOT between 10 and 20"
+fi
+
+echo -n "Enter another NUM: "
+read NUM
+
+# Check whether a number is between 10 and 20 (Using OR -o operator)
+if [ $NUM -lt 10 -o $NUM -gt 20 ]
+then
+    echo "$NUM is NOT between 10 and 20"
+else
+    echo "$NUM is between 10 and 20"
+fi
+
+
+
+
+
+
+
+
+
+#!/bin/bash
+
+echo "Hello" 
+
+jdk
+downloaded repo & jenkins io keys 
+yum install jenkins -y
+
+
+
+
+#~~~~~~~~~~~~~
+
+
+#!/bin/bash
+
+echo "Hello"
+echo "Hello Team" >> filez.txt
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+A simple script to show usage while loop
+
+Source Code:
+
+#!/bin/bash
+#
+
+COUNT=0
+
+while [ $COUNT -lt 5 ]
+do
+    echo "Loop count is ${COUNT}"
+    COUNT=$((COUNT + 1))
+done
+
+echo "Done"
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Sum of N natural numbers using while loop
+
+Source Code:
+
+#!/bin/bash
+#
+
+echo -n "Enter a number: "
+read NUM
+
+let SUM=0; 
+let I=1
+while [ $I -le $NUM ]
+do
+	SUM=`expr $SUM + $I`
+	I=$((${I} + 1))
+done
+
+echo "The sum of the first $NUM numbers is: $SUM"
+
+
+
+
+
+
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+A simple script to demonstarte for loop [ Bash syntax ]
+
+Source Code:
+
+#!/bin/bash
+#
+
+COUNT=0
+
+for i in 0 1 2 3 4
+do
+    echo "Loop count is ${COUNT}"
+    COUNT=$((COUNT + 1))
+done
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+A simple script to demonstarte for loop [ C syntax ]
+
+Source Code:
+
+#!/bin/bash
+
+COUNT=0
+
+for ((i = 0; i < 5; i++))
+do
+    echo "Loop count is ${COUNT}"
+    COUNT=$((COUNT + 1))
+done
+
+
+
+
+
+
+
+
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+A script to show the usage of command line arguments, Here we access positional arguments using $1, $2 …
+
+Source Code:
+
+#!/bin/bash
+
+echo "Total no. of argument: $#"
+
+echo "Program name: $0"
+echo "1st argument: $1"
+echo "2nd argument: $2"
+echo "3rd argument: $3"
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ A script to show the usage of command line arguments, Here we access arguments by iterating over $@
+
+Source Code:
+
+#!/bin/bash
+
+echo "Total no. of argument: $#"
+echo "Argument list: $@" # Commonly used
+echo "Argument list: $*"
+
+# Iterate over arguments ($@)
+for ARG in $@
+do
+    echo $ARG
+done
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+A script to show the usage of function
+
+Source Code:
+
+#!/bin/bash
+
+# Function definition
+function print_hello()
+{
+    	echo "====="
+    	echo "Hello"
+    	echo "====="
+}
+
+# Call the function - print_hello
+print_hello
+
+print_hello
+print_hello
+print_hello
+print_hello
+print_hello
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~``
+
+perform email_id validation : asdfasd@asdf.com -- pgm.   - create a func.
+
+
+
+Sign-up module/service
+func()
+sign-in module
+func()
+update_profile Module
+func()
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+A script to show the usage of function and how to pass arguments
+
+Source Code:
+
+#!/bin/bash
+
+# Function definition
+function find_sum()
+{
+    SUM=`expr $1 + $2`
+    echo $SUM
+}
+
+# Pass arguments 10 and 20 to find_sum function
+find_sum 10 20 # 30
+
+# Save the output of function in a variable
+RESULT=`find_sum 100 200`
+echo $RESULT	# 300
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+num1=5
+num2=5
+
+
+sample1.sh
+
+#!/bin/bash
+num1=$1
+num2=$2
+
+num3=$num1 + $num2
+
+num3=$1 + $2 + $3 
+
+echo $num3 
+
+sh sample1.sh 34 45 43
+
+
+
+
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+A script to show the usage of function and how to pass arguments Inside function:
+$# – Gives no. of arguments
+$@ – Contains the arguments to function
+Accessing function arguments is similar to accessing command line arguments
+
+Source Code:
+
+#!/bin/bash
+
+# Function definition
+function find_sum()
+{
+    echo "Arg count: $#"
+    echo "Arg list: $@"
+    SUM=0
+    # Iterate over function arguments
+    for ARG in $@
+    do
+	SUM=`expr $ARG + $SUM`
+    done
+
+    echo $SUM
+}
+
+# Call find_sum with many arguments
+find_sum 1 2 3 4 5
+
+find_sum 10 20
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+A script to show how to declare an array and access its elements
+
+Source Code:
+
+#!/bin/bash
+
+# Declare an array
+FRUITS=(apple mango banana orange)
+
+# Print value of each element
+echo "element 0: ${FRUITS[0]}"
+echo "element 1: ${FRUITS[1]}"
+echo "element 2: ${FRUITS[2]}"
+echo "element 3: ${FRUITS[3]}"
+
+# Print size / length of array
+echo "Length: ${#FRUITS[@]}"
+echo "Whole array: ${FRUITS[@]}"
+echo "Whole array: ${FRUITS[*]}"
+
+echo "Looping over array elements"
+# Iterate over array elements
+for ITEM in ${FRUITS[@]}
+do
+    echo $ITEM
+done
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+A script to store all cmd line arguments to a array and prints
+
+Source Code:
+
+#!/bin/bash
+
+ARG=($*)
+
+echo ${ARG[0]}
+echo ${ARG[1]}
+echo ${ARG[2]}
+echo ${ARG[3]}
+echo ${ARG[4]}
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+A script to demonstrate different types of array access
+
+Source Code:
+
+#!/bin/bash
+#
+
+array=(zero one two three four five)
+
+# Element 0   1   2    3   4   5
+echo ${array[0]}       #  zero
+echo ${array:0}        #  zero, Parameter expansion of first element,+ starting at position # 0 (1st character).
+echo ${array:1}        #  ero, Parameter expansion of first element, + starting at position # 1 (2nd character).
+echo "--------------"
+echo ${#array[0]}      #  4, Length of first element of array.
+echo ${#array}         #  4, Length of first element of array. (Alternate notation)
+echo ${#array[1]}      #  3, Length of second element of array. Arrays in Bash have zero-based indexing.
+echo ${#array[*]}      #  6, Number of elements in array.
+echo ${#array[@]}      #  6, Number of elements in array.
+echo "--------------"
+
+# Quoting permits embedding whitespace within individual array elements.
+array2=([0]="first element" [1]="second element" [3]="fourth element")
+
+echo "The ${array2[0]}"   # first element
+echo "The ${array2[1]}"   # second element
+echo "The ${array2[2]}"   # Skipped in initialization, and therefore null.
+echo "The ${array2[3]}"   # fourth element
+echo "The lenght of ${array2[0]} ${#array2[0]}" 	   # 13 (length of first element)
+echo "The number of elements in the array ${#array2[*]}"  # 3  (number of elements in array)
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+A script to demostrate usage of sed command
+
+Source Code:
+
+#!/bin/bash
+
+# Basic text substitution using sed
+echo "Bash Scripting Language" | sed 's/Bash/Perl/'
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Check whether the given Number is PRIME Number or NOT :
+
+#!/bin/bash
+echo "enter number"
+read num
+function prime
+{
+for((i=2; i<=num/2; i++))
+do
+  if [ $((num%i)) -eq 0 ]
+  then
+    echo "$num is not a prime number."
+    exit
+  fi
+done
+echo "$num is a prime number."
+}
+r=`prime $number`
+echo "$r"
+
+
+a/b = Q
+a%b = R
+
+###############################################################################################################################################
+###############################################################################################################################################				
+
+
+
+
+		Linux shell scripts :
+		
+		Application Development Fundamentals :
+			Java Programming 
+			Python 
+		
+		
+		useradd -m -d /home/devopsuser devopsuser
+		
+		ls -alrt
+
+		chown -R devopsadmin:devopsadmin /etc/ansible
+		
+		shell Scripts!!!!
+		
+			vi sample1.sh 
+			
+		chmod 755 script1.sh
+		
+		
+	Scripting Lang. (vs)
+	
+		handle_variables/Conditions/iterations/files/remote_Servers/
+		
+	variable can be static / dynamic 
+	
+	
+	4 --> even number ?
+	
+	4%2 = remainder = 0
+	
+#!/bin/bash
+# Define for loop in C-style format
+for (( n=1; n<=$1; n++ ))
+do
+    # Check the number is even or not
+    if (( $n%2==0 ))
+    then
+        echo "$n is even"
+    else
+        echo "$n is odd"
+    fi
+done
+
+
+#!/bin/bash
+# Define for loop in C-style format
+upper_limit=$1
+input_param2=$2
+echo @input_param2 
+
+for (( n=1; n<=$upper_limit; n++ ))
+do
+    # Check the number is even or not
+    if (( $n%2==0 ))
+    then
+        echo "$n is even"
+    else
+        echo "$n is odd"
+    fi
+done
+
+script1.sh var1 var2
+
+199 ==> even or odd ??
+
+Check whether the given number is even or odd ?
+
+#!/bin/bash
+n=$1
+# Check the number is even or not
+if (( $n%2==0 ))
+then
+	echo "$n is even"
+else
+	echo "$n is odd"
+fi
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TO CHECK FOR PRIME NUMBER :
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Iterate from 2 to n/2, i as looping variable.
+If the number is divisible, Then  - The number is not a prime number. 
+Assign a flag = 1;
+If the flag != 1, say  - The number is a prime prime number
+Stop
+
+
+prime_or_not.sh
+
+#!/bin/bash
+echo "Enter a number: "
+read num
+i=2
+f=0
+while [ $i -le `expr $num / 2` ]
+do
+if [ `expr $num % $i` -eq 0 ]
+then
+f=1
+fi
+i=`expr $i + 1`
+done
+if [ $f -eq 1 ]
+then
+echo "The number is composite"
+else
+echo "The number is Prime"
+fi
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+#!/bin/bash
+num=150
+if [ $num -gt 100 ] && [ $num -lt 200 ]
+then
+        echo "The number lies between 100 and 200"
+fi
+
+
+
+*********************************************************
+
+
+#!/bin/bash
+echo "Enter value for x: "
+read x
+echo "$x"
+
+a="Team"
+echo "Hello $a"
+b="Hai"
+echo "Hello $b"
+echo "Hello $1 $2"			Hello 50 40
+sudo yum install vim -y
+
+
+./script1.sh 50 40 
+80
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*********************************************************
+
+# !/bin/bash
+num=150
+if [ $num -gt 100 ] && [ $num -lt 200 ]
+then
+        echo "The number lies between 100 and 200"
+fi
+
+*********************************************************
+
+# !/bin/bash
+
+if [ $# -ne 1 ]
+then
+        echo "You need to enter the year."
+        exit 1
+fi
+
+year=$1
+
+if [ $[$year % 400] -eq "0" ]
+then
+        echo "$year is a leap year!"
+elif [ $[$year % 4] -eq 0 ]
+then
+        if [ $[$year % 100] -ne 0 ]
+        then
+                echo "$year is a leap year!"
+        else
+                echo "$year is not a leap year."
+        fi
+else
+        echo "$year is not a leap year."
+fi
+
+
+*********************************************************
+
+# !/bin/bash
+Balance=900
+if ((Balance < 0)); then
+  echo "Balance is less than zero, Please add more funds else you will be charged penalty"
+elif ((Balance == 0)); then
+  echo "Balance is zero, please add funds"
+else
+  echo "Your balance is above zero."
+fi
+
+
+*********************************************************
+
+#!/bin/bash
+read -p "Enter theory marks: " quiz_marks
+read -p "Enter practical marks: " assignments_marks
+if (($quiz_marks > 50));
+then
+  echo "Please check the input marks for quiz."
+elif (($assignments_marks > 50));
+then
+  echo "Please check the input marks for assignments."
+else
+  echo " Your total marks: sum=$(( quiz_marks + assignments_marks))"
+fi
+
+#######################################################################
+
+#!/bin/bash
+quiz_marks=80
+assignments_marks=70
+if (($quiz_marks > 50));
+then
+  echo "Please check the input marks for quiz."
+elif (($assignments_marks > 50));
+then
+  echo "Please check the input marks for assignments."
+else
+  echo " Your total marks: sum=$(( quiz_marks + assignments_marks))"
+fi
+			
+			
+			
+
+calculate sum of two numbers
+
+calculate sum of 'n' numbers
+
+ n = 5 
+ 
+ 
+ read 5 values 
+ 
+ 4,5,7,6,3
+ 
+ 4+5+7+6+3 
+ 
+find whether the given number is even or odd ?
+
+mod 
+
+a/b ==> 
+
+a=10
+b=5
+
+a/b ==> 2 Q
+a%b ==> 0 R
+
+
+10
+3
+
+a/b ==> 3 Q
+a%b ==> 1 R
+ 
+a=5
+
+a%2 == 0 R
+
+find whether the given number is prime number or not?
+
+5
+
+
+###########################################################################################################
+
+Module : 2
+#################
+15th August 2023
+#################
+
+Application Development Fundamentals :
+• Overview of Application Development
+• Various Types of Application
+• Introduction to Databases
+• Multi-tiered application architecture
+• Overview of Monolithic and Microservices
+
+
+	Applications are nothing but the domain 
+	
+		Banking Application 
+		Insurance Application 
+		Retail Application
+		
+	Software are collection of Programs :
+	
+	Program is the set of Instruction/Task
+	
+	
+	Types of 
+	
+	
+	Software :::		Software are collection of Programs :
+	
+		Application Software :
+		
+			Desktop Application
+			Mobile Application
+			Web Application
+				Banking Application 
+				Insurance Application 
+				Retail Application 
+		
+		System Software :
+		
+			Operating System - OS - W/M/L/A
+			Middleware Products
+			Micro-Chip level programming
+			Embedded Applications
+			
+		Underlying Hardware!
+		
+		
+		Based on Workload :::
+		
+			Web Application ::::		Static Web appln./ Dynamic web appln.
+			
+				Front_end / Application_Logic(C#.Net/Java/Python) / DataBase(SQL/ORACLE)		---> 3-Tier Architecture
+
+			private cloud / public cloud ??
+
+		
+		Monolith Application Architecture
+				(vs)
+		Micro-Service Based Application Architecture
+				
+					
+				Monolith Application Architecture  :::
+					
+						The Application Components are tightly coupled.
+						
+				Micro-Service Based Application Architecture :::
+				
+						The Application is splitted into various services.
+						It is loosely coupled.		
+						
+		
+		Insurance Domain ::: Legacy 
+		
+			Travel/Healthcare/personal/Children
+
+		DevOps Architect/Application Architects/Owners -- We have to do a detailed assessment about the business, process and tools
+		
+		On-Premises ==> Datacenter - Mainframe server 
+		
+		Cloud Adoption --> 
+		
+			Monolith Application --> tightly coupled.
+			
+				- Splitted into micro-services and that be migrated to cloud
+				- All the New applications should be directly developed in cloud based on micro-services architecture
+				- Effort that takes to convert from monolith to micro-services that is very very high & Costly.
+						Docker & Kubernetes 
+						
+				- Reverse Engineering :				
+						To recreate the same using java based web appln.
+						Code Conversion
+						
+				
+		script 		-- appln1.
+		
+			10 funcs		
+						
+		script 			-- appln2.
+					
+			2 funcs		+ 8 func			
+			
+		Micro-Service :::
+		
+		10 services
+		
+		Web_Application :::		Dynamic web appln.
+		
+		Module-1 :::
+		
+			- User_Registration 
+			
+				Application_Logic ::
+							user_name/user_Id/Email_Id/Contact_No/Password_Creation/Address
+					functions 
+						to validate the email - code function			
+			
+		Module-2 :::
+		
+			- User_Sigin
+
+				Application_Logic ::
+							Email_Id/Password	
+									to validate the email - code function
+									
+									
+		What is Database ????
+		
+			To maintain and manage the relational Data.
+				Table
+					Rows / Columns 
+					
+			Data : --> Is just a raw text - without any meaning
+
+			Information : --> Processed Data.
+			
+			What is Information ?
+			
+				INDIA ?
+				
+				INDIA is a Country :: 
+				
+			Storage :::
+			
+			INDIA is a Country	-	File 
+		
+		
+			Database -- It is a collection of Tables 
+			
+			Tables -- are collection of Rows and Columns
+			
+			
+			Name 		Country 
+			Swati		INDIA 
+			asd			PAKI
+			asd			USA
+			
+			Relational Database Management System - RDBMS :::
+			
+			
+Introduction to Java Concepts
+• Overview of Java and its Architecture
+• Compiling Source Code and Packaging Applications
+• Java Console based and Web based Applications
+• Deployment to Tomcat and Consuming Java Applications
+• OOPs Concept Practical Includes
+
+Practical Includes
+
+1. Create a Console based Java Application
+2. Create a Dynamic web Application and Deploy it to Tomcat
+Server			
+	
+	Continuous Improvement!!!!!!
+	
+	
+		The List of Tools to work in this module :::
+			
+			-	Window OS & Mac 			==> Dev Machine
+			
+			- 	Install :			Open Source -
+					- JDK 
+					- Eclipse IDE for Web Development 
+					- Tomcat Web Application Server 
+					- Visual Studio Code
+					- SQL Client 
+					- Python 
+					- GIT 
+					
+					
+#################
+17th August 2023
+#################	
+		
+		echo "Hello" >> file1.txt 
+		
+		Hello 
+		
+		echo "echo 'Hello' " >> ./file2.txt 
+		
+		home/devopsadmin $ echo "echo 'Hello' " >> ./file2.txt
+		
+		
+		home/devopsadmin $ echo "echo 'Hello' " >> home/devopsadmin/tempdir1/file2.txt
+		
+		home/devopsadmin/tempdir1/file2.txt
+		
+		./file2.txt 
+		
+		
+		./file2.txt 
+		
+		cat file2.txt 
+		
+		echo Hello 
+			
+
+
+		The List of Tools to work in this module :::
+			
+			-	Window OS & Mac 			==> Dev Machine
+			
+			- 	Install :			Open Source -
+					- JDK 
+							https://jdk.java.net/20/
+							
+							https://jdk.java.net/java-se-ri/11-MR2
+							
+							
+							downloads jdk package & extract 
+							define environment variable, to access that application across the machine
+													
+							
+					- Eclipse IDE for Web Development  - EE
+							https://www.eclipse.org/downloads/packages/release/kepler/sr2/eclipse-ide-java-ee-developers
+					
+					- Tomcat Web Application Server 
+					
+							https://tomcat.apache.org/download-80.cgi
+					
+					- Visual Studio Code
+					
+							https://code.visualstudio.com/download
+					
+					- SQL Client 
+					
+					- Python 
+					
+					- GIT 	
+			
+https://jdk.java.net/20/
+
+
+#################
+18th August 2023
+#################		
+
+			Java is a Object Oriented Programming Language.
+			
+			Programming 
+			
+				Applications ::::	
+					
+					Desktop/Mobile/Web 		===> 
+					
+				
+			Developers Role ::
+				
+				- Design of Application 
+				- Code
+				- Build 
+				- Test 
+				- Promote to Target Environments 
+			
+			
+			
+			DevOps Engineer Role :::
+
+				
+				--> Type of Programming Language 
+				--> Tools used to develop the Application 
+				--> Tools used to build the Application
+				--> Tools used to perform Automated Testing 
+			
+			Worst Case of DevOps Engineer ?
+			
+				Challenges ??
+				Drawback of DevOps  ???
+				
+			People! ==> are the main challenge!!!!
+			
+			DevOps is all about :	
+					People 
+					Process 	--> are meant for Continuous Improvement
+					Tools		-->  
+					
+			Individual member of DevOps Team ::: 
+					- Update yourself regularly.
+					- Always find the scope for automation.					
+					
+					DevOps - DevSecops - SRE - GitOps - MLOps - AIOps .....
+					
+			Java_Appln ==> approached to onboard their appln to devops. 
+			
+				Automate --> CI/Cd/CD/CT/CM
+				
+			
+			
+			DevOps Engineer Role :::
+
+				
+				--> Type of Programming Language 
+						Java --> How the java pgm is written
+							
+				--> Tools used to develop the Application 
+				--> Tools used to build the Application
+				--> Tools used to perform Automated Testing 			
+			
+			Java Programming :::
+			
+				Architecture ::
+				
+					Simple java program --> *.java ==> Desktop Application 
+					
+					Mirco-services based architecture
+					
+						All the dependencies :::
+						
+						Developer :::
+							*.java ===>
+							
+								Notepad to write the pgms ??
+								compile 
+								create binaries 
+
+								build 
+								test 
+								deploy
+								
+							IDE - Integrated Developement Environment 
+									Eclipse ???
+									- to write java pgm?					==> Code Editor
+									- compile program & create artifacts	==> Build Tool			javac *.java
+									- run the pgm 							==> Hosted Servers(tomcat)/terminals java pgm1
+			
+							Build --> What type of build tool we use ?
+							
+									ant/gradle/maven 
+									
+							MAVEN is a build tool ==> used to compile and create artifacts (binaries - *.war/*.jar)
+							
+							
+					Java --> is called as platform independent language
+							
+					Dev Environment --> I have create java application in windows.
+					
+						create once and run in any platform 
+						
+							Linux/Mac/Android/iOS
+				
+					JVM ==> 
+					
+					sample.java ==> 
+					
+					*.class files 
+				
+				Build Tool Maven
+				
+					Maven is build tool used to identify all the dependencies and plugins required
+						- To perform Automated Build 
+						- To perform Automated Unit Testing
+						- Automatically create the artifacts 
+						
+						
+					Install Maven in the build server 
+					
+						mvn == command we can execute maven build 
+						
+						Maven Architecture
+				
+							- Maven Folder Structure 
+							
+							- pom.xml 
+				
+				
+			--> Java Project Creation using Eclipse :::
+			
+			
+				Type of Projects ::::
+				
+					Simple Java Project :
+					
+						Java_Project 
+							src 
+								app1.java 
+								app2.java
+					
+					Maven Web Application Project 		with All the dependencies :::
+					
+						Java_web_App_Project
+							src
+								/main/java
+										*.java 
+								/test/java
+										*.java 
+							resources 
+								/html 
+								/css 
+								/bootstrap
+								
+							targets/
+								/*.war 
+								
+							pom.xml		==> Used to define all the dependencies and plugins used for Maven Application build
+							
+							
+									create artifacts --> what is name of artifact ?		signin.war
+														 what type of artifact ? war
+														 Automated Unit Testing 
+															JUnit 
+															TestNG 
+															Selenium
+															
+							Maven Goals ::::
+							
+								mvn 
+
+
+		Build Tool :
+
+		Maven Build Tool --> Used to build and Create the artifacts.
+
+		Why Maven ???
+
+
+		signup.java ===> build - plugins, dependencies, Unit testing, tools
+		pom.xml ==> Which defines the application artifacts, plugins and all the required depedencies
+
+
+		How maven download and use the plugins and all the required depedencies>>>
+		Maven Repositories.
+
+			Central repo --> Remote Repo --> Local Repo
+		
+		Maven Project Structure :::
+
+		MVN_Poject1
+			src 
+				main
+					java
+				test
+					java
+			target
+				artifacts *.war / *.jar
+			pom.xml 			==> defines the application artifacts, plugins and all the required depedencies
+			
+				By using Maven Archetypes
+			JRE_Libraries
+			MVN_Libraries
+
+
+		Maven Commands/goal:
+
+		Maven Goals :
+			● mvn clean - to clean the target folder.
+			● mvn compile - to compile the source code
+			● mvn test - to compile and execute junit test cases
+			● mvn package - to compile, test and package the application
+			● mvn install - to install the package to local repository.
+			● mvn deploy - to deploy the package from local repository to remote repository.
+
+
+					mvn clean package ??
+
+
+			MVN_Poject1
+				src 
+					main
+						java
+					test
+						java
+				target
+					artifacts *.war / *.jar  ==>  *.exec application
+					
+				pom.xml 			==> defines the application artifacts, plugins and all the required depedencies
+				
+			
+			Java Spring boot Application Frameworks :::
+			
+			
+					Using Maven we can create ::
+					
+			.Net Framework !!!
+				c#.Net
+				ASP.Net 
+				
+				
+				
+		Java Components ::
+		
+			variables ===> Is an identifier 
+						x = 500
+						
+					Datatype :::
+						
+						x = 500 		Integer / Numeric
+						x = 500.5		floating / decimal
+						x = "Hello"		Char / String 
+						x = "Hello123"	Alpha-Numeric
+					
+					int x = 5;
+					
+				
+				static / dynamic 
+				
+				public / private / protected 
+				
+			Arrays ===>		Is a group of values with same datatype 
+			
+					int x = 5;
+					int x[5] = {5,6,7,8,9};
+						indexed 
+								starts with 0/
+								
+					print x[3] ==> 8
+					print x[0] ==> 5
+					print x[4] ==> 9
+					print x[5] ==> 		Exception / Error ==> Out-of Index/Range Exception.
+					
+			Functions/Methods :::
+			
+				print "Hello" 
+				
+				string disp() {				// Function Definition
+					print "Hello"
+				}
+						
+					
+				disp();						// Function Invocation
+				
+				sum()						// function without argument
+				{
+					int a = 5;
+					int b = 6;
+					c = a + b;
+					return c;
+				}
+				
+				
+				sum();	// 11
+				
+				sum(int a, int b)						// function with arguments
+				{
+					c = a + b;
+					return c;
+				}				
+					
+				sum(5,6);		// 11
+				
+				sum(1,2);		// 3
+				
+				
+				
+			functions 
+			
+			Conditional Statements :::
+			
+				if Statements
+				switch case 
+				
+			Operators ==> 6 types of arithmetic operators ==> ==
+			Logical Operators 
+			
+			Looping statements :::
+			
+				for
+				while 
+				do while 
+			
+					int x[5] = {5,6,7,8,9};
+						index will start from 0
+						x[0] = 5;
+
+				Search for value 7 ?
+				
+					Sequential Search
+				
+				if x[0] == 7 
+				print 7
+				
+				
+			Aritifacts ::::
+			
+				Testing ==> *.war 
+				
+				Execute the artifacts ::::
+				
+			Dev Servers 
+
+			Build Servers 	
+						compile & Create *.war 
+			
+			Test Servers/Target server/Hosted Server 	===> Virtual Machines - VM - Hardware
+					Install Web Application Server - Tomcat/Nginx - software
+					
+					
+				Deploy *.war to Test Server 
+				
+				How to Test this application :::
+				
+					Web Application Server - Tomcat / Nginx
+				
+				
+			
+			Production Servers/Target server/Hosted Server
+				
+				
+				
+				
+
+			
+
+		Create a Maven Console Application
+		Create a Maven Web Application 
+		Create a Maven Springboot Application 	
+
+		
+
+					
+					
+					Web Application :::
+					
+						What the components / dependencies to create web Application ?
+						
+							3-tier 	==> front-end(html/css/bootstrap/php/jsp) / Application_Logic / Back_End(Dbase)
+							2-tier  ==> front-end / Application_Logic
+							1-tier  ==> Application_Logic
+			
+					Micro-Service ==> 
+					
+						Main_program ==> Interact with frontend 
+							sub-program1,2,3,4
+			
+		
+			./mysript.sh a b c 
+	
+	
+#################
+21st August 2023
+#################					
+				
+				
+			Create a Java Console :
+			Create a Java Web Application :	
+			
+			Maven Tool to create -> Console / Webapplications.
+			
+			
+		Create a Maven Console Application :
+				Desktop Application :::	
+						Group_ID
+							org.apache.maven.archetype
+						Artifact_ID
+							maven-archetype-simple
+						
+		Create a Maven Web Application 
+						Group_ID
+							org.apache.maven.archetype
+						Artifact_ID
+							maven-archetype-webapp
+							
+		Create a Maven Springboot Application 
+		
+		Create a Maven Console Application :		
+		Maven Repository :::		https://mvnrepository.com/
+		
+			Maven Remote / Central Repository  
+		
+			Eg.: 
+				<dependencies>
+					<dependency>
+					<groupId>junit</groupId>
+					<artifactId>junit</artifactId>
+					<version>3.8.1</version>
+					</dependency>
+				</dependencies>
+				
+			Maven Local Repository
+			
+			Java Project :::
+			
+				
+				Java_Package 
+					Class 				
+						signin.java 
+
+
+			Package => Collection of classes 
+			
+			Class	=> Collection of Functions/Methods/Variable
+
+		Create a Maven Dynamic Web Application :::
+		
+			
+		Create a Maven Springboot Application 		--> Web Application Framework!
+		
+		
+		Java Console Application :
+		Java Dynamic Web Application :
+		
+		SpringBoot Application :
+		
+#################
+22nd August 2023
+#################
+
+		- A Simple Java Console Application 
+		- A Java Dynamic Web Application 
+		
+		- A Java Maven console Application 
+		- A Java Maven Web Application
+		
+		- Maven Springboot Application.
+		
+		
+		In Eclipse Add Tomcat Server Configuration.
+		
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>www.loksaieta.com</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="jumbotron" style="background-color:white">
+      <img src="https://octodex.github.com/images/spidertocat.png" alt="Spidertocat"
+           class="img-responsive center-block" style="width:250px"/>
+      <h2 class="text-center">Hello Team</h2>
+      <p class="text-center">Application Modernization </p>
+  </div>
+</body>
+</html>
+
+
+
+
+	Application Testing:
+
+	Shift Left Approach 	
+	
+	dev --> qa --> uat --> Prod
+	
+#################
+24th August 2023
+#################	
+	
+		- Simple java program using Notepad/cmd prompt/vi editor
+		
+		- IDEs 
+	
+		- A Simple Java Console Application 
+		- A Java Dynamic Web Application 
+		
+		- A Java Maven console Application 
+		- A Java Maven Web Application	
+				
+		- Maven Springboot Application.		https://start.spring.io/
+		
+		- Testing
+			Junit
+			TestNG
+			Selenium
+	
+	
+		Environments :::
+		
+		Dev
+				1. Unit Testing :	
+				
+		Testing Environment:
+		
+			-> Test Data 
+			-> Test Scenarios 
+			-> Test Cases	
+		
+			QA Testing :
+
+				2. Integration Testing
+				3. Regression Testing
+				4. Performance Testing
+			
+			
+			UAT Testing :
+			
+				5. Acceptance Testing
+
+		
+		Production 
+	
+	
+				Sample.java ===> 
+				
+				dev1
+				dev2
+				dev3
+
+
+			Web application ::::
+			
+			User Login ::
+			
+				-	User_Name :
+				-	Password  :
+				
+					Login_Button	Cancel_Button
+				
+			Web Browser:
+			 chrome, IE, Edge, Firefox,.........
+			 Mobile 
+			
+			
+			Selenium Grid ==> 
+			
+				
+			Scenarios ::: 
+				1. Client side scripting		 
+						all the basic validations 
+							- User_Name --> length, chars, spl char, alpha-numeric content
+							- Password  --> length, chars, spl char, alpha-numeric content
+							
+				2. Server side Scripting
+							- Receive the inputs from user -> User_name,Password,Click_Event
+							
+							- Once login is successful, it will route to next page 
+							
+							- If it is not successful, it will route to error page
+							
+				Website	==> collection of web pages --- 1000s pages
+				
+				Automated Testing tools like selenium:::
+				
+				TestNG ==> Reporting Tool based on JUnit.
+
+				Selenium Test Scenarios :::
+				
+					Create a Selenium WebDriver instance
+					Configure browser if required
+					Navigate to the required web page
+					Locate the relevant web element				screen scraping!!!!
+					Perform action on the web element
+					Verify and validate the action
+
+				
+				
+#################
+25th August 2023
+#################	
+
+
+			Assignment : Linux Assignments ??
+						1. create dir, copy, move the files. 
+						2. Prime no. or not.
+						3. welcome msg using echo.
+						
+					Script :::
+					
+						1. Script to install build tools in a server Linux server ?
+						
+							git 
+							maven
+							
+			Server Provisioning  IAC Tools
+			
+			Server Configuration
+							
+script 1 :					
+#!/bin/bash
+
+# Update package information
+sudo apt update
+
+# Install Git
+sudo apt install git -y
+
+sudo apt install maven -y
+
+# Check Git version
+git --version
+
+
+
+GITHUB :::  --> It is used to version the source code.
+
+
+script2 :
+
+	git clone 
+	mvn clean package    *.war_v2 -- before creating new version, take a bckup of older version - Archive. Artifactory Repository
+	
+	
+script3 : deployment1
+
+	SCP *.war to QA_test_server		*.war_v2 
+	
+script4 : 
+
+	QA_Testing - 
+	
+script4 : deployment3
+
+	SCP *.war to UAT_test_server
+	
+script5 : 
+
+	UAT_Testing - 	
+	
+script6 : 
+
+	PROD			 *.war_v2
+	
+
+
+Groovy 
+
+Yaml
+
+Python Scripts 	
+	
+
+			Implement all the tools that are required to exec.
+			
+			Upstream and Downstream Dependencies.
+			
+			I have master script.
+			
+		Tasks ::
+		
+			1. Write a shell script to install git and maven in Ubuntu Machine.
+			2. Write a script to take a backup of the artifacts to backup server. 
+			3. Install tomcat in the ubuntu machine.
+			
+			
+			a[5] = {2,3,8,4,5}
+
+			
+			a[2]
+			
+			
+			array=(Sample process seven)
+				
+			echo ${array[0]:1}		==> rocess
+								
+			apt install git -y
+			
+
+				
+#################
+28th August 2023
+#################	
+
+		Selenium Demo :
+
+		
+			Create a Selenium WebDriver instance
+			Configure browser if required
+			Navigate to the required web page
+			Locate the relevant web element				screen scraping!!!!
+			Perform action on the web element
+			Verify and validate the action
+
+
+		Jenkins Server :::
+			<public_ip>:8080
+			
+			
+			www.amazon.com
+			
+				In - Add to cart ==> Module 
+				
+				Login 
+				
+				search 
+				
+				add to cart 
+			
+
+
+
+
+
+
+
+
+
+			
+			
+			
+Install JDK
+Install Eclipse
+Download the chromedriver.exe – version should be same as the chrome already installed from this link - https://chromedriver.chromium.org/ - choose for windows
+Create new workspace
+Go to Help Menu -> Eclipse Market Place ==> Install TestNG in Eclipse.
+
+Create Maven Project with simple archetype ==> org.apache.architype group - maven-archetype-simple
+
+Create a folder in project call Drivers and copy the chormedriver.exe in it.
+Update pom.xml file with the required dependencies and plugins like selenium and testNG and compiler
+https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java
+
+
+Create package under src/test/java
+Create Class under this package 
+And all the test script as shown 
+Run as testNG
+
+
+
+package seleniumpkg1;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+public class Testloginpage {
+
+	@Test
+	public void login() {
+		System.setProperty("webdriver.chrome.driver", "./webdrivers/chromedriver.exe");
+		WebDriver driver=new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("http://1.2.3.8:8080/login?from=%2F");
+		WebElement username=driver.findElement(By.id("j_username"));
+		WebElement password=driver.findElement(By.name("j_password"));
+		WebElement login=driver.findElement(By.name("Submit"));
+		username.sendKeys("Loksai");
+		password.sendKeys("lokafdasdfsdfsdsai");
+		login.click();
+		String actualUrl="http://1.2.2.185.8:8080/";
+		String expectedUrl= driver.getCurrentUrl();
+		Assert.assertEquals(expectedUrl,actualUrl);
+	}
+}
+
+
+Create a Selenium WebDriver instance
+Configure browser if required
+Navigate to the required web page
+Locate the relevant web element
+Perform action on the web element
+Verify and validate the action
+
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>seleniumprojects</groupId>
+  <artifactId>seleniumdemo</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>seleniumdemo</name>
+  <description>seleniumdemo</description>
+ 
+  <dependencies>	  
+		  <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+		<dependency>
+		    <groupId>org.seleniumhq.selenium</groupId>
+		    <artifactId>selenium-java</artifactId>
+		    <version>4.10.0</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
+		<dependency>
+		    <groupId>org.testng</groupId>
+		    <artifactId>testng</artifactId>
+		    <version>7.8.0</version>
+		    <scope>test</scope>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-simple -->
+		<dependency>
+		    <groupId>org.slf4j</groupId>
+		    <artifactId>slf4j-simple</artifactId>
+		    <version>2.0.7</version>
+		    <scope>test</scope>
+		</dependency>
+  </dependencies>
+
+<build>
+  	<plugins>
+  		<plugin>
+  			<groupId>org.apache.maven.plugins</groupId>
+           	<artifactId>maven-compiler-plugin</artifactId>
+           	<version>3.6.1</version>
+           	<configuration>
+           		<source>1.8</source>
+           		<target>1.8</target>
+           	</configuration>
+  		</plugin>
+  		
+  		<plugin>
+  			<groupId>org.apache.maven.plugins</groupId>
+           	<artifactId>maven-surefire-plugin</artifactId>
+           	<version>2.20</version>
+           	<configuration>
+           	 	<suiteXmlFiles>
+           			<suiteXmlFile>testng.xml</suiteXmlFile>
+           			<!-- <suiteXmlFile>src/main/resources/testng.xml</suiteXmlFile> -->
+           		</suiteXmlFiles>
+           	</configuration>
+  		</plugin>
+  	</plugins>  
+  </build> 
+   
+  
+</project>
+
+			
+	
+
+#################
+29th August 2023
+#################	
+
+		OOP ==> Object Oriented Programming! 
+		
+			Java Code Coverage(JaCoCo) :::
+				
+			Class 
+			Object 
+			
+
+		Funtamentals of Python 
+		
+			Install of Python
+			
+			Create Python Console Application.
+			Create Python Web Application.
+			
+			
+			Scripting Languages ::: shell/python_script/groovy/yaml for DevOps.
+			
+			Install of Python :::
+			
+				Visual Studio Code IDE
+			
+				Python scripts ===> 
+				
+					Eclipse IDE --> for Java based application ::
+					
+					Desktop
+					Mobile 
+					Web Application 
+					
+				IDE --> PyCharm IDE 
+					-->	Visual Studio Code IDE 
+							Install Python Extension
+							
+				Tools --> Install Python 
+							IDLE - Utility to work with python.
+							https://www.python.org/downloads/			
+		
+		
+				a[5] ==> {4,5,6,7,8}
+				
+				a[1] ==> 5
+				a[3] ==> 7
+
+
+#################
+31st August 2023
+#################	
+
+			Python Web Application Development :::
+			
+			Web Application Framework :: 
+			_flask_
+
+			Web Application :::
+				Front_End 
+				Back_End
+				Application_Logic
+				
+			IDEs - Pycharm -
+			IDLE - Command Line Interface 
+			Eclipse IDE -- Java application 
+			
+			Create Web Application Development using Python:
+			
+*************************************	
+		Pre-requisites 
+			
+			
+		Python scripts ===> 
+		
+			Eclipse IDE --> for Java based application ::
+			
+			Desktop
+			Mobile 
+			Web Application 
+			
+		IDE --> PyCharm IDE 
+			-->	Visual Studio Code IDE 
+					Install Python Extension
+					
+		Tools --> Install Python 
+					IDLE - Utility to work with python.
+					https://www.python.org/downloads/
+					
+		Python :::
+		
+			Web Application Framework
+				- Django
+				- Flask
+
+	Open Visual Studio Code 
+	Create Project Folder :
+	
+	Open New Terminal :
+		
+		
+		Install : 	Web Application Framework
+			pip install flask
+	
+		Create app.py 
+
+from flask import Flask, render_template
+
+app = Flask(__name__)
+
+@app.route('/')
+
+def sample():
+	return render_template("sample.html")
+
+if "__name__" == "__main__":
+	app.run(debug=True)
+
+
+
+		Create "templates" folder at root level :::
+				Create Html files :: eg. sample.html 
+				
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>www.loksaieta.com</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="jumbotron" style="background-color:white">
+	  <img src="https://octodex.github.com/images/spidertocat.png" alt="Spidertocat"
+		   class="img-responsive center-block" style="width:250px"/>
+	  <h2 class="text-center">Hello Everyone</h2>
+	  <p class="text-center"> SA 11 - Python Demo...</p>
+  </div>
+</body>
+</html>	
+
+		set FLASK_APP=sample
+	
+		python -m flask run	
+
+
+#################
+31st August 2023
+#################
+
+		Structured Query Language - SQL 
+		
+		
+		Database
+		Data 
+		Database Management System ?
+		Relational DBMS ?
+		
+		Data vs Information 
+		
+		Data Manage/Handling ???
+		
+		Variable ???
+		
+			"Hello"	==> 5 characters - 1Byte(8bits) ==> stored in a memory location!
+			
+			Variable ==> called as Identifier 
+
+				int a = 5;
+			
+			Group of Data are managed by Array Variables
+			
+			File system --> Sequential / Indexed 
+			
+			Batch Application 
+					(vs)
+			Online Application 
+			
+			Database Management System:
+			
+			Data are stored in the form of Database :
+			
+			Database is a collection of Tables 
+			
+			In Table, the data are stored in the form of Rows & Columns
+			
+		Employee_DataBase:
+		
+			Employee_Base_Table
+			Employee_Project_Details
+			Employee_Salary
+	
+			Employee_Base_Table:
+			
+				Emp_ID		Emp_Name	Emp_Email		Emp_Addr	Emp_Mobile_No	Emp_DOB			Emp_DOJ		Dept
+				E1001		xyz			xyz@abc.com		asdfasdf	1231231231		12/12/1997		12/1/2052	EMP 
+				E1002		xyz			xyzz@abc.com	asdfasdf	1231251231		12/1/1997		12/1/1997	HR
+				E1003		hgfh876878	xyz2			asdfasdf	1jhjg61231		12/1/1997		12/1/1997	FIN		
+			
+			Data Integrity:::::
+			
+			Constraints ::	Conditions
+			
+			Unique 
+			Not-Null
+			Check
+			Primary-Key Constraint ==> (both Unique & Non-Null Constraints)
+			Default 
+			Index 
+			
+			Emp_ID,Email_Id,Mobile_No -- Unique 
+			
+			
+			Employee_Base_Table:
+			
+				Emp_ID		Emp_Name	Emp_Email		Emp_Addr	Emp_Mobile_No	Emp_DOB			Emp_DOJ		Dept
+				E1001		xyz			xyz@abc.com		asdfasdf	1231231231		12/12/1997		12/1/2052	EMP 
+				E1002		xyz			xyzz@abc.com	asdfasdf	1231251231		12/1/1997		12/1/1997	HR
+				E1003		hgfh876878	xyz2			asdfasdf	1jhjg61231		12/1/1997		12/1/1997	FIN						
+
+			Employee_Salary:
+			
+				Emp_ID		Emp_Name	Basic_pay		HRA			Gross_Pay		Net_Pay			Accn_No	
+				E1001		xyz			10000			0			0				0				adfasdfasdf123123
+				E1010		asdfasdf	123123			23123		12312312		82342347686		868713231212			
+
+			Employee_Project_Details:
+
+				Proj_Name	Dept		Emp_Name		Emp_ID		Start_Date		End_Date		Manager_ID		
+				adfasdfs	IT			xyz				E1001		sfasdf			asdfasdf		sdfasdfasdfsdfsdfsdf
+				
+			
+			Referential Integrity Constraint :::
+			
+				Before Insert/Update the record into child tables we need to confirm the record exist in parent table. 
+				Before Delete the record from parent table, we need to confirm the record does not exist in any child table.
+			
+				
+			
+			How to create the Database Objects ::
+			
+			We need Database Engine : Oracle/MySQL/ 
+				Structured Query Language - SQL 		to work in RDBMS 
+				
+			SQL :::
+			
+			DDL - Data Definition Language 
+					Create,Alter,Rename,Drop,Trancate.........
+			DML - Data Manipulation Language
+					Insert,Update,Delete,Select
+			DCL - Data Control Langage
+					Grant,Revoke,.... 
+			TCL	- Transaction Control Language 
+					Commit,RollBack,....
+					
+					
+			Working with SQL ::
+			
+				MySQLite => Open Source Tool 
+		
+		
+		
+Demo project for Spring Boot
+This is selenium Demo			
+		
+		
+	Table Create ::
+
+CREATE TABLE games11(yr INT, city VARCHAR(20));
+		
+INSERT INTO games11(yr,city) VALUES (2004,'Athens');
+INSERT INTO games11(yr,city) VALUES (2008,'Beijing');
+INSERT INTO games11(yr,city) VALUES (2012,'London');
+
+SELECT * FROM games11;	
+
+	Create	==> is to create database objects like Dbase,tables,...
+	Alter 	==> is used to modify the properties of database object like column name, constraints....
+	
+	where clause ==> 
+	
+	
+	SELECT * FROM games11;		
+		
+			Employee_Base_Table:
+			
+				Emp_ID		Emp_Name	Emp_Email		Emp_Addr	Emp_Mobile_No	Emp_DOB			Emp_DOJ		Dept
+				E1001		xyz			xyz@abc.com		asdfasdf	1231231231		12/12/1997		12/1/2022	EMP 
+				E1002		xyz			xyzz@abc.com	asdfasdf	1231251231		12/1/1997		12/1/1997	HR
+				E1003		hgfh876878	xyz2			asdfasdf	1jhjg61231		12/1/1997		12/1/1997	FIN			
+				F1033		hgfh876878	xyz2			asdfasdf	1jhjg61231		12/1/1997		12/1/1997	FIN			
+				F1403		hgfh876878	xyz2			asdfasdf	1jhjg61231		12/1/1997		12/1/1997	FIN			
+				F1343		hgfh876878	xyz2			asdfasdf	1jhjg61231		12/1/1997		12/1/1997	FIN			
+				M1903		hgfh876878	xyz2			asdfasdf	1jhjg61231		12/1/1997		12/1/1997	FIN			
+				M1023		hgfh876878	xyz2			asdfasdf	1jhjg61231		12/1/1997		12/1/1997	FIN			
+				M1803		hgfh876878	xyz2			asdfasdf	1jhjg61231		12/1/1997		12/1/1997	FIN			
+
+			Employee_Salary:
+			
+				Emp_ID		Emp_Name	Basic_pay		HRA			Gross_Pay		Net_Pay			Accn_No	
+				E1001		xyz			10000			0			0				0				adfasdfasdf123123
+				E1010		asdfasdf	123123			23123		12312312		82342347686		868713231212	
+				
+			SELECT * FROM Employee_Base_Table;		
+
+			select EMp_name,Emp_Email from Employee_Base_Table where dept = EMP and Emp_DOJ = 12/1/2022;
+			
+			delete from Employee_Base_Table where Emp_ID = E1002  
+											where Emp_ID LIKE M*
+			
+			update table Employee_Base_Table set Emp_Mobile_No = 99999999 where Emp_ID = E1001;
+			
+			
+			truncate Employee_Base_Table;
+			
+			drop Employee_Base_Table
+			
+			
+			Join
+			
+			
+			Aggregate function ::: count(*) 
+			
+			select count(*) from Employee_Salary where dept = IT
+			
+			Wild_card-Symbols
+			
+		
+		Application Developement :::
+			Built and deployment :::
+			
+			 maven -- goal -- 
+			 unit testing 
+			 
+			 
+		DevOps Fundamentals :::
+		
+			CI/CD 
+			
+
+
+#################
+1st Sep 2023
+#################
+
+		Module - 3
+			
+		Developement Activities :::
+		
+		In DevOps Workflow :
+		
+			Coding 
+				Commit the code to source code repository(GITHUB)
+				
+			DevOps Automation :		CI/CD Pipeline --> 
+					Compile code 
+					Create Artifacts 
+					Unit Testing 
+					
+					Promote to QA Environment
+					QA Testing 
+					
+					Promote to UAT Environment
+					UAT Testing
+					
+					Promote to PROD Environment
+					PROD Testing
+					Production Monitoring
+					
+			Continuous Integration
+			Continuous Testing 
+			Continuous Delivery & Deployment
+			Continuous Monitoring
+			
+
+
+	1. Version Control System using GIT :
+			
+		
+		Continuous Developement :::
+		
+				Source Code ::
+					How the source code is managed ????
+					
+					The Source Code should be maintained in a Common Location/Folder where all team members can able to access.
+					
+						This is to ensure high availabilty of source code changes.
+						
+						Shared Folder 
+						Share Drives 
+					
+				Folder - Java_Web_Application :
+
+					index.html 
+					
+					<html>
+					-asdfsd
+					-afasdf
+					-adfasdf
+					-asdfasdfsd
+					</html>
+			
+		
+				save -- it just save the file as a static content.
+			
+				Incremental Changes ::
+
+				index.html 
+				
+					<html>
+					-asdfsd
+					-a333333333fasdf
+					-3333333333333333adfasdf
+					-asdfasdfsd
+					-33333333
+					-333333333333					
+					-333333333
+					-333333333333333
+					</html>	
+
+					Testing the new changes ... 
+					
+				Version Control System :::
+				
+					- Used to version control the source code. 
+					- Used to track the source code changes.
+					
+						index.html_V1.0 --(Tag/version_Number/commit_ID)
+						index.html_V1.1	
+						index.html_V1.2				
+						index.html_V1.3					
+						index.html_V1.4				
+						index.html_V1.5			
+		
+			Coding 
+				Commit the code to source code repository(GITHUB)
+				
+			DevOps Automation :		CI/CD Pipeline --> Script --> groovy/yaml  
+					Compile code 
+					Create Artifacts 
+					Unit Testing 
+					
+					Promote to QA Environment
+					QA Testing 
+					
+					Promote to UAT Environment
+					UAT Testing
+					
+					Promote to PROD Environment
+					PROD Testing
+					
+					
+			Version Control System :::
+			
+				Types of Version Control System :::
+				
+					Local VCS 
+					Centralized VCS 
+					Distributed VCS 
+					
+					
+			GIT :::
+					Is open source Distributed Version Control System.
+					Used to Track the Source Code Changes 
+					Used to Version control the Source Code Changes 
+					Used to perform Parallel Development.
+
+	
+			
+			Local Machine :					Remote Servers :
+			
+				GIT Client 						GIT - github 
+				
+			Github
+			
+			gitlab
+			Azure Repo 
+			AWS Code Commit 
+			bit bucket 
+				
+		
+			Repository :::
+			
+				Is just the collection of Folders and Files.
+	
+			In your local Machine 
+				
+						Install GIT Client
+		
+#################
+4th Sep. 2023
+#################	
+
+
+			GIT :::
+			
+				Installation and Management of GIT Repositories.
+				Misc GIT Commands 
+				GIT Branching Techniques
+				GIT Repository Handling
+				
+				
+			In Windows :
+			
+				GIT Bash
+				GIT Cmd
+				GIT GUI
+				
+			c: d: e:
+			
+			e:
+				mkdir SA-DGP-July
+					cd SA-DGP-July 
+						mkdir repo1
+						mkdir repo1
+		
+			e: 
+				SA-DGP-July
+					Repo1
+					Repo2
+					Repo3
+		
+		Misc GIT Commands :
+		
+		Repository : collection of Folders and Files.
+		
+		
+		Local Machine																		Remote Server 
+		
+		Working Directory	--> Staging Area	--> Local Repository						Remote Repository
+		
+						index.html_V1.0 --(Tag/version_Number/commit_ID)
+						index.html_V1.1	
+						index.html_V1.2				
+						index.html_V1.3					
+						index.html_V1.4				
+						index.html_V1.5			
+		
+		
+			index.html ==> 
+			
+				asdfasdfasdfsdf
+				asdfasdfasdffas
+				dfassdf
+				asdfasdfsd
+		
+		GIT File WorkFlow ::
+		
+			Developers WorkLoad :::
+			
+			-	New Project					
+			
+			- 	Enhancement Project 		--> Handle Incremental Changes!
+			-	Bugfix
+		
+		
+		Misc GIT Commands :
+		
+		git add 		==> Used to the changes from working directory to staging area.
+		git commit		==> Used to commit the changes from staging area to Local Repository.
+		git push		==> Used to publish/push the changes from local repository to Remote Repository.
+		
+		git fetch/pull	==> Both git fetch and pull are used to handle the incremental Changes from remote repository.
+		
+						==> git fetch is just used to check for any incremental changes in remote repository. If there is any changes exist, it will fetch the changes from remote repository into local repository. NOT working Directory.
+							
+						==> git pull is used to check for any incremental changes in remote repository. If there is any changes exist, 	it will fetch the changes from remote repository into local repository and update the changes in working Directory as well.
+						
+		git clone		==>	Used to clone/copy the entire remote git repository to local machine.
+							This is always recommended to be the one time activity.
+							
+		fork			==> Used to copy a remote repository to another remote repository
+						
+	
+		
+		Create New Repository in Local Machine using GIT.	
+
+		git init 		==> Used to initialize a new git repository in local machine.
+							Create GIT_DIR and a default branch called master.
+		
+		git status		==> Used to track the status of git repository
+
+		git config ==> Used to setup the default configuration for Author Name and Email ID.
+		
+			Local Configuration : 	applicable only for a specific repository 
+
+			git config user.name "Loksai"
+			git config user.email "Loksai@qww.com"			
+			
+			Global Configuration :	applicable for all the repositories 
+			
+			git config --global user.name "Loksai"
+			git config --global user.email "Loksaieta@qww.com"		
+		
+		git add <file_name>
+		
+		git commit -m "Commit_Message"
+		
+		
+		git config ==> Used to setup the default configuration for Author Name and Email ID.
+		
+			Local Configuration : 	applicable only for a specific repository 
+
+			git config user.name "Loksai"
+			git config user.email "Loksai@qww.com"			
+			
+			Global Configuration :	applicable for all the repositories 
+			
+			git config --global user.name "Loksai"
+			git config --global user.email "Loksaieta@qww.com"
+			
+			git add :::
+			
+				git add <file_name>
+			
+				git add <file_name> <file_name>
+				
+				git add *.html 
+				
+				git add .						# Add all the files from working dir. to staging area.
+				
+				
+				git commit -m "Commit_Message"	
+				
+  503  cd e:
+  504  mkdir SA-DGP-JULY
+  505  cd SA-DGP-JULY/
+  506  pwd
+  507  git --version
+  508  ls
+  509  echo "asdf" >> s1.txt
+  510  ls
+  511  clear
+  512  pwd
+  513  mkdir testrepo1
+  514  cd testrepo1/
+  515  pwd
+  516  ls
+  517  ls -a
+  518  git init
+  519  ls
+  520  ls -a
+  521  cd .git/
+  522  ls
+  523  cd ..
+  524  clear
+  525  ls
+  526  git status
+  527  echo "rec1" >> file1.txt
+  528  git status
+  529  git add file1.txt
+  530  git status
+  531  git commit -m "Created file1.txt"
+  532  git log
+  533  ls
+  534  git status
+  535  echo "rec1" >> file2.txt
+  536  ls
+  537  git status
+  538  git add file2.txt
+  539  git status
+  540  git commit -m "created file2.txt"
+  541  git status
+  542  git log
+  543  git config user.name "Loksai"
+  544  echo "rec1" >> file3.txt
+  545  git add file3.txt
+  546  git commit -m "created file3.txt"
+  547  git log
+  548  cd ..
+  549  mkdir testrepo2
+  550  cd testrepo2/
+  551  git status
+  552  git init
+  553  ls -a
+  554  git status
+  555  echo "rec2" >> f1.txt
+  556  git add f1.txt
+  557  git commit -m "Created f1.txt"
+  558  git log
+  559  git config --global user.name "Loksai"
+  560  git config --global user.email "Loksaieta@qww.com"
+  561  echo "rec2" >> f2.txt
+  562  git add f2.txt
+  563  git commit -m "Created f2.txt"
+  564  git log
+  565  cd ..
+  566  clear
+  567  mkdir testrepo3
+  568  cd testrepo3/
+  569  git init
+  570  git status
+  571  ls
+  572  echo "rec" >> s1.txt
+  573  git status
+  574  git add s1.txt
+  575  git status
+  576  git commit -m "initial commit"
+  577  git status
+  578  git log
+  579  clear
+  580  ls
+  581  echo "rec1" >> w1.java
+  582  ls
+  583  git status
+  584  echo "rec1" >> w2.java
+  585  echo "rec1" >> w2.doc
+  586  echo "rec1" >> w4.html
+  587  git status
+  588  echo "rec1" >> w5.html
+  589  echo "rec1" >> w4.jsp
+  590  echo "rec1" >> w7.jsp
+  591  clear
+  592  ls
+  593  git status
+  594  git add w1.java w2.doc
+  595  git status
+  596  git add *.html
+  597  git status
+  598  git add .
+  599  git status
+  600  git commit -m "Created temp files"
+  601  git log
+  602  ls
+  603  git log
+  604  history
+
+
+#################
+5th Sep. 2023
+#################
+
+
+		Git Misc Command :::
+		
+		git add :
+		
+		
+		file1.txt 
+		
+		
+		added the changes to staging area --> 
+		
+			git rm --cached s1.txt	===> Used to remove the changes/files just from staging area.
+			
+			git rm -f s1.txt		===> Used to remove the changes/files from both stagin area as well as from working Dir.
+			
+			
+		git log ::
+
+			git log 
+			
+			git log --oneline
+			
+			git log -2
+			
+			git log --oneline -2
+			
+			git log --stat -2
+		
+		git show <commit_id>
+			
+			
+		git diff ::
+			
+			git diff 			==> used to compare and get the diff between the committed file and the file modified in working dir.
+			
+			git diff --cached 	==> used to compare and get the diff between the committed file and the file added in staging area.
+			
+			git diff <commit_id> <commit_id>
+			
+			
+		working dir									staging area												local repo (cm1,cm2,cm3,....)
+			
+		git diff (working dir & local repo)
+
+		git diff --cached ( staging area & Local repo)
+		
+		git diff <commit_id> <commit_id> ( between the commits in local repo)
+		
+		
+		
+		git ignore ::: == It is used to ignore the files from tracking. 
+		
+		Local_Machine :																				Remote Server (Repository)
+		
+		Java_Web_Appln_Project:												Pushed to remote repo.									
+			src 
+				*.java 
+				*.class
+			src/resource 
+				*.html
+				*.jsp
+				*.css 
+			target						==> can be ignored 
+				*.war					==> can be ignored
+			application.properties		==> can be ignored
+			mysql_credentials.json
+				db_username/password
+			
+			
+		git ignore ::::
+		
+			target/
+			
+			
+		git reset & revert ::
+		
+			==> It is used to undo the changes. 
+			
+		git reset :::
+		
+			- It is used to undo the changes for the repository.
+			- It will never create any new commit commit point.
+			- We should avoid using git reset in shared repository(remote repo.)
+			
+		
+		git reset --soft 		==> This will undo the changes from repository by moving the HEAD pointer to the previous commit point.
+									This is remove the changes from local repository, but the changes remains in staging area as well as in working directory.
+			
+		*git reset --mixed		==> This will undo the changes from repository by moving the HEAD pointer to the previous commit point.
+									This is remove the changes from local repository as well as from staging area. But, the changes remains in working directory.			
+			
+		git reset --hard		==> This will undo the changes from repository by moving the HEAD pointer to the previous commit point.
+									This is remove the changes from local repository, staging area as well as from the working directory.		
+		
+
+
+		git reset <commit_id>	==> This will use --mixed option by default.
+				
+		syntax :
+				git reset <commit_id> <type>
+				
+				cm5				latest commit - HEAD 
+				cm4
+				cm3
+				cm2
+				cm1
+				
+			git reset cm4 --soft 
+		
+				cm4				latest commit - HEAD 
+				cm3
+				cm2
+				cm1		
+		
+		
+			git reset cm1 --soft 	
+
+				cm1				latest commit - HEAD 
+				
+				
+  501  cd e:
+  502  cd SA-DGP-JULY/
+  503  clear
+  504  ls
+  505  mkdir myproj1
+  506  cd myproj1/
+  507  git init
+  508  echo "rec1" >> f1.txt
+  509  git status
+  510  git add .
+  511  git status
+  512  git add .
+  513  ls
+  514  echo "rec2" >> f1.txt
+  515  cat f1.txt
+  516  git status
+  517  git add .
+  518  git status
+  519  ls
+  520  git add .
+  521  git commit -m "created f1.txt"
+  522  git log
+  523  ls
+  524  echo "rec1" >> s1.txt
+  525  git status
+  526  git add .
+  527  git status
+  528  ls
+  529  clear
+  530  ls
+  531  git status
+  532  git log
+  533  git rm --cached s1.txt
+  534  git status
+  535  ls
+  536  git add .
+  537  git status
+  538  ls
+  539  git rm -f s1.txt
+  540  git status
+  541  ls
+  542  clear
+  543  git log
+  544  echo "rec1" >> s1.txt
+  545  git add .
+  546  git commit -m "cm1"
+  547  echo "rec1" >> s2.txt
+  548  git add .
+  549  git commit -m "cm2"
+  550  echo "rec1" >> s3.txt
+  551  git add .
+  552  git commit -m "cm3"
+  553  echo "rec2" >> s3.txt
+  554  git add .
+  555  git commit -m "cm4"
+  556  clear
+  557  git log
+  558  git log --oneline
+  559  git show 47579b7
+  560  git show b703f69
+  561  git show 1eab4c8
+  562  git show 63e7fa3
+  563  git log -2
+  564  git log
+  565  git log -2
+  566  git log -3
+  567  git log --oneline -3
+  568  git log --stat
+  569  clear
+  570  ls
+  571  git status
+  572  echo "record3" >> s3.txt
+  573  git diff
+  574  git status
+  575  git add .
+  576  git diff --cached
+  577  git diff
+  578  git commit -m "Updated s3.txt"
+  579  git log --oneline
+  580  git diff c4e211f 1eab4c8
+  581  git diff 1eab4c8 c4e2
+  582  ls
+  583  cat s3.txt
+  584  git log --oneline
+  585  git show c42211
+  586  ckear
+  587  clear
+  588  git log --oneline
+  589  git show c4e211f
+  590  cd ..
+  591  mkdir myproj2
+  592  cd myproj2/
+  593  git init
+  594  ls -a
+  595  vi .gitignore
+  596  cat .gitignore
+  597  git status
+  598  git add .
+  599  git commit -m "Initial Commit for .gitignore"
+  600  git log --oneline
+  601  git status
+  602  echo "rec1" >> f1.txt
+  603  git status
+  604  echo "rec1" >> f2.txt
+  605  git status
+  606  echo "rec1" >> s1.doc
+  607  ls
+  608  git status
+  609  echo "rec1" >> sample.txt
+  610  git status
+  611  git log
+  612  clear
+  613  clear
+  614  cd ..
+  615  mkdir myproj3
+  616  clear
+  617  cd myproj3/
+  618  clear
+  619  git init
+  620  echo "rec1" >> f1.txt
+  621  git add .
+  622  git commit -m "CM1"
+  623  echo "rec1" >> f2.txt
+  624  git add .
+  625  git commit -m "CM2"
+  626  echo "rec1" >> f3.txt
+  627  git add .
+  628  git commit -m "CM3"
+  629  echo "rec1" >> f4.txt
+  630  git add .
+  631  git commit -m "CM4"
+  632* echo "rec1" >> f.txt
+  633  git add .
+  634  git commit -m "CM5"
+  635  clear
+  636  git log --oneline
+  637  ls
+  638  git status
+  639  git ls-files
+  640  git reset --soft 20a9e28
+  641  git status
+  642  git ls-files
+  643  ls
+  644  git log --oneline
+  645  git commit -m "CM5.1"
+  646  git status
+  647  git log --oneline
+  648  ls
+  649  git ls-files
+  650  git reset --mixed 20a9e28
+  651  git status
+  652  ls
+  653  git ls-files
+  654  git log --oneline
+  655  git status
+  656  git add .
+  657  git commit -m "CM5.2"
+  658  clear
+  659  git log
+  660  clear
+  661  git log --oneline
+  662  ls
+  663  git ls-files
+  664  git status
+  665  git reset --hard 20a9e28
+  666  git status
+  667  git ls-files
+  668  ls
+  669  git log --oneline
+  670  clear
+  671  git log --oneline
+  672  git reset --hard e409f7f
+  673  ls
+  674  git ls-files
+  675  git status
+  676  git log -oneline
+  677  git log --oneline
+  678  clear
+  679  git log --oneline
+  680  ls
+  681  history
+
+
+#################
+7th Sep. 2023
+#################
+
+
+		git revert :::
+		
+			It is used to undo the changes.
+			It is used to revert a specific commit.
+			revert will create a new commit point.
+			
+			Without losing the track of changes we can revert.
+			It is recommended in shared repositories.
+			I want to safely undo the changes.
+			Keeps the track of commits.
+
+		git revert <commit_id>
+
+		git rm -f <file_name> 
+		
+		git rm --cached <file_name>
+		
+		_________________
+		
+		git commit ?
+		
+			git commit -m 
+			
+		development ==> 
+		
+		Release_ID/Number 
+		CR_Number
+		
+		SEP2023-INS
+
+				
+				git commit -m "SEP2023-INS - Created signin logic"
+				
+		Branching Techniques :::
+		
+			It is used to perform parallel development.
+			To maintain the integrity of master Branch.
+			
+		Enhancement Project :::
+		
+		Existing Repository ==> default branch called master/main (Production copy)
+		
+		myprogrepo1: (master) index.html
+						cm1,cm2,c3
+			feature1 : 			index.html
+						cm1,cm2,c3,f1cm1,f1cm2,f1cm3,.............
+						
+						
+		GIT Branching Strategies/Process/Rules/Protocols ::::
+		
+		Scenario 1:
+		
+			my_webapp_proj1:
+					master 		--> cm1,cm2,cm3
+									cm1,cm2,cm3,f1cm1,f1cm2,f1cm3			# Upon Merge 
+					
+					feature1 	--> cm1,cm2,cm3,f1cm1,f1cm2,f1cm3
+										After thorough testing merge the changes to master.
+				
+		Scenario 2:
+		
+			my_webapp_proj1:
+					master 		--> cm1,cm2,cm3
+									cm1,cm2,cm3,f1cm1,f1cm2,f1cm3,f2cm1,f2cm2,f3cm3,f2cm4		# Upon merging Dev_Branch
+									 
+						Dev_Branch	--> cm1,cm2,cm3,f1cm1,f1cm2,f1cm3,f2cm1,f2cm2,f3cm3,f2cm4
+							feature1 	--> cm1,cm2,cm3,f1cm1,f1cm2,f1cm3,.....					
+							feature2	--> cm1,cm2,cm3,f2cm1,f2cm2,f3cm3,f2cm4,....
+							
+		Scenario 3:
+		
+			my_webapp_proj1:
+					master 		--> cm1,cm2,cm3
+									cm1,cm2,cm3,Dev_Branch1,Dev_Branch2							# Upon merging Integration_Branch	
+									
+						Integration_Branch: cm1,cm2,cm3,Dev_Branch1,Dev_Branch2
+							Dev_Branch1	--> cm1,cm2,cm3,f1cm1,f1cm2,f1cm3,f2cm1,f2cm2,f3cm3,f2cm4
+								feature1 	--> cm1,cm2,cm3,f1cm1,f1cm2,f1cm3,.....					
+								feature2	--> cm1,cm2,cm3,f2cm1,f2cm2,f3cm3,f2cm4,....
+								
+							Dev_Branch2	--> cm1,cm2,cm3,f1cm1,f1cm2,f1cm3,f2cm1,f2cm2,f3cm3,f2cm4
+								feature1 	--> cm1,cm2,cm3,f1cm1,f1cm2,f1cm3,.....					
+								feature2	--> cm1,cm2,cm3,f2cm1,f2cm2,f3cm3,f2cm4,....
+								
+		Scenario 4:
+		
+			my_webapp_proj1:
+					master 		--> cm1,cm2,cm3
+									cm1,cm2,cm3,Team1,Team2									# Upon merging Release_Branch	
+									
+						Release_Branch: --> cm1,cm2,cm3,Team1,Team2								
+						
+							Integration_Branch: cm1,cm2,cm3,Dev_Branch1,Dev_Branch2						Team1
+								Dev_Branch1	--> cm1,cm2,cm3,f1cm1,f1cm2,f1cm3,f2cm1,f2cm2,f3cm3,f2cm4
+									feature1 	--> cm1,cm2,cm3,f1cm1,f1cm2,f1cm3,.....					
+									feature2	--> cm1,cm2,cm3,f2cm1,f2cm2,f3cm3,f2cm4,....
+									
+								Dev_Branch2	--> cm1,cm2,cm3,f1cm1,f1cm2,f1cm3,f2cm1,f2cm2,f3cm3,f2cm4
+									feature1 	--> cm1,cm2,cm3,f1cm1,f1cm2,f1cm3,.....					
+									feature2	--> cm1,cm2,cm3,f2cm1,f2cm2,f3cm3,f2cm4,....
+
+							Integration_Branch: cm1,cm2,cm3,Dev_Branch1,Dev_Branch2						Team2
+								Dev_Branch1	--> cm1,cm2,cm3,f1cm1,f1cm2,f1cm3,f2cm1,f2cm2,f3cm3,f2cm4
+									feature1 	--> cm1,cm2,cm3,f1cm1,f1cm2,f1cm3,.....					
+									feature2	--> cm1,cm2,cm3,f2cm1,f2cm2,f3cm3,f2cm4,....
+									
+								Dev_Branch2	--> cm1,cm2,cm3,f1cm1,f1cm2,f1cm3,f2cm1,f2cm2,f3cm3,f2cm4
+									feature1 	--> cm1,cm2,cm3,f1cm1,f1cm2,f1cm3,.....					
+									feature2	--> cm1,cm2,cm3,f2cm1,f2cm2,f3cm3,f2cm4,....
+									
+		
+		Create Branches :::
+		
+		
+		samplerepo1:		
+					master 	--> cm1,cm2,cm3 
+					
+					feature1
+					feature2
+					feature3 
+		
+				git switch -c <branch_name> 
+				
+				git branch <branch_name>
+				
+				git checkout -b <branch_name>
+				
+				
+				git Merge :::		Used to merge the changes from the current branch to target branch
+				
+						git merge <branch_name>		# this branch name should you the current branch
+						
+						git merge feature1 			# Execute the git Merge Command from the target branch.
+						
+							git switch master 
+							
+							git merge feature
+							
+				master 
+				
+						feature1	
+						
+						feature4 	
+						
+				MERGE Conflict :::
+				
+					Occurs when we try to merge the changes from multiple branches into the same target branch,file and same record. 
+					
+					
+				RESOLVE Merge Conflict :::
+				
+					How to resolve Merge Conflict ???
+					
+						1. Identify the file that is causing merge conflict.
+						2. Review the file content.
+						3. Decide which Record / who's changes has to be maintained.
+						4. Make necessary changes in the file.
+						5. Add and Commit the Latest Changes.
+						
+						
+				Prevent the Merge Conflict :::
+				
+					How to prevent the Merge Conflict ???
+							
+							Before Merge, do a detailed review of the changes.
+							With proper approval.
+							
+							
+					GIT Commands :::
+					
+							git rebase 
+							git squash
+
+
+  682  cd ..
+  683  mkdir samplerepo1
+  684  cd samplerepo1/
+  685  ls
+  686  clear
+  687  git init
+  688  echo "rec1" >> f1.txt
+  689  git add .
+  690  git commit -m "CM1"
+  691  echo "rec1" >> f2.txt
+  692  git add .
+  693  git commit -m "CM2"
+  694  echo "rec1" >> f3.txt
+  695  git add .
+  696  git commit -m "CM3"
+  697  echo "rec1" >> f4.txt
+  698  git add .
+  699  git commit -m "CM4"
+  700  echo "rec1" >> f5.txt
+  701  git add .
+  702  git commit -m "CM5"
+  703  clear
+  704  git log
+  705  q
+  706  clear
+  707  git log --oneline
+  708  ls
+  709  git ls-files
+  710  git status
+  711  git show bd6385a
+  712  git log --oneline
+  713  git revert bd6385a
+  714  git log --oneline
+  715  git show 865a581
+  716  ls
+  717  git ls-files
+  718  git log --oneline
+  719  git show bd6385a
+  720  ls
+  721  git revert 865a581
+  722  git log --oneline
+  723  ls
+  724  git ls-files
+  725  cat f3.txt
+  726  ls -a
+  727  git status
+  728  ls
+  729  echo "resc" >> f1.txt
+  730  clear
+  731  git status
+  732  git add
+  733  git add .
+  734  clear
+  735  git status
+  736  git rm --cached f1.txt
+  737  git status
+  738  ls
+  739  cat f1.txt
+  740  git add .
+  741  git status
+  742  cat f1.txt
+  743  git rm -f f1.txt
+  744  ls
+  745  clear
+  746  git log --oneline
+  747  echo "rec1" >> s1.txt
+  748  echo "rec1" >> s1.txt
+  749  echo "rec1" >> s1.txt
+  750  echo "rec1" >> s1.txt
+  751  echo "rec1" >> s1.txt
+  752  echo "rec1" >> s1.txt
+  753  clear
+  754  git status
+  755  git commit -m "adfasdfasdf"
+  756  clear
+  757  git status
+  758  git log --oneline
+  759  git add s1.txt
+  760  git commit -m "aasdfasdfasdfasdf"
+  761  clear
+  762  git log --oneline
+  763  git commit -m "sep2023-created s1.txt"
+  764  git commit --amend -m "sep2023-created s1.txt"
+  765  git log --oneline
+  766  git branch
+  767  ls
+  768  clear
+  769  cd ..
+  770  mkdir samplerepo2
+  771  clear
+  772  cd samplerepo2/
+  773  clear
+  774  git init
+  775  git branch
+  776  git status
+  777  echo "rec1" >> s1.txt
+  778  git add .
+  779  git commit -m "cm1 from master"
+  780  echo "rec1" >> s2.txt
+  781  git add .
+  782  git commit -m "cm2 from master"
+  783  echo "rec1" >> s3.txt
+  784  git add .
+  785  git commit -m "cm3 from master"
+  786  clear
+  787  git log --oneline
+  788  git status
+  789  git branch
+  790  git switch -c feature1
+  791  git log --oneline
+  792  git switch master
+  793  git branch
+  794  git branch feature2
+  795  git checkout -b feature3
+  796  git branch
+  797  git log --oneline
+  798  clear
+  799  git switch master
+  800  git log --oneline
+  801  ls
+  802  git switch feature1
+  803  git log --oneline
+  804  ls
+  805  clear
+  806  ls
+  807  echo "rec1" >> q1.txt
+  808  git add .
+  809  git commit -m "f1cm1"
+  810  git log --oneline
+  811  ls
+  812  git switch master
+  813  ls
+  814  git log --oneline
+  815  clear
+  816  git switch feature1
+  817  ls
+  818  git log --oneline
+  819  git switch master
+  820  git merge feature1
+  821  git log --oneline
+  822  ls
+  823  git branch feature4
+  824  git log --oneline
+  825  git switch feature4
+  826  git log --oneline
+  827  ls
+  828  clear
+  829  ls
+  830  cat q1.txt
+  831  echo "record2 from feature4"  >> q1.txt
+  832  cat q1.txt
+  833  git add .
+  834  git commit -m "f4CM1"
+  835  git log --oneline
+  836  git switch feature1
+  837  cat q1.txt
+  838  echo "record2 from feature1" >> q1.txt
+  839  cat q1.txt
+  840  git add .
+  841  git commit -m "f1CM2"
+  842  git log --oneline
+  843  git switch master
+  844  git log --oneline
+  845  cat q1.txt
+  846  git merge feature1
+  847  git log --oneline
+  848  cat q1.txt
+  849  git merge feature4
+  850  cat q1.txt
+  851  vi q1.txt
+  852  git add .
+  853  git commit -m "Resolved Merge Conflict"
+  854  git log --oneline
+  855  ls
+  856  cat q1.txt
+  857  history
+
+#################
+8th Sep. 2023
+#################
+
+		Git Merge Options :
+		
+			git Rebase 
+			
+			git Squash 
+			
+		git stash
+
+		Handle git Remote Repository - github
+		
+
+		Git Merge Options :
+		
+			git Rebase 		==> Used to keep the current branch in-sync with target branch 
+								It is used to maintain the linear commit history.
+								Before any merge action, we should rebase.
+								
+			Repo1 :
+			
+				master 		==> cm1,cm2,cm3
+				
+								cm1,cm2,cm3,f1cm1,f1cm2,f1cm3	
+
+								cm1,cm2,cm3,f1cm1,f1cm2,f1cm3,f2cm1,f2cm2,f2cm3
+				
+				feature1	==>	cm1,cm2,cm3									s1.txt
+								cm1,cm2,cm3,f1cm1,f1cm2,f1cm3
+								
+					git switch master 
+					
+					git merge feature1 
+					
+			
+				feature2	==>	cm1,cm2,cm3			
+								cm1,cm2,cm3,f2cm1,f2cm2,f2cm3,4,5,6,7,8,9,...................,n
+					
+					git rebase master 										# this should be executed from the current branch
+								cm1,cm2,cm3,f1cm1,f1cm2,f1cm3,f2cm1,f2cm2,f2cm3
+					
+					git switch master 
+					
+					git merge feature2 										# this should be executed from the target branch		
+					
+					
+			
+			
+			git Squash :::
+			
+				It is used to combine the commit points and create a new commit point.
+				
+				
+			Code Change :::
+			
+				java program :
+				
+					6 func. ==> 
+					
+					func1 ==> cm1,2,3,4,5,6,7,8,9	==> func1changes
+					func2 ==> cm1,2,3,4,5,6,7,8,9	==> func2changes
+					
+					
+			While working on the current branch: (Before Merge)
+			
+						::: git rebase -i HEAD~6		
+			
+				
+			
+			While Merging to target branch :
+			
+						git merge --squash feature1
+						
+						git commit -m "Commit_Message"
+				
+				
+				
+		Scenario 4:
+		
+			my_webapp_proj1:
+					master 		--> cm1,cm2,cm3
+									cm1,cm2,cm3,cm4									# Upon merging Release_Branch	
+									
+						Release_Branch: --> cm1,cm2,cm3,Team1changes,Team2changes
+						
+							Integration_Branch: cm1,cm2,cm3,Dev_Branch1,Dev_Branch2						Team1
+								Dev_Branch1	--> cm1,cm2,cm3,f1cm1,f1cm2,f1cm3,f2cm1,f2cm2,f3cm3,f2cm4
+									feature1 	--> cm1,cm2,cm3,f1cm1,f1cm2,f1cm3,.....					
+									feature2	--> cm1,cm2,cm3,f2cm1,f2cm2,f3cm3,f2cm4,....
+									
+								Dev_Branch2	--> cm1,cm2,cm3,f1cm1,f1cm2,f1cm3,f2cm1,f2cm2,f3cm3,f2cm4
+									feature1 	--> cm1,cm2,cm3,f1cm1,f1cm2,f1cm3,.....					
+									feature2	--> cm1,cm2,cm3,f2cm1,f2cm2,f3cm3,f2cm4,....
+
+							Integration_Branch: cm1,cm2,cm3,Dev_Branch1,Dev_Branch2						Team2
+								Dev_Branch1	--> cm1,cm2,cm3,f1cm1,f1cm2,f1cm3,f2cm1,f2cm2,f3cm3,f2cm4
+									feature1 	--> cm1,cm2,cm3,f1cm1,f1cm2,f1cm3,.....					
+									feature2	--> cm1,cm2,cm3,f2cm1,f2cm2,f3cm3,f2cm4,....
+									
+								Dev_Branch2	--> cm1,cm2,cm3,f1cm1,f1cm2,f1cm3,f2cm1,f2cm2,f3cm3,f2cm4
+									feature1 	--> cm1,cm2,cm3,f1cm1,f1cm2,f1cm3,.....					
+									feature2	--> cm1,cm2,cm3,f2cm1,f2cm2,f3cm3,f2cm4,....				
+				
+				
+				
+			cherrypick ::::
+
+			git cherry-pick Team1changes Team2changes
+			
+				syntax: 
+				
+						git cherry-pick <commit_id>
+						
+						
+				master :	cm1 
+				
+							cm1,f1cm1,f1cm2,f1cm3,f1cm4,f1cm4	## Upon Merge 
+							
+							cm1,f1cm3 							## Upon Cherry-pick
+							
+					feature1 
+							cm1,f1cm1,f1cm2,f1cm3,f1cm4,f1cm4 
+							
+						git switch master 
+
+						git merge feature1 ===> 
+						
+						git cherry-pick ebdad16
+						
+			GIT STASH :::
+				
+				It is used to save the uncommitted changes in a temporary area.
+				
+				
+				git stash ==> Move the staged but uncommitted contents to temporary area.
+				
+				git stash list 	==> used to get the list of stashed entries
+				
+				git stash save "valid message" 
+						
+				git stash show <stash_id>
+				
+				git stash apply 	
+					==> apply the latest/specific entry from the stash list to the staging area of that branch
+				
+				git stash pop 		
+					==> apply the latest/specific entry from the stash list to the staging area of that branch, by removing that entry from stash list.
+				
+				git stash drop 		==> delete the latest/specific entry from the stash list
+				
+				git stash clear		==> delete the all the enteries from the stash list
+				
+				
+				git add .
+				
+				git stash 
+				
+				git stash branch <temp_branch_name>
+				
+			GIT Remote Repository ::::
+			
+				Create remote repository
+			
+					pull Request :::
+			
+				git clone 
+				
+				git fetch / pull 
+				
+				git remote 
+				
+				git push 
+			
+			
+Next ::
+			
+				git clone 
+				
+				git fetch / pull 
+				
+				git remote 
+				
+				git push 
+
+				Jenkins Module 
+			
+				
+				
+#################
+11th Sep. 2023
+#################			
+				
+				
+			Working with GITHUB
+			
+				git clone 
+				
+				git fetch / pull 
+				
+				git remote 
+				
+				git push 
+
+				Jenkins Module 
+			
+				git add 		==> Used to the changes from working directory to staging area.
+				git commit		==> Used to commit the changes from staging area to Local Repository.
+				git push		==> Used to publish/push the changes from local repository to Remote Repository.
+				
+				git fetch/pull	==> Both git fetch and pull are used to handle the incremental Changes from remote repository.
+				
+								==> git fetch is just used to check for any incremental changes in remote repository. If there is any changes exist, it will fetch the changes from remote repository into local repository. NOT working Directory.
+									
+								==> git pull is used to check for any incremental changes in remote repository. If there is any changes exist, 	it will fetch the changes from remote repository into local repository and update the changes in working Directory as well.
+								git pull = git fetch + git merge
+								
+				git clone		==>	Used to clone/copy the entire remote git repository to local machine.
+									This is always recommended to be the one time activity.
+									
+				fork			==> Used to copy a remote repository to another remote repository
+				
+				
+				
+				Developers' Workload 
+				
+					New Project 
+					
+					Enhancement Project 
+					Bug fix
+								
+				git clone https://github.com/SA-DevOps-JULY-2023/testrepo1.git
+				
+				git push 
+				
+					git credentials :::
+						user_id & password
+							user id : loksaieta
+							Access Token : sdY
+				
+				git fetch / pull 
+				
+				git remote -v 
+				git remote add origin https://github.com/SA-DevOps-JULY-2023/temprepo2.git
+				git remote remove origin https://github.com/SA-DevOps-JULY-2023/temprepo2.git
+				
+				
+				New Project :::
+				
+					git init 
+					git add .
+					git commit -m "CM1"
+					git remote add origin https://github.com/SA-DevOps-JULY-2023/temprepo2.git
+					git push -u origin master
+					
+				
+#################
+11th Sep. 2023
+#################		
+
+			Build Orchestration Tool - Jenkins
+			
+			Jenkins is one of the open source build orchestration tool :
+				Uses Master/Slave Architecture :::
+				
+			Developer's Perspective
+				- are just consumers.
+						
+			DevOps Perspective
+			
+				Administrator :::
+				
+				- Installation of jenkins 
+				- Manage the plugins 
+				- User Management 
+				- Credential Management
+				- Tools Management 
+				- Jenkins Master/Slave - Node Configuration and Management
+				- Security Management 
+				- Backup & Recovery 
+				- Upgrade
+				- Create jenkins CI/CD Pipelines Project to onboard application
+				- Troubleshooting
+				
+				
+			Jenkins Architecture :::
+				
+				Jenkins Master / Slave Architecture :::
+				
+				Jenkins_Master 				VM 	==> To create Jenkins CI/CD Pipeline Jobs & Schedule the jobs
+					Jenkins_Slave-Node1		VM	==> Java Appln. Build ==> git, jdk, maven	# Application Build Server
+					Slave-Node2				VM	==> Python Appln. Build ==> git, python	# Application Build Server
+					Slave-Node3				VM	==> C# Appln. Build ==> git, jdk, maven	# Application Build Server
+					
+Install Jenkins ::  https://www.jenkins.io/doc/book/installing/linux/
+
+Launch Ubuntu Machine - 20.04
+
+Add Inbound rule in security Group.
+	8080
+	All Traffic ==> 
+
+Install Java :
+
+sudo -i
+sudo apt update
+sudo apt install openjdk-17-jre
+java -version
+
+Install Jenkins :
+					
+				
+curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key | sudo tee \
+  /usr/share/keyrings/jenkins-keyring.asc > /dev/null
+  
+echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
+  https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
+  /etc/apt/sources.list.d/jenkins.list > /dev/null
+  
+sudo apt-get update
+ 
+sudo apt-get install jenkins -y
+			
+jenkins --version 
+
+To Check the status of Jenkins Server :::
+
+systemctl status jenkins
+systemctl stop jenkins
+systemctl start jenkins
+systemctl restart jenkins
+systemctl enable jenkins 		==> To make jenkins as startup service
+
+To Access Jenkins ::
+
+	<external_IP_Addr>:8080
+			
+Jenkins Plugins are extension to Jenkins.			
+				
+				
+#################
+12th Sep. 2023
+#################				
+				
+				
+			Create Jenkins Project:
+			
+			Working with Variables 
+				User-Defined 
+				Environment variable
+			
+				Free-Style Project
+					It is completely Manual Project configurations.
+					
+				Pipeline Projects
+				
+					It is completely Automated using Groovy Scripts.
+						Create CI/CD Pipeline projects 
+						
+				Jenkins Workspace :::
+				
+			
+			Working with Variables 
+				
+				Environment variables	- reserverd jenkins keywords
+				
+				User-Defined Variables
+
+				
+			Pipeline Projects			
+				It is completely Automated using Groovy Scripts.
+				
+					Type of Pipelines :
+					
+						Scripted Pipeline 
+						Declarative Pipeline
+				
+				
+pipeline {
+    agent any
+
+    stages {
+        stage('SCM_Checkout') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+        stage('App_Build') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+        stage('Deploy to QA Environment') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+    }
+}
+
+
+		Build and Deployment of Java Application :
+		SCM_Checkout - Build - Create artifacts
+		
+
+		Create Jenkins Master & Slave Architecture :::
+		
+			Jenkins_master 			VM 			==> jdk, jenkins
+				Jenkins_Slave-Node1	VM			==> git, jdk, maven
+					Create user 
+						ssh-keys - 
+			
+			- Jenkins Master/Slave - Node Configuration and Management				
+	
+pipeline {
+    agent { label 'javaslave1' }
+    
+    tools {
+        maven "maven_3.6.3"
+    }
+    
+    stages {
+        stage('SCM_Checkout') {
+            steps {
+                echo 'SCM CHeckout'
+				git 'https://github.com/LoksaiETA/Java-mvn-app2.git'
+            }
+        }
+        stage('App_Build') {
+            steps {
+                echo 'Perform Maven Build'
+				sh 'mvn -Dmaven.test.failure.ignore=true clean package'
+            }
+        }
+        stage('Deploy to QA Environment') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+    }
+}		
+
+
+
+#*************************************************************************************************************
+#Jenkins Master :::
+#*************************************************************************************************************
+sudo -i 
+
+# Install Java :::
+
+sudo apt update
+sudo apt install openjdk-17-jre
+java -version
+
+
+# Install Jenkins :::
+
+
+curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key | sudo tee \
+  /usr/share/keyrings/jenkins-keyring.asc > /dev/null
+echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
+  https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
+  /etc/apt/sources.list.d/jenkins.list > /dev/null
+sudo apt-get update
+sudo apt-get install jenkins
+
+jenkins --version 
+
+
+systemctl status jenkins
+systemctl start jenkins
+systemctl restart jenkins
+systemctl stop jenkins
+systemctl enable jenkins
+
+	<public_ip_Address>:8080 
+
+#*************************************************************************************************************
+Configure Slave Node1 for Java Maven App. :
+#*************************************************************************************************************
+
+Install Java ::
+
+sudo apt update -y 
+sudo apt install openjdk-11-jre -y
+java -version
+
+Install GIT :
+
+sudo apt install git -y
+
+Install Maven - Build Tool :
+https://maven.apache.org/install.html
+
+sudo apt install maven -y 
+
+
+Create User in Jenkins Slave Machine & Create SSH Keys 
+
+	SSH Keys --> is composed of public and private keys 
+
+
+#Add User : 
+
+#useradd -m -d /home/devopsadmin devopsadmin
+#useradd devopsadmin
+
+useradd devopsadmin -s /bin/bash -m -d /home/devopsadmin
+
+su - devopsadmin
+
+#ssh-keygen
+
+#for Ubuntu ::
+ssh-keygen -t rsa -b 4096 -m PEM
+
+
+ls ~/.ssh 
+
+#You should see following two files:
+
+#id_rsa - private key
+#id_rsa.pub - public
+
+
+cat id_rsa.pub > authorized_keys
+
+chown -R devopsadmin /home/devopsadmin/.ssh
+chmod 600 /home/devopsadmin/.ssh/authorized_keys
+chmod 700 /home/devopsadmin/.ssh
+
+
+In Jenkins Master - Add Node Configuration
+		
+		Goto Manage Jenkins - Add New Node Configuration
+
+#**************************************************************************************************
+
+#################
+14th Sep. 2023
+#################	
+
+
+
+pipeline {
+    agent { label 'javaslave1' }
+    
+    tools {
+        maven "maven_3.6.3"
+    }
+    
+    stages {
+        stage('SCM_Checkout') {
+            steps {
+                echo 'SCM Checkout'
+				git 'https://github.com/LoksaiETA/Java-mvn-app2.git'
+            }
+        }
+        stage('App_Build') {
+            steps {
+                echo 'Perform Maven Build'
+				sh 'mvn -Dmaven.test.failure.ignore=true clean package'
+            }
+        }
+        stage('Deploy to QA Environment') {
+            steps {
+				script {
+					sshPublisher(publishers: [sshPublisherDesc(configName: 'QA-Server', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: '', execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '.', remoteDirectorySDF: false, removePrefix: 'target/', sourceFiles: 'target/mvn-hello-world.war')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])
+				}
+            }
+        }
+    }
+}
+
+
+		CI/CD 
+		
+			Environments ::
+			
+			DEV 
+				Jenkins_Build_Server 
+				
+			
+			TEST 
+				QA_Server 			==> 	jdk, tomcat 			
+				UAT 
+				
+			PROD 
+				
+		How to promote the code to higher environments.
+		How to Schedule Automated Build and Deployments and notifications.
+
+
+		Remote_Server 1 & 2 		
+		
+		Remote_Server 1 & 2
+		
+			Ansible is a CM Tool
+		
+			Ansible server 			===> 	target_machine1,2,3,4,5,6
+			 create ssh_keys 
+			  ssh-copy -- public 						authorized_keys
+			
+			
+		DevOps team :	
+			jenkins_Master 
+				Slave1 
+			using SSH Conn.
+			
+				private and public 				
+				ssh_keygen ??
+				
+				
+				Jenkins_Master
+						Jenkins_Slave-Node1
+						
+				QA_Server 
+					
+
+			Deployment :
+				It is process of copying the artifact from source to target server.
+				
+				Source_Server - Jenkins_Slave-Node1
+					/home/devopsadmin/workspace/SAJULY-Pipeline-Project/target/mvn-hello-world.war  ===>
+					
+				Target_Server - QA_Server
+					/opt/tomcat/webapps/
+				
+				
+				Jenkins_Slave-Node1																					QA_Server
+					/home/devopsadmin/workspace/SAJULY-Pipeline-Project/target/mvn-hello-world.war 		===>			/opt/tomcat/webapps/  
+				
+
+
+
+
+
+######################Install TOMCAT Application Server on Ubuntu :::
+sudo -i
+
+sudo apt update -y
+sudo apt install openjdk-11-jre -y 
+java -version
+
+#edit /etc/profile & add JAVA_HOME
+
+#/usr/lib/jvm/java-11-openjdk-amd64/
+
+vi /etc/profile
+
+export JAVA_HOME="/usr/lib/jvm/java-11-openjdk-amd64"
+PATH=$PATH:$HOME/bin:$JAVA_HOME/bin
+
+source /etc/profile
+
+Install Tomcat ::  https://tomcat.apache.org/download-80.cgi
+
+#https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.93/bin/apache-tomcat-8.5.93.tar.gz
+
+cd /opt
+
+wget https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.93/bin/apache-tomcat-8.5.93.tar.gz
+
+tar -xvzf /opt/apache-tomcat-8.5.93.tar.gz
+
+mv apache-tomcat-8.5.93 tomcat
+
+#Start Tomcat Server:
+#Goto:
+
+cd /opt/tomcat/bin
+./startup.sh
+
+###########################################
+
+#Add User : 
+
+#useradd -m -d /home/devopsadmin devopsadmin
+#useradd devopsadmin
+
+useradd devopsadmin -s /bin/bash -m -d /home/devopsadmin
+
+su - devopsadmin
+
+#ssh-keygen
+
+#for Ubuntu ::
+ssh-keygen -t rsa -b 4096 -m PEM
+
+
+ls ~/.ssh 
+
+#You should see following two files:
+
+#id_rsa - private key
+#id_rsa.pub - public
+
+
+cat id_rsa.pub > authorized_keys
+
+chown -R devopsadmin /home/devopsadmin/.ssh
+chmod 600 /home/devopsadmin/.ssh/authorized_keys
+chmod 700 /home/devopsadmin/.ssh
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#make devopsadmin user as a owner to tomcat dir :
+
+chown -R devopsadmin /opt/tomcat
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+	Go to Jenkins - Manage Jenkins - Plugins Manager - 
+		Search for Publish over SSH Plugins in Availables Tab.
+			Select, install with restart option.
+		
+		
+
+pipeline {
+
+    agent { label 'java-slave1' }
+	
+    tools {
+        maven "maven-3.6.3"
+    }	
+	
+    stages {
+        stage('SCM Checkout') {
+            steps {
+                echo 'Hello World'
+				git 'https://github.com/LoksaiETA/Java-mvn-app2.git'
+            }
+        }
+        stage('Build') {
+            steps {
+                echo 'Perform Maven Build'
+				sh 'mvn -Dmaven.test.failure.ignore=true clean package'
+            }
+        }
+        stage('Deploy to QA Server') {
+            steps {
+				script {
+                    sshPublisher(publishers: [sshPublisherDesc(configName: 'QA-Server', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: '', execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '.', remoteDirectorySDF: false, removePrefix: 'target/', sourceFiles: 'target/mvn-hello-world.war')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])
+				}
+            }
+        }
+    }
+}				
+	
+
+
+Automate the Jenkins Job Execution :::
+
+		Build Triggers :::
+		
+			- Build Periodic
+					Is used to schedule the job based on cron tab.
+					
+			- github webhook
+				It is used to trigger the jenkins job, whenever there is any changes happened in the src_code.
+				Create- Web hook configuration in github repo.				
+				
+			Payload URL :	http://3.110.102.185:8080/github-webhook/			
+			
+			
+			- Poll SCM 
+				It is used to trigger the jenkins job, based on the schedule and if there is any changes happened in the src_code.
+				Define  Cron Tab.
+				
+			Test Cycle :::
+			
+				8am
+				12pm
+				3pm
+				
+				
+Email Notifications :::::
+
+		Gmail Account ::::
+		
+			valid / active Gmail Account 
+				
+				MFA 
+				Create App Password
+				
+
+
+Email Notification Plugins :::
+
+SMTP Server :
+smtp.gmail.com
+
+SMTP Authentication
+
+SMTP Port :: 465
+
+Login to Gmail :::
+
+Click Account Settings
+
+select Security 
+
+MFA --> mobile#
+App Password = 16
+What ? window
+Which Appln - email				
+		
+							
+#################
+15th Sep. 2023
+#################	
+
+		DevOps ::
+		
+			CI/Cd/CD
+			
+		Virtual Machines :::
+		Virtualization ?
+		
+		VMs in AWS Cloud Platform !!!!
+		
+			Regions 
+				Availability Zones(Data Centers)
+					Server1,2,3,4,5,6
+					
+		Virtual Machines ::
+				- Hardware Level Virtualization
+				- Used to run the Operating System.
+				- VM consume lot of space and time to bootup.
+				
+		Containerization ::
+				- OS level Virtualization
+				- Used to run the applications. NOT and Operating System.
+				- It is light-weight when compared to VMs.
+				- It consume less volume and faster.
+				- Each Container run in its own address space, and it is completely isolated from other containers and base OS.
+				- It uses the underlying properties of base OS.
+					like Namespaces & Control Groups.
+					
+					
+		Consider Containerization ::
+		
+			Two Perspectives ::
+			
+			Infra-Structure Perspective :
+			
+				Jenkins_Master ::	VM 
+						Slave1			Java 
+						Slave2			Python 
+						Slave3			.Net  
+						Slave4			Angular 
+						Slave5			NodeJS 
+						
+						
+				Jenkins_Master ::	VM 
+						Build_Server :: VM 
+							Container Engine 
+								C1				Java 
+								C2              Python 
+								C3              .Net  
+								C4              Angular
+								C5              NodeJS 
+			
+			
+			
+			Development/Deployment Perspective :
+			
+					
+			
+				Create the source code ::
+					Build 					Compiled and created artifacts ::: mywebapp1.war
+					Test the war file.		==> openjdk11, tomcat8.5 	==> mywebapp1.war - successfully executed and tested. 
+					Eclipse --> jdk, 
+							    tomcat 				
+					
+					Deploy to QA_Server 	==> jdk1.8, tomcat8.0		==> mywebapp1.war ?
+			
+					
+					Deploy to UAT_Server 	==> jdk1.8, tomcat8.0		==> mywebapp1.war ?
+					
+					
+					Deploy to PROD_Server 	==> jdk1.8, tomcat8.0		==> mywebapp1.war ?
+					
+					
+					Containerization :::
+						Create the source code ::
+							Build 					Compiled and created artifacts ::: mywebapp1.war
+							Test the war file.		==> openjdk11, tomcat8.5 	==> mywebapp1.war - successfully executed and tested.	
+
+								Create a Application Package ==> (mywebapp1.war,openjdk11,tomcat8.5)		==> mywebapp1pkg
+									Container Image/Package 
+						
+								Deploy the package to QA_Server 	==> mywebapp1pkg		==> (mywebapp1.war,openjdk11,tomcat8.5)
+										Container Engine 
+											C1				mywebapp1pkg (mywebapp1.war,openjdk11,tomcat8.5)
+											C2              mywebapp2pkg
+											C3              mywebapp3pkg
+											C4              mywebapp4pkg
+											C5              mywebapp5pkg				
+								
+								Deploy to UAT_Server 	==> jdk1.8, tomcat8.0		==> mywebapp1.war ?
+								
+								
+								Deploy to PROD_Server 	==> jdk1.8, tomcat8.0		==> mywebapp1.war ?						
+										
+
+					DevOps :: Docker & Kubernetes.
+	
+				Terminologies :::
+				
+					Containerization :
+						It is the process of packaging the application along with its dependencies.
+					
+					Namespace (NS)			--> Used to create independent process to the containers
+					Control Groups (CG)		--> Used to create the level of isolation to run the containers in the namespace.
+					
+					Container Engine 		--> Used to create the container Images, Run the Container, Manage the Container resources.
+												It acts as an interface between the underlying OS and the Containers.
+					Image					--> Images are the static file, that defines the application and its depedencies.
+												Image are Non-Executable.
+					Container				--> Containers are Executable unit of Image. 
+					Container Registry		--> It is used to Store and Manage the Container Images.
+												dockerhub - is the default container registry for Container Images.
+												www.hub.docker.com
+					Container Repository	--> These are the subset of Container Registry.
+					
+					
+				About Container Registry 
+				
+				Installation of Container Engine.  https://docs.docker.com/engine/install/
+				
+						In your slave machine : Ubuntu
+						
+							sudo -i
+							apt update -y
+							apt install docker.io -y
+							
+							docker --version
+							
+					Virtual Machine :::
+						Install the Container Engine 
+							Docker 
+							
+						AWS 	--> ECS,ECR,EKS
+						
+						Azure 	--> ACS,ACR,AKS
+						
+						GCP 	--> GCS,GCR,GKS
+					
+				Container Orchestration Tool ::::
+				
+					It is used to orchestrate the containers and ensure high availability of containers.
+					
+						For Docker Containers --> Docker Swarm 
+						
+						Kubernetes --> Opensource Container Orchestration Tool 
+				
+				Working with Container Images and Containers::
+				
+					Docker CLI Commands :::
+
+						docker --version 
+						
+						docker images 	==> Get the list of container images 
+						
+						docker ps		==> Get the list of running containers
+						
+						docker ps -a 	==> Get the list of running as well as stopped containers.
+					
+					
+#################
+18th Sep. 2023
+#################						
+
+		- How to used docker hub to run the containers 
+		
+		- How to work with containers ::::
+		
+		
+		
+		Open a excel sheet :
+		
+		GIT 			Jenkins 
+		
+		
+		
+		java-mvn-app2
+		
+		1. Schedule jenkins pipeline project for every 4 hrs to clean the workspace in slave machine?
+		
+		- Open/import tis repository in eclipse?
+		- edit the src - index.jsp?
+		- commit the changes?
+		
+		please let me know the progress
+		
+		
+		
+		
+					
+#################
+19th Sep. 2023
+#################		
+		
+		
+		Working with Docker 
+		
+		overview od DockerHub 
+		
+		
+		
+		Using Docker Engine, we are gng to create containers 
+		
+			use the exist images docker hub and create containers 
+			Build the user defined/application Image and create the containers.
+		
+		
+		Containerization ::
+				- OS level Virtualization
+				- Used to run the applications. NOT an Operating System.
+				- It is light-weight when compared to VMs.
+				- It consume less volume and faster.
+				- Each Container run in its own address space, and it is completely isolated from other containers and base OS.
+				- It uses the underlying properties of base OS.
+					like Namespaces & Control Groups.	
+
+			
+			
+			docker pull <image_name>:<tag>
+			
+			docker pull images
+			
+			docker run centos 
+			
+			docker run ubuntu
+			
+			docker run --name=mycontainer1 centos
+			
+			Container Modes of Execution :::
+			
+				- Foreground mode / attached mode* (That Terminal will be locked by that container, till the container goes to exit state.
+						docker run centos sleep 20
+					
+				- Background mode / detached mode 
+						docker run -d centos sleep 20 
+						
+				- Interactive Mode
+						docker run -it centos		### This will allow to login to container while it is running.
+					
+			
+			Stop the container 
+			
+			remove the images and container
+			
+				docker rmi <image_name>
+				
+				docker rmi -f <imagename>
+				
+				docker rm <container_id>
+				
+				
+			
+			Start and Stop the container ::
+			
+				docker start <container_id>
+				
+				docker stop <container_id>
+				
+			Container Port Mapping/Binding  :::
+			
+				<external_IP_Addr>:8080		# Accessed the tomcat running in VM.
+				
+			Port Mapping ==> It is process of mapping the container port with the host port.
+			
+			docker run -it -p 8085:8080 tomcat:8.0
+			
+			
+				-p <host_port>:<container_port>
+				
+				
+			QA_Server :::
+						*.war
+						tomcat ==> *.war - 8080
+						100 application artifacts (micro-services)
+						
+						C1 - tomcat appln. 8080
+						C2 - tomcat appln. 8081 ..... C100
+						
+				docker logs <continer_id> 
+				
+				docker inspect <continer_id>
+				
+			Container Volumes ::::
+			
+				Containers are not a permanent entity.
+				
+				
+				Application :::
+				
+					- Stateless Application 
+							The application will not have any trace of execution.
+					
+					- Stateful Application
+							The Applications/service will have the trace of execution in the form of logs/reports/artifacts
+							
+			Container Volumes are used to run any stateful Application and maintain persistant volumes to permanently store the data generated by the application inside the container.
+			
+			docker volume list
+			
+			docker volume create sadevopsvol 
+			
+			docker volume inspect sadevopsvol
+			
+			docker run -it --mount source=sadevopsvol,destination=/sadevopsvol centos
+			
+			To send any input files to container or to access teh output files from container, we use container volume.
+			
+			
+			3-tier application architecture ::::
+			
+				Micro-Service based architecture :::
+				
+					sign_in  --> Service (Front End,Application_Logic,BackEnd_DB)	
+						
+									Service (C1,C2,C3)				
+					
+			To run multiple containers as a single service we use Docker Compose.
+
+					
+			
+			
+    1  clear
+    2  apt update -y
+    3  apt install docker.io -y
+    4  clear
+    5  docker --version
+    6  docker images
+    7  docker ps
+    8  docker ps -a
+    9  clear
+   10  docker images
+   11  docker pull centos
+   12  docker images
+   13  docker ps -a
+   14  docker run centos
+   15  docker ps
+   16  docker ps -a
+   17  docker run centos sleep 30
+   18  docker run centos
+   19  docker ps -a
+   20  clear
+   21  docker run centos
+   22  docker run ubuntu
+   23  docker images
+   24  docker ps -a
+   25  docker run ubuntu
+   26  docker ps -a
+   27  clear
+   28  docker run centos sleep 10
+   29  docker run -d centos sleep 20
+   30  docker ps -a
+   31  docker ps
+   32  clear
+   33  docker ps -a
+   34  docker run -it centos
+   35  clear
+   36  docker images
+   37  clear
+   38  docker images
+   39  docker ps -a
+   40  docker rm 56c39b4
+   41  docker ps -a
+   42  docker rmi ubuntu
+   43  docker rm b7693a1cabb6 06eae3192684 f39f63fa78ec
+   44  docker rmi ubuntu
+   45  docker images
+   46  docker ps -a
+   47  docker run ubuntu
+   48  docker ps -a
+   49  docker rmi -f ubuntu
+   50  docker images
+   51  docker ps -a
+   52  docker run centos
+   53  docker ps -a
+   54  docker run --name=testcos centos
+   55  docker ps -a
+   56  docker images
+   57  docker start 97ace191024f
+   58  docker ps -a
+   59  docker ps
+   60  clear
+   61  docker ps -a
+   62  docker start 9e9a2964a9ed
+   63  docker ps
+   64  docker start 9e9a2964a9ed
+   65  celar
+   66  clear
+   67  docker ps
+   68  docker stop 9e9a2964a9ed
+   69  docker ps
+   70  clear
+   71  docker ps
+   72  docker run -it -p 8085:8080 tomcat:8.0
+   73  clear
+   74  docker run -it -p 8085:8080 tomcat:8.0
+   75  history
+			
+    1  clear
+    2  docker ps
+    3  docker stop 39fe98983dc3 929dd9742803
+    4  docker ps -a
+    5  docker start test*
+    6  clear
+    7  docker ps -a
+    8  docker ps
+    9  docker log 6841493ed4c0
+   10  docker logs 6841493ed4c0
+   11  docker inspect 6841493ed4c0
+   12  clear
+   13  docker images
+   14  docker inspect tomcat
+   15  docker inspect 5d0da3dc9764
+   16  clear
+   17  docke images
+   18  docker images
+   19  docker history ef6a7c98d192
+   20  clear
+   21  docker images
+   22  docker history 5d0da3dc9764
+   23  clear
+   24  docker run -it centos
+   25  clear
+   26  docker volume list
+   27  docker volume create sadevopsvol
+   28  docker volume list
+   29  docker volume inspect sadevopsvol
+   30  cd /var/lib/docker/volumes/
+   31  ls
+   32  cd sadevopsvol/
+   33  ls
+   34  cd _data/
+   35  pwd
+   36  clear
+   37  cd ~
+   38  docker ps
+   39  docker run -it centos
+   40  docker run -it --mount source=sadevopsvol,destination=/sadevopsvol centos
+   41  cd /var/lib/docker/volumes/sadevopsvol/_data
+   42  ls
+   43  cd f
+   44  cat file1fromcontainer.txt
+   45  echo "rec1" >> filefromhost.txt
+   46  ls
+   47  cd ~
+   48  docker ps -a
+   49  clear
+   50  docker ps
+   51  docker ps -a
+   52  docker run -it --mount source=sadevopsvol,destination=/sadevopsvol centos
+   53  cd /var/lib/docker/volumes/sadevopsvol/_data
+   54  cd ~
+   55  history
+			
+
+#################
+21st Sep. 2023
+#################	
+
+
+		How to create Docker container Images:
+		How to publish the images to docker registry
+		
+		Docker Compose 
+		Container Orchestration Tools :
+		
+			Docker Swarm 
+			Kubernetes 
+			
+		
+
+		How to create Docker container Images:
+
+					
+			Naming Container Images ::::
+			
+				loksaieta/mydebiangit-img:v1.0
+				
+				loksaieta/mydebiangit-img:latest
+	
+			- Docker Commit 
+			
+			- Docker Build 				
+			
+
+			- Docker Commit :::
+			
+				It is used to create a new Image based on the container.
+				
+			docker run -it --name=mvnbuildcontainer --mount source=sadevopsvol,destination=/sadevopsvol centos 
+			
+			mvnbuildcontainer:
+			
+			/# ls 
+			/# git 
+			/# jdk 
+			/# maven 
+			
+			/# exit 
+			
+			docker start 
+			
+			Based on this container ID we can create new image.		==> mvnappbuiderimg ==> publish this to docker registry
+			
+			docker run -it debian 
+			/# apt update -y
+			/# apt install git -y 
+			/# exit 
+				
+						
+			docker commit abdb913e0a19 loksaieta/sajulyimg1:v1.0
+			
+			
+			- Docker Build 				using Dockerfile we can build new images.	
+
+					mywebapp1.war ==> (mywebapp1.war,jdk,tomcat) --> mywebappimg.
+
+
+				Create Dockerfile :
+				
+				docker build -t loksaieta/sajulyimg1:v1.1 .
+				
+				Dockerfile is the collection of Instructions to build the container image.
+				
+				
+				Create an Image :
+					
+				Dockerfile :
+				
+					FROM debian
+					RUN apt-get update -y
+					RUN apt-get install git -y 
+					
+				docker build -t loksaieta/sajulyimg1:v1.1 .
+				
+				
+			How to publish the images to docker registry ???
+			
+				docker cli command 
+				
+				docker login -u loksaieta
+				
+				Access Token --> dXk
+				
+				docker push loksaieta/sajulyimg1:v1.1
+				
+			
+			Developer --> Eclipse IDE --> Create Src_code --> Push_the_Change to github_repository
+			
+			Jenkins 
+					  SCM_Checkout	--> Application_Build(*.war)	--> Docker_Build(App_Img)	--> Publish_to_Docker_Resigtry
+						
+					  --> Pull the image into QA_Server 	--> Run Container in QA
+					  
+					  --> Pull the image into UAT_Server 	--> Run Container in UAT
+					  
+					  --> Pull the image into PROD_Server 	--> Run Container in PROD		container1 
+					  
+			
+			VM --> PROD Server1,2,3  ==> amazon-app1.war 
+			Load Balancers 
+			
+					Usage :::
+					
+						100000
+			
+			Container Orchestration Tools :
+					Are used to ensure high availability of Containers.
+					Create the Replicas of Containers.
+					replicas - 5 
+					
+				Docker Swarm --> 
+						Is the Container Orchestration Tool used to Orchestrate only the Docker Containers.
+						
+				Kubernetes 
+						Is the Container Orchestration Tool used to Orchestrate any type of Containers.
+					  
+			Micro-Service Based Appln. deployments using Containers :::::
+			
+			
+			High Availability of Application :::
+					Servers & Resources which are responsible to to run the applications should available. 
+					
+					VM & Containers 
+			
+				
+			Docker Compose :::
+			
+					It is used to run multiple Containers as a Service.  Why to run multiple containers as a service ????
+					
+					
+			
+			Web Application : E_Commerce
+			
+			www.amazon.com - E_Commerce  ::::
+
+			Developers's Perspective ::::
+			
+						sign_up ==> --> 3 - tier Architecture
+										FrontEnd,Application_Logic,BackEnd(Database) SQL/ORACLE		
+											C1,C2,C3
+											
+											docker run 
+						
+			
+			Sign_up			---> (Micro-service) Developer will make the code change --> test --> QA/UAT/ --> Released to Prod.		
+
+			Docker Compose & Docker Swarm :::
+			
+			Docker Swarm --> 
+					Is the Container Orchestration Tool used to Orchestrate only the Docker Containers.	Ensure High Availability of Container.		
+			Docker Compose :::			
+					It is used to run multiple Containers as a Service.
+					
+			Service1(C1,C2,C3)	--> 
+			
+			
+			Kubernetes :::
+			
+			Build :::
+				Dockerfile :
+				
+					FROM debian
+					RUN apt-get update -y
+					RUN apt-get install git -y 	
+
+			Docker File Instructions:::
+			
+			
+			Want to have a Container to build their application :::
+			
+				Jenkin_Master 
+					Jenkins_Slave
+									C1,C2,C3,C4,C5,C6
+									
+				Dockerfile :
+				
+					FROM debian
+					RUN apt-get update -y
+					RUN apt-get install git -y 	
+
+
+				Instructions ::
+				
+				FROM  	--> Used to specify the base image. 
+				
+				RUN 	--> Used to run the package managers to manage the package within the container.
+				
+				COPY	--> Used to copy the files from host machine into the container volume/Dir. 
+				
+				CP		--> Used to copy the files with the container volumes/dir.
+				
+				WORKDIR --> Used to identify the current working directory.
+				
+				ENV 	--> Used to Create Environment Variables
+				
+				EXPOSE	--> It is used to Expose the Container Port. 
+				
+				CMD		--> Used to specific the default/start-up command to run the container. 
+							This allow users to pass any commands at runtime. 
+				
+				ENTRYPOINT	--> Used to specific the default/start-up command to run the container.
+								This Will not allow users to pass any commands at runtime. 
+				
+				
+				
+Next :::
+
+			Dockerfile :
+		
+			Jenkins 
+					  SCM_Checkout	--> Application_Build(*.war)	--> Docker_Build(App_Img)	--> Publish_to_Docker_Registry
+						
+					  --> Pull the image into QA_Server 	--> Run Container in QA				
+			
+			
+#################
+22nd Sep. 2023
+#################	
+		
+			Requirement :::
+			
+			
+			1. Java Maven web application.
+				Create Jenkins pipeline to perform automated build and publish the application image to Dockerhub registry.
+				
+				
+			Pre-requisites :::
+				- source code should be present in github repo.
+				- Infra-Structure :
+					- Tools: 
+						GIT 
+						jenkins 
+						jdk 
+						maven 
+						docker
+						
+					- Servers :
+						Jenkins_Master						==> git,jdk,jenkins 		
+															==> It is create the build pipeline & Schedule the job to node.
+							Java_Appln_Build_Server			==> git,jdk,maven,docker	
+															==> It is used to build the Application and build Container image
+															==> Push the images to Container Registry.
+							
+			Implementation :::
+
+			Create a Workflow of CI/CD Pipeline :::
+			
+			CI Pipeline ::::
+			
+				SCM_Checkout 
+				Build_Application	
+				
+				Build_Application_Image
+				
+				Publish_to_Docker_Registry
+				
+			Critical Technical Requirements ::::
+			
+				Before creating the actual pipeline script :
+				
+					- Jenkins_Master & Node Configuration is successful
+							usermod -aG docker devopsadmin
+							User_ID in build server with SSH Keys
+							Config the Node in Jenkins_Master
+							
+					- Access to Dockerhub from Jenkins.
+							Configure the Dockhub credentials in Jenkins_Master
+								- Create Access Token in Dockerhub
+							- Login to Dockerhub
+							- Publish_to_Docker_Registry
+			
+			
+			Create CI Pipeline Script :::			
+			
+				SCM_Checkout 	-->		Build_Application		-->		Build_Application_Image		--> 	Publish_to_Docker_Registry
+			
+			
+
+
+pipeline {
+
+    agent { label 'slave1' }
+	
+    tools {
+        maven "maven-3.6.3"
+    }
+
+	environment {	
+		DOCKERHUB_CREDENTIALS=credentials('dockerloginid')
+	}
+	
+    stages {
+        stage('SCM_Checkout') {
+            steps {
+                echo 'Perform SCM Checkout'
+				git 'https://github.com/LoksaiETA/devops-java-webapp.git'
+            }
+        }
+        stage('Application_Build') {
+            steps {
+                echo 'Perform Maven Build'
+				sh 'mvn -Dmaven.test.failure.ignore=true clean package'
+            }
+        }
+        stage('Build Docker Image') {
+            steps {
+				sh 'docker version'
+				sh "docker build -t loksaieta/loksai-eta-app:${BUILD_NUMBER} ."
+				sh 'docker image list'
+				sh "docker tag loksaieta/loksai-eta-app:${BUILD_NUMBER} loksaieta/loksai-eta-app:latest"
+            }
+        }
+		stage('Login2DockerHub') {
+
+			steps {
+				sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
+			}
+		}
+		stage('Publish_to_Docker_Registry') {
+			steps {
+				sh "docker push loksaieta/loksai-eta-app:latest"
+			}
+		}
+    }
+}								
+	
+	
+Next :::
+
+		Kubernetes :
+		Deploy the Images in the target environments using Kubernetes.
+		
+#################
+25th Sep. 2023
+#################	
+
+
+			Sign_up			---> (Micro-service) Developer will make the code change --> test --> QA/UAT/ --> Released to Prod.	
+
+
+			Service ==> 3 containers ==> 
+			
+			Kubernetes 
+					Is the Container Orchestration Tool used to Orchestrate any type of Containers.
+					  
+			Micro-Service Based Appln. deployments using Containers :::::
+			
+			
+			High Availability of Application :::
+					Servers & Resources which are responsible to to run the applications should available.
+
+			
+			What are the factors that might impact the Production Deployments ???
+			
+				High Traffic 
+				Resource Usage
+				Network/connectivitity issues
+				Server Availability
+				
+				Application 
+				
+				Mask all these impacts using Containers.
+				
+				3 replicas of my container. scale up the containers.
+				
+				
+			Kubernetes 
+					Is the Open-Source Container Orchestration Tool used to Orchestrate any type of Containers.
+					It is used to ensure high availability of the applications running thru containers.
+					Load-Balancing,Auto-Scaling,self-healing 
+					
+					Kubernetes Controller Objects - Used to ensure that the applications are running as per its desired state.
+					
+			Architecture of Kubernetes:
+				Master & Workers Node Architecture
+				
+			Terminologies :
+				Images 
+				Containers 
+				Container Registry 
+				Repositories
+				
+				Kubernetes_Master		==> Is a controller Machine, shedules the deployments 
+				Kubernetes_Cluster 		==> Is a collection of Kubernetes_Worknodes
+				Kubernetes_Worknodes 	==> Are the nodes where the actual deployment happens.
+				Kubeadm					==> Is the command line utility  used to initiate the Kubernetes Master & its resource.
+				kubectl					==> It is a command line utility used to interact with Kubernetes master.
+				
+				PODs					==> Atomic Unit of Scheduling.
+			
+			Installation & Configuration of Kubernetes*********
+			Architecture of Kubernetes*********************
+			
+			
+			Kubernetes --> Is the Open-Source Container Orchestration Tool
+			
+			Managed Services ::
+			
+				AWS 		- ECS,ECR,EKS 
+				AZURE 		- ACS,ACR,AKS 
+				GCP 		- GCS,GCR,GKS
+				
+
+Architecture of Kubernetes
+				
+	Master Components :::::
+
+	Below are the main components on the Kubernetes master node:
+
+		etcd cluster – a simple, distributed key value storage which is used to store the Kubernetes cluster data (such as number of pods, their state, namespace, etc), API objects and service discovery details. It is only accessible from the API server for security reasons. 
+
+		kube-apiserver – Kubernetes API server is the central management entity that receives all REST requests for modifications (to pods, services, replication sets/controllers and others), serving as frontend to the cluster. 
+		Also, this is the only component that communicates with the etcd cluster, making sure data is stored in etcd and agrees with the service details of the deployed pods.
+
+		kube-controller-manager – runs several distinct controller processes in the background (for example, replication controller controls number of replicas in a pod, endpoints controller populates endpoint objects like services and pods, and others) to regulate the shared state of the cluster and perform routine tasks. 
+
+		cloud-controller-manager – is responsible for managing controller processes with dependencies on the underlying cloud provider (if applicable). For example, when a controller needs to check if a node was terminated or set up routes, load balancers or volumes in the cloud infrastructure, all that is handled by the cloud-controller-manager.
+
+		kube-scheduler – helps schedule the pods (a co-located group of containers inside which our application processes are running) on the various nodes based on resource utilization. It reads the service’s operational requirements and schedules it on the best fit node. 
+
+
+	Node (worker) components  :::::
+
+	Below are the main components found on a (worker) node:
+
+		kubelet – the main service on a node, regularly taking in new or modified pod specifications (primarily through the kube-apiserver) and ensuring that pods and their containers are healthy and running in the desired state. This component also reports to the master on the health of the host where it is running.
+
+		kube-proxy – a proxy service that runs on each worker node to deal with individual host subnetting and expose services to the external world. It performs request forwarding to the correct pods/containers across the various isolated networks in a cluster.
+
+				
+				
+				
+			Kubectl get pods ::::
+				used to get list of pods along with it status
+				
+			syntax: 
+			
+				kubectl <command> <Object_Type> <Object_Name> <parameters>
+				
+			
+			Installation of Kubernetes
+			Kubernetes Objects :
+				PODS 
+				Deployment Controller Object 
+			Kubernetes Services
+			Kubernetes Namespaces 
+			
+			
+			Pod is a automic unit of scheduling :::
+			
+				state of pod :
+				
+						pending 
+						running 
+						failed 
+						successful
+
+
+#################
+26th Sep. 2023
+#################	
+
+			Installation of Kubernetes
+			Working with Kubernetes Objects :
+				PODS 
+				Deployment Controller Object 
+			Kubernetes Services
+			Kubernetes Namespaces 
+
+			Installation and Configuration of Kubernetes Master & Kubernetes Worker Nodes :::
+			
+				- Minikube.
+				
+				Enterprise level :
+				- Managed Services(EKS/AKS/GKS)
+				
+				- Open source kubernetes 
+						Kubeadm 
+						
+							-> Pre-requisites :::
+									
+									Launch VMs - Host_Machines -- KM,(KWN1,2,3,...)
+									
+									3GB RAM 
+									2 CPUs 
+									
+									All the Nodes should have full network assess. 
+									There should not be any firewall restriction. 
+									All the required ports should be enabled.
+									
+									
+									
+									To be install in all the nodes - Master & Workernodes.
+										Setup Host_Machine Names -- KM,(KWN1,2,3,...)
+										docker 
+										ContainerD ==> CRI - Container Runtime Interface 
+										kubeadm,kubectl,kubelet
+									
+									To be executed only in Master 
+										kubeadm init to initialize Kubernetes master 
+									
+									To be executed only in WorkerNodes
+										kubeadm join to join the workernodes kubernetes Master 
+										
+									
+									
+						deployment -> pod --> container --> application --> write 100 records to a database.
+								completed around 30 records 
+								
+						Controller Manager 
+						
+						deployment -> new pod --> resume. 
+		
+			Working with Kubernetes Objects :
+				PODS 
+				Deployment Controller Object 
+
+			Kubernetes Services :::
+			
+				NodePort Service ==> It is used to expose the pod to internet.		== Generate the NodePort.
+				
+				Using the External IP Address of the Node and the NodePort, we can access the application that is running inside the pod thru web browser.
+
+
+Summary : 
+
+			Installation of Kubernetes
+			Working with Kubernetes Objects :
+				PODS 
+
+Next ::				
+			Deployment Controller Object  high - availability of pods, autoscale, upgrade, rollback(undo) the changes  
+				Kubernetes Services
+				Kubernetes Namespaces 
+				
+
+#################
+28th Sep. 2023
+#################				
+
+			Deployment Controller Object  high - availability of pods, autoscale, upgrade, rollback(undo) the changes  
+				Kubernetes Services
+				Kubernetes Namespaces 
+				
+				
+			Deployment Controller object:
+			
+			pods --> 7
+
+			Kubernetes_Master
+				Kubernetes_Cluster
+					Kubernetes_Worknode1
+					Kubernetes_Worknode2
+			
+			Kubernetes_Master
+				Kubernetes_Cluster1
+					Kubernetes_Worknode1
+					Kubernetes_Worknode2
+					Kubernetes_Worknode3
+					Kubernetes_Worknode4						
+				Kubernetes_Cluster2
+					Kubernetes_Worknode1
+					Kubernetes_Worknode2
+					Kubernetes_Worknode3
+					Kubernetes_Worknode4			
+				Kubernetes_Cluster3
+					Kubernetes_Worknode1
+					Kubernetes_Worknode2
+					Kubernetes_Worknode3
+					
+			Kubernetes_Master	
+				Kubernetes_Master1
+					Kubernetes_Cluster1
+						Kubernetes_Worknode1
+						Kubernetes_Worknode2
+						Kubernetes_Worknode3
+						Kubernetes_Worknode4						
+					Kubernetes_Cluster2
+						Kubernetes_Worknode1
+						Kubernetes_Worknode2
+						Kubernetes_Worknode3
+						Kubernetes_Worknode4			
+					Kubernetes_Cluster3
+						Kubernetes_Worknode1
+						Kubernetes_Worknode2
+						Kubernetes_Worknode3			
+				Kubernetes_Master2
+					Kubernetes_Cluster1
+						Kubernetes_Worknode1
+						Kubernetes_Worknode2
+						Kubernetes_Worknode3
+						Kubernetes_Worknode4						
+					Kubernetes_Cluster2
+						Kubernetes_Worknode1
+						Kubernetes_Worknode2
+						Kubernetes_Worknode3
+						Kubernetes_Worknode4			
+					Kubernetes_Cluster3
+						Kubernetes_Worknode1
+						Kubernetes_Worknode2
+						Kubernetes_Worknode3
+
+
+			Deployment Controller object:::
+			
+				Pod :::
+				
+				Deployment ::: 
+				
+					mywebapp.war ==> myweappimg:v1.0	==> Published to Docker_hub.
+					mywebapp.war ==> myweappimg:v1.1	==> Published to Docker_hub.
+					mywebapp.war ==> myweappimg:v1.2	==> Published to Docker_hub.
+					mywebapp.war ==> myweappimg:v1.3	==> Published to Docker_hub.
+					mywebapp.war ==> myweappimg:v1.4	==> Published to Docker_hub.
+					mywebapp.war ==> myweappimg:v1.5	==> Published to Docker_hub. pod is up an running
+				
+				Upgrade
+				Revert/Undo the Change 
+				Replicas of Pod 
+					Auto-Scaling Capability of Kubernetes 
+						Scale-Up
+						Scale-Down
+				
+
+				StrategyType:           RollingUpdate ***Default Deployment Strategy
+				
+				Services :::
+					ClusterIP 	(Default Service)
+					NodePort 	- It is used to expose the pods to internet.
+					Load Balancer
+				
+				
+				1 copy of Pod --> 	nginx:1.7.9			===>> nginx:1.9.1
+				
+				3 copy of Pod --> 	nginx:1.7.9			===>> nginx:1.9.1
+				1 of 3 ==> Upgraded first. If it is successful then only it will upgrade the remaining pods.
+				
+nginx-deploy-5bdd559bcc-7f6rv   1/1     Running   0          3m15s
+nginx-deploy-5bdd559bcc-9pk2z   1/1     Running   0          3m15s
+nginx-deploy-5bdd559bcc-wth8t   1/1     Running   0          3m15s
+
+
+nginx-deploy-58cbc576c5-7mlks   1/1     Running   0          54s
+nginx-deploy-58cbc576c5-g5h47   1/1     Running   0          44s
+nginx-deploy-58cbc576c5-r64ql   1/1     Running   0          34s
+				
+			Kubernetes Services
+				
+				Services :::
+					ClusterIP 	(Default Service)
+					NodePort 	- It is used to expose the pods to internet.
+					Load Balancer		
+
+					
+			Kubernetes Namespaces 			==> Logical Partitioning of the Cluster.
+					Can be created based on the Application / Environments.
+
+				kubectl get nodes  ==> 
+				
+			00:00  kubectl set image deploy nginx-deploy nginx-container=nginx:1.9.1
+			10000 replicas 
+   54  kubectl get nodes
+   55  kubectl get pods --all-namespaces
+   56  clear
+   57  kubectl get pods
+   58  vi nginx-pod.yaml
+   59  kubectl create -f nginx-pod.yaml
+   60  kubectl get pods
+   61  kubectl get pods -o wide
+   62  clear
+   63  kubectl get pods -o yaml
+   64  kubectl describe pod nginx-pod
+   65  clear
+   66  kubectl get pods -o yaml
+   67  clear
+   68  kubectl get pods -o wide
+   69  ls
+   70  kubectl exec -it nginx-pod -- /bin/sh
+   71  kubectl get svc
+   72  kubectl expose pod nginx-pod --type=NodePort --port=80
+   73  kubectl get svc
+   74  kubectl get pods -o wide
+   75  clear
+   76  kubectl get pods --all-namespaces
+   77  clear
+   78  kubectl get nodes
+   79  kubectl get pods
+   80  ls
+   81  clear
+   82  vi nginx-deploy.yaml
+   83  clear
+   84  ls
+   85  kubectl get pos
+   86  kubectl get pods
+   87  clear
+   88  kubectl get pods -o wide
+   89  kubectl create -f nginx-deploy.yaml
+   90  kubectl get pods -o wide
+   91  kubectl get rc
+   92  kubectl get rs
+   93  kubectl get deploy -l app=nginx-app
+   94  kubectl get rs -l app=nginx-app
+   95  kubectl get po -l app=nginx-app
+   96  kubectl describe deploy nginx-deploy
+   97  kubectl set image deploy nginx-deploy nginx-container=nginx:1.91 --record
+   98  kubectl describe deploy nginx-deploy
+   99  kubectl rollout status deployment/nginx-deploy
+  100  kubectl rollout history deployment/nginx-deploy
+  101  kubectl get po -l app=nginx-app
+  102  kubectl rollout undo deployment/nginx-deploy
+  103  kubectl rollout status deployment/nginx-deploy
+  104  kubectl get po -l app=nginx-app
+  105  kubectl describe deploy nginx-deploy
+  106  kubectl set image deploy nginx-deploy nginx-container=nginx:1.9.1
+  107  kubectl rollout status deployment/nginx-deploy
+  108  kubectl get po -l app=nginx-app
+  109  kubectl describe deploy nginx-deploy
+  110  kubectl get po -l app=nginx-app
+  111  kubectl scale deployment nginx-deploy --replicas=8
+  112  kubectl get po -l app=nginx-app
+  113  kubectl scale deployment nginx-deploy --replicas=2
+  114  kubectl get po -l app=nginx-app
+  115  kubectl scale deployment nginx-deploy --replicas=8
+  116  kubectl get po -l app=nginx-app -o wide
+  117  kubectl get svc
+  118  clear
+  119  kubectl get ns
+  120  kubectl get pods
+  121  kubectl get pods -owide
+  122  clear
+  123  kubectl get pods --all-namespaces
+  124  kubectl create ns DEV
+  125  kubectl create ns dev
+  126  clear
+  127  kubectl get ns
+  128  kubectl create ns qa
+  129  kubectl create ns uat
+  130  kubectl get ns
+  131  ls
+  132  cp nginx-pod.yaml nginx-pod1.yaml
+  133  ls
+  134  vi nginx-pod1.yaml
+  135  ls
+  136  kubectl create -f nginx-pod1.yaml
+  137  clear
+  138  kubectl get pods
+  139  kubectl get pods --all-namespaces
+  140  clear
+  141  history
+			
+Kubernetes :::	
+		What is Container Orchestration 
+		Type of Container Orchestration Tools
+		Kubernetes 
+		Kubernetes Architecture 
+		Create Pod 
+		Deployments***
+		Namespaces 
+		Services - NodePort Service.
+		
+		
+		
+		
+#################
+29th Sep. 2023
+#################
+
+			Infra-Structure as Code :::
+			
+			dev namespace ==> only dev team 
+			
+			qa_ namespace ==> only testing
+			
+			
+			Infra-Structure as Code :::
+			
+				DevOps :::
+				
+					Infra-Structure Provisioning and Configurations 
+					
+						Worker_Machine 
+							Configure all the required tools.
+							
+							
+				Infra-Structure Team :::
+				
+				Dev_Team :: 100 Developers 
+						Dev_machine 
+						Install all the required tools & Service
+						
+				Automate the Server Creation ???
+				
+					CLI/Shell scripts 
+					
+					IAC Tools ::
+						Terraform / Cloudformation ==> Provision the Servers.
+				
+				Automate the Server Configuration ???
+						
+						Ansible 	==> Configure the server
+						
+				Ansible is IAC Tool used for Configuration Management.
+					It is simple and Agentless
+					It is powerful IAC Tool
+					It uses push mechanism to manage the target machines.
+				
+				
+				Ansible is used to :
+					- Configure the Server - Installation/Unstallation/Upgrade of tools/Services
+					- Deployment of Applications 
+					- Used to perform Security Patch updates in all the target Machines
+					
+				Ansible Architecture :::				
+					Client/Server Architecture:
+					
+					
+				Ansible Controller/Master/Engine :::
+				
+					Inventory 
+					Modules 
+					ansible.cfg
+					
+					Inventory: 
+						It is just a flat file used to maintain the target server details.
+						-IP of Target Machines 
+						-SSH_User_Name
+						-SSH_Password
+						-Connection_type
+						
+					Modules :
+						It is the script used to perform any task in the target machines.
+						shell ==> used to run shell commands in target machine 
+						yum/apt/dnf
+						These modules are injected into the target server and it gets executed in target server.
+						Once the execution is completed, the script will be removed from target machine.					
+					
+					ansible.cfg	==> This defines the default properties of Ansible controller Machines.
+				
+				Connection is established using SSH.
+				
+				How to execute the Modules ::::
+				
+					- Ansible Adhoc Commands 
+					
+						apt install git -y
+					
+					- Ansible Playbooks 
+						-> Manifest file that defines the set/series of tasks to be executed in target machines.
+						-> Thest manifest files are written using *.yaml script
+						
+						update 
+						jdk
+						install tomcat 
+						start tomcat
+						
+						Build Server 
+						
+							git 
+							jdk 
+							maven 
+						
+						
+				Install Ansible ::
+				
+					
+					Prepare the Ansible Controller Machine :::
+							Python is a pre-requisites
+							Install Ansible
+							Create valid user & SSH Key
+					
+					Prepare the Ansible Target Machines :::
+							Valid User Name.
+							
+				
+				3 VM : 
+					1- Ansible Controller 
+					2- Ansible Target
+					
+					
+			Working with Ansible Adhoc Commands ::::
+			
+				ansible <host> -m <module_name> -i <inventory_file>
+				
+				Possible values for <host> : group_name/node_name/all
+				Eg.: 
+				
+				ansible testnodes -m ping
+
+   15  cd /etc/ansible/
+   16  ls
+   17  cat hosts
+   18  clear
+   19  ls
+   20  vi hosts
+   21  ll
+   22  chown -R devopsadmin:devopsadmin /etc/ansible
+   23  clear
+   24  exit
+   25  ls
+   26  cd /etc/ansible/
+   27  ls
+   28  clear
+   29  ansible testnodes -m ping
+   30  ansible samplenode1 -m ping
+   31  ansible samplenode2 -m ping
+   32  ansible all -m ping
+   33  ls
+   34  cd ..
+   35  cd ~
+   36  ansible all -m ping
+   37  pwd
+   38  cd /etc/ansible/
+   39  ls
+   40  cat ansible.cfg
+   41  ls
+   42  clear
+   43  ls
+   44  ll
+   45  cat ansible.cfg
+   46  clear
+   47  ls
+   48  vi devmachines
+   49  vi devmachines
+   50  ansible devnodes -m ping
+   51  ansible devnodes -m ping -i devmachines
+   52  ansible devnode1 -m ping -i devmachines
+   53  ansible devnodes -m ping -i devmachines
+   54  history
+				
+							
+
+Next :
+
+		Ansible Modules 
+		Playbooks 
+		variables
+		roles 
+		
