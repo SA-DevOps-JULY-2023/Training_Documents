@@ -7726,4 +7726,202 @@ Next :
 		Playbooks 
 		variables
 		roles 
+	
+#################
+2nd Oct. 2023
+#################
+
+		Ansible Modules 
+		Playbooks 
+		variables
+		roles 
 		
+		
+		Ansible Adhoc Commands ::::
+		
+			ansible testnodes -m ping 
+			
+			
+		Ansible Playbooks :::
+		
+			It is written in *.yaml
+			
+		Playbook :
+			It is used to execute the series of tasks.
+			Task is just the collection of modules.
+			
+			Playbook should be organised and it should reusable.
+			
+		Create a simple playbook  to execute a module.
+		
+			debug module is used to display the content to the terminal
+			
+			
+		Using user-defined variables in Playbook :::
+		
+		
+		Ansible Roles :
+		
+				Organise the ansible components(variables, handlers, default, properties, tasks)
+				Re-use the ansible Components
+				Share the Ansible Components 
+		
+			- Install Pre-requisites 
+			- Install the actual tool 
+			- Post - Installation tasks 
+			
+		MYSQL_DBServer 
+
+			- Install Pre-requisites 
+			- Install the actual tool 
+			- Post - Installation tasks 			
+			
+			
+		Configure Java Build Server ::
+			
+				apt install git 
+				apt install jdk 
+				apt install maven 
+				
+		config_mvnbuildserver.sh 		
+		apt update -y
+		apt install git 
+		apt install jdk 
+		apt install maven 
+		
+		./config_mvnbuildserver.sh
+		
+		VM1 
+		
+		
+		Ansible ::
+		
+		Playbook :::
+		
+		host: build_servers
+		task:		
+		apt:
+			name: git-2.276.8 
+			state: present
+		apt:
+			name: Openjdk11 
+			state: present
+			notify:
+				name: install-Maven
+		
+		handler:
+			name: install-Maven
+			apt:
+				name: maven-3.2.6 
+				state: present
+				
+				
+				
+#################
+3rd Oct. 2023
+#################
+
+		Handlers ::
+		
+		Ansible Roles
+		
+		Terraform :::
+		
+		
+		Ansible Components ::::
+		
+			Should be reusable :::
+			
+			Ansible - CM --> 
+			
+			DataBase servers in Nprod & prod
+
+			Provision the required number of VMs for Database servers.
+			
+			Inventory file ::
+			Playbook ::			
+			
+			Ansible Repository.
+			
+			Ansible Galaxy 
+			
+				Used to Initialize or Install the Ansible roles ::::
+				
+				
+			Ansible Roles ==> 	It is used to organize the ansible components.
+								It is used to Reuse the ansible components.
+								It is also used to share the ansible components.
+			
+			
+			Playbook ::
+			
+				hosts: <db_servers>
+				task:
+					Install pre-requisites 
+					Install mysql 
+					start mysql
+					create database
+					
+				hosts: <db_servers>
+				roles:
+					mysql_role
+					
+					
+				mysql_role :
+				
+					tasks/
+						main.yaml
+						
+			
+			ansible-galaxy init <new_role_name>
+			
+			ansible-galaxy role install <existing_role_name>
+			
+			Clone the repo 
+			
+			
+Ansible :::
+		
+		IAC 
+		
+		Install Ansible 
+		Configure Target Nodes 
+		Inventory 
+		Modules 
+		Adhoc 
+		playbooks 
+		Handling Variables
+		Ansible roles 
+		
+		
+
+NExt
+		Fundamentals of Terraform 
+		
+		Fundamentals of Continuous Monitoring using Prometheus & Grafana
+		
+		Capestone Project Discussions.
+		
+			3 Projects  (Monday)
+			
+			
+		Assignments ::::
+		
+			Jenkins 
+			Docker 
+			Kubernetes
+			Ansible 
+		
+Jenkins_pipeline:		
+		scm_checkout
+		application_build
+		application_image_build 
+		Login_to_dockerhub
+		published to docker hub 
+		
+		Deployment using kubernetes
+
+pull and run in qa_server		
+			
+		
+				
