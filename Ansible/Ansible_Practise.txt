@@ -25,6 +25,12 @@ vi /etc/ssh/sshd_config
 #Enable Password Authentication to Yes and save the file
 #Execute Below command to update the changes.
 
+#As a root user edit below file:
+$ visudo
+
+#add the below mentioned line in the file and save it.
+ansibleadmin ALL=(ALL) NOPASSWD: ALL
+
 service sshd reload
 
 su - ansibleadmin
