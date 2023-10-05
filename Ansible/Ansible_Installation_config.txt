@@ -27,6 +27,12 @@ vi /etc/ssh/sshd_config
 
 service sshd reload
 
+#As a root user edit below file:
+
+$ visudo
+#add the below mentioned line in the file and save it.
+#ansibleadmin ALL=(ALL) NOPASSWD: ALL
+
 su - ansibleadmin
 
 ls -a 
