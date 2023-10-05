@@ -1,0 +1,93 @@
+
+#################
+5th Oct. 2023
+#################
+
+################
+Terraform :::
+################
+
+		Fundamentals of Terraform ::::
+		
+		IAC --> 
+		
+		Provisioning the Servers.
+		
+		Dev, Test Team, Release 
+		
+		Automated Testing thru jenkins pipeline :
+	
+			Test Environments :::
+			
+		
+		IAC - 
+		
+		Terraform 	==> Create the servers 
+		
+		Ansible 	==> Configure the servers 
+		
+		
+		
+		
+		
+		
+			Terraform 	- is one of the source IAC Tools for server provisioning/Creation.
+						- Terraform Scripts are written using HCL scripting Language - HashiCorp Declarative Language(in json file format)
+						- The Terraform script should be saved as *.tf
+						- AWS Provider for Terraform
+						
+			AWS -- Cloud Formation
+			Az  -- ARM
+			
+			Terraform Work flow:
+			
+				1. Identify the scope for the servers/Environment - AWS/AZ/GCP/
+				2. Initialize the Provider 		# Install the Provider for terraform in the local machine. 
+				3. Create/customise the terraform script.
+				4. Execute terraform plan		# It is used to verify the script and the resource definition. 
+				5. Execute terraform apply		# It is used to actually provision the resources.
+				
+			Using Terraform ::
+			
+				1. Create/Add the resources	 				+
+				2. Alter/Update/Change the resources 		~
+				3. Delete/Destroy the resources				-
+			
+			Installation of Terraform :::
+			
+				Install Terraform in the local Windows Machine
+				
+					https://developer.hashicorp.com/terraform/downloads
+					
+					Download AMD64 for windows ==> Extract and have it in a directory - 
+					Create Environment variable.
+				
+					Visual Studio Code IDE	
+					
+					Install Terraform Extension for Visual Studio Code.
+					
+					Create Project Folder for Terraform
+					Create *.tf file 
+					
+					
+					
+
+				Using Terminals/command prompts to execute the Terraform script.			
+
+				Terraform State File ==> It is used to maintain the current status of the target server
+				
+				terraform init 	# This should be one time in the project level
+				
+				terraform plan
+				
+				terraform apply
+
+
+Next :::
+
+
+		Fundamentals of Continuous Monitoring using Prometheus & Grafana
+		
+		Capestone Project Discussions.
+		
+			3 Projects  (Monday)
