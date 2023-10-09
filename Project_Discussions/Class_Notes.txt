@@ -1,0 +1,91 @@
+#################
+9th Oct. 2023
+#################
+
+		Project Discussion :::
+		
+		Pre-requisites :::
+		
+		Process of Project / Software - Development LifeCycle :::
+		
+		End Goal ::::
+		
+			Profile ::
+			
+				DevOps Skill :::
+				
+						Tool 				: 	GIT,Jenkins,Docker,Kubernetes,Ansible,Terraform,/Prometheus/Grafana.
+						
+						Scripting Languages : 	Shell,Groovy Script for CI/CD Pipeline, Yaml Scripts for Ansible & Kubernetes
+												Python Scripting(Added advantage)
+												
+						Development Process	:	How the Applications are developed, build, tested and deployed.
+						
+				Projects :::
+				
+						About the Project 
+						Problem Statements 
+						Tools used 
+						
+						Solutions given 
+						Your Key roles and responsibilities
+			
+		Best Practises for this project:::
+		
+			- Keep a log of all that you do and you get!
+			
+			- Create a log file :
+			
+				Challenges you have faced.
+				How you get it fixed?
+				
+			- Group Discussion weekly twice.
+			
+			- Tools --> Keep a note of alternative tools at every level.
+			
+			- Do NOT focus only on the task.
+			
+			- Do Focus on the process based task.
+			
+		
+
+		Projects :::
+		
+			Developers should Have Domain Knowledge.
+			
+				Insurance 
+				Health 
+				Retail 
+				Banking 
+				Financial 
+		
+			DevOps ::::
+			
+			
+			Project :::
+			
+			
+			www.gmail.com				DNS  	x.x.x.x					==> endpoint 
+			www.gmail.com/inbox 				x.x.x.x/inbox			==> endpoint
+			www.gmail.com/sent
+			www.gmail.com/spam
+			
+		
+			www.google.com
+
+			www.maps.google.com
+			www.drive.google.com
+			www.translate.google.com
+			www.gmail.com
+			
+			
+			How you are going to come-up with the Solutions?
+			
+			Your roles and responsibilities - List of Tasks you are gng to do.
+			
+				
+				
+			<public_ip_Address>:8080/contact.html
+			
+			https://www.amazon.in/mobile-phones/
+			
