@@ -1,0 +1,119 @@
+			
+			
+#################
+6th Oct. 2023
+#################
+
+		Fundamentals of Continuous Monitoring using Prometheus & Grafana :::
+		
+		DevOps :::
+		
+			Stages of DevOps :::
+			
+				Contiuous Development ............................................... Continuous Monitoring
+				
+				
+			Continuous Monitoring	
+				Owned/Managed by : 
+				
+					Production Support/Monitoring Team
+					
+					-> Infra-Structure Monitoring - Jenkins
+								Prometheus/Grafana/Dynatrace/DataDog					
+							
+					-> Application Monitoring
+								AppDynamics
+								
+				Production Support/Monitoring Team :::
+				
+				
+				Prod_Servers ::::
+				
+					These prod servers should be LIVE for 24/7 
+					
+					-> Infra-Structure Monitoring - Production Servers 
+					
+							Usage - Resources/User Traffic
+							
+							Memory Utilization :::
+							
+							Prometheus -- Used for Infra-Structure Monitoring ::
+
+			Monitoring Tool :::
+					Prometheus	--> Is the Monitoring Tool 
+					Grafana		--> Is the Visualization Tool
+					
+		
+			Prometheus Architecture :::
+			
+				Prometheus Server 							===>	 Grafana
+					Storage(Time Series Database)
+					PromQL 
+					
+				Targets 
+					Agent : Node Exporter
+					
+			Install Prometheus & Grafana :::
+			
+				SQL Database 
+				
+				API 
+				CLI 
+
+					TimeSeries Database.	
+					
+					ETL 
+				
+			Monitoring_Server 
+				Target_Server
+			
+			
+			Add Prometheus Data Source to Grafana
+			
+			
+	Use Cases:::
+	
+		Monitoring_Server ::
+				Prometheus
+				
+					- Used to Create Monitoring Dashboards.
+					
+					- Alert Manager Plugins
+					- Notification Plugins
+					- Webhooks
+
+			Memory Utilization ::
+			
+				Alert Mechanism :::
+					80% 
+					 -> Alert the users using Notification Plugins - Email, MS Teams, Slack
+					 -> Cleanup the volumes/Add More Volumes
+					 
+				- Webhooks
+					- Trigger any Automated Jobs using Jenkins/Az Pipeline
+					
+			Network Traffic ::: (Prod servers) - Kubernetes_Cluster-
+	
+				Alert Mechanism :::
+					80% 
+					 -> Alert the users using Notification Plugins - Email, MS Teams, Slack
+					 -> Scale-Up/Down 
+					 
+				- Webhooks
+					- Trigger any Automated Jobs using Jenkins/Az Pipeline	
+
+
+		jenkins_Master/Slave_Nodes  
+		
+		Non-prod / prod 
+		
+		
+		Build_Servers  
+		Ansible_Controllers 
+		
+
+
+Project Discussions ::::
+
+	9th - Monday :::
+	
