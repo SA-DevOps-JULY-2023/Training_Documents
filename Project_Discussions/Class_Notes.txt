@@ -89,3 +89,120 @@
 			
 			https://www.amazon.in/mobile-phones/
 			
+			
+#################
+10th Oct. 2023
+#################			
+			
+		Banking Project ::::
+		
+		HealthCare ::::
+		
+		Solution :::
+		
+		Ansible for deployment :::
+		
+		
+		
+		Developers Perspective:
+			Continuous Development : 
+				
+				- Fork the given src_code Repository.
+				- Open Eclipse IDE 
+						- Import a Maven project from github. 
+				- Make Necessary Changes if need / Without making changes try to validate the result using tomcat server intergration in eclipse.
+				
+				- Commit the changes in remote src_code Repository.
+
+		DevOps Perspective:
+			Continuous Integration/Testing/Delivery/Deployment 
+			
+			- Create github webhook - first.
+			- Create Jenkins_pipeline.
+				Stages :::
+				
+					1. SCM_Checkout
+							--> clone the src_code repo in jenkins slave node.
+							git '<repo_url>'
+								Send the Email Notifications to the stake holder - during failure.						
+					2. Build_Application using Maven ==> *.war 
+					3. Build_Docker Image 
+					4. Publish Image to Docker_Hub
+					5. Deploy the image in target environment QA/UAT/PROD ???
+							If kubernetes is used, deploy the appln in kubernetes_Cluster
+							If Not, deploy the appln in target servers.
+			
+				*** Setup email_Notifications where_ever possible.
+		
+		Production Support/Monitoring :		
+			Monitoring :
+		
+		Infra-Structure Requirement ::::
+		
+				How many VMs we need?  Tag : SA_Project_***
+					Jenkins_master
+					Build_Server 
+					QA_Server
+					Prod_Server
+					Monitoring_Server
+					Kubernetes_Master 
+					Kubernetes_Worknode1,2,3
+					Ansible_Controller
+					Terraform_Server
+					
+				What is the purpose of each VM?
+					Jenkins_master	==> To create & Schedule the jobs
+					Jenkins_Slave	==> To Build Application & Create Artifacts & Build Application Images
+					QA_Server		==> To test the appications
+					Prod_Server		==> Deploymements
+					Monitoring_Server ==> Set Up Monitoring tools to monitor the Prod_Server
+					Kubernetes_Master ==> Create Pods & Deployments
+					Kubernetes_Worknode1,2,3 ==> To ensure high availability of applications/pods
+					Ansible_Controller ==> To configure the tools in build server & Perform Appln. deployment to QA & Prod severs--> 
+					Terraform_Server   ==> Provision the VMs - 			
+				
+				
+				What are the tools to be installed in each VM?
+				
+					Jenkins_master				==> git, jdk, Jenkins
+					Jenkins-Build_Server 		==> git, jdk, maven, docker
+					QA_Server					==> jdk,tomcat, / docker
+					Prod_Server 				==> jdk,tomcat, / docker
+					Monitoring_Server			==> prometheus & Grafana
+					Kubernetes_Master 			==> Kubernetes Components 
+					Kubernetes_Worknode1,2,3	==> Kubernetes Components 
+					Ansible_Controller			==> python & ansible									
+					Terraform_Server			==> Terraform	
+					
+				
+				Action Items ::: @ Infra-Structure Perspective :::
+				
+					Launch all the required VMs 
+					Install the tools in each VMs 
+					Create Users in all the required servers 
+					Create the SSH-Keys in all the required servers
+					Integrate the Servers 
+					Ensure that the servers can interact without any access/network issues.
+					
+				Action Items ::: @ DevOps CICD Perspective :::	
+				
+					Create CI/CD Pipeline
+					
+			- Create github webhook - first.
+			- Create Jenkins_pipeline.
+				Stages :::
+				
+					1. SCM_Checkout
+							--> clone the src_code repo in jenkins slave node.
+							git '<repo_url>'
+								Send the Email Notifications to the stake holder - during failure.						
+					2. Build_Application using Maven ==> *.war 
+					3. Build_Docker Image 
+					4. Publish Image to Docker_Hub
+					5. Deploy the image in target environment QA/UAT/PROD ???
+							If kubernetes is used, deploy the appln in kubernetes_Cluster
+							If Not, deploy the appln in target servers.
+
+
+									
+				
