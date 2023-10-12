@@ -205,4 +205,251 @@
 
 
 									
+#################
+12th Oct. 2023
+#################
+
+			DevOps Perspective :::::
+			
+			
+			
+			Development Perspective :::::
+			
+			
+			FROM tomcat:8.5 
+			
+			FROM Centos:latest 
+			RUN jdk
+			RUN Tomcat 
+			EXPOSE 8089
+			
+			
+			tomcat:latest --> hub 
+			
+			docker run -it tomcat:latest  			backend
+			
+			docker run -it -p <host_port>:<container_port> tomcat:latest   front_end
+			
+			replication of Pods --> 
+			
+			DevOps Perspective :::::
+			
+				- Create all the required VMS & Install the tools.
+				- Create the Users, Access keys / credentials 
+				- Integrate the servers.
+				- Create CI/CD Pipeline.
+				- Test Repositories 
+			
+			
+				What are the tools to be installed in each VM?
+				
+					Jenkins_master				==> git, jdk, Jenkins
+					Jenkins-Build_Server 		==> git, jdk, maven, docker
+					Kubernetes_Master 			==> Kubernetes Components 
+					Kubernetes_Worknode1,2,3	==> Kubernetes Components
+					
+					Monitoring_Server			==> prometheus & Grafana				
+			
+				Action Items ::: @ Infra-Structure Perspective :::
+				
+					Launch all the required VMs 
+					Install the tools in each VMs 
+					Create Users in all the required servers 
+					Create the SSH-Keys in all the required servers
+					Integrate the Servers 
+					Ensure that the servers can interact without any access/network issues.
+					
+				Action Items ::: @ DevOps CICD Perspective :::	
+				
+					Create CI/CD Pipeline			
+
+Email Notification Plugins :::
+
+SMTP Server :
+smtp.gmail.com
+
+SMTP Authentication
+
+SMTP Port :: 465
+
+Login to Gmail :::
+
+Click Account Settings
+
+select Security 
+
+MFA --> mobile#
+App Password = 16
+What ? window
+Which Appln - email	
+
+		
+
+Use Publish Over SSH Plugins to connect jenkins master with Kubernetes and copy the *.yaml to Kubernetes Master.
+
+	Create UserID-devopsadmin in Kubernetes Master Node 
+	Craete SSH_Key to the userID-devopsadmin 
+	devopsadmin should have access to Kubernetes to execute kubectl commands and Docker.
+	Use Publish Over SSH Plugins and Add Server - Kubernetes_Master
+
+###########################################
+In Kubernetes Master :::
+#Add User : 
+
+useradd devopsadmin -s /bin/bash -m -d /home/devopsadmin
+
+su - devopsadmin
+
+#ssh-keygen
+#for Ubuntu ::
+ssh-keygen -t rsa -b 2048 -m PEM
+ls ~/.ssh 
+
+#You should see following two files:
+#id_rsa - private key
+#id_rsa.pub - public
+
+cat id_rsa.pub > authorized_keys
+
+chown -R devopsadmin /home/devopsadmin/.ssh
+chmod 600 /home/devopsadmin/.ssh/authorized_keys
+chmod 700 /home/devopsadmin/.ssh
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~	
+###Add user to User to docker group ::
+
+###As a root user exec this command :
+usermod -aG docker devopsadmin
+
+####Give kubectl access to devopsadmin :::::
+
+su - devopsadmin
+
+mkdir -p $HOME/.kube
+sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+sudo chown $(id -u):$(id -g) $HOME/.kube/config
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~		
+			
+
+pipeline {
+
+    agent { label 'slave1' }
+	
+    tools {
+        maven "maven-3.6.3"
+    }
+
+	environment {	
+		DOCKERHUB_CREDENTIALS=credentials('dockerloginid')
+	}
+	
+    stages {
+        stage('SCM_Checkout') {
+            steps {
+                echo 'Perform SCM Checkout'
+				git 'https://github.com/LoksaiETA/devops-java-webapp.git'
+            }
+        }
+        stage('Application_Build') {
+            steps {
+                echo 'Perform Maven Build'
+				sh 'mvn -Dmaven.test.failure.ignore=true clean package'
+            }
+			  post {
+				failure {
+				  sh "echo 'Send mail on failure'"
+				  mail to:"lemail3@gmail.com", from: 'lemail3@gmail.com', subject:"FAILURE: ${currentBuild.fullDisplayName}", body: "Build failed."
+				}
+			  }
+        }
+        stage('Build Docker Image') {
+            steps {
+				sh 'docker version'
+				sh "docker build -t loksaieta/loksai-eta-app:${BUILD_NUMBER} ."
+				sh 'docker image list'
+				sh "docker tag loksaieta/loksai-eta-app:${BUILD_NUMBER} loksaieta/loksai-eta-app:latest"
+            }
+              post {
+                success {
+                  sh "echo 'Send mail docker Build Success'"
+                  mail to:"lemail3@gmail.com", from: 'lemail3@gmail.com', subject:"App Image Created Please validate", body: "App Image Created Please validate - loksaieta/loksai-eta-app:latest"
+                }
+                failure {
+                  sh "echo 'Send mail docker Build failure'"
+                  mail to:"lemail3@gmail.com", from: 'lemail3@gmail.com', subject:"FAILURE: ${currentBuild.fullDisplayName}", body: "Image Build failed."
+                }
+              }	
+        }
+        stage('Approve - push Image to dockerhub'){
+            steps{
+                
+                //----------------send an approval prompt-------------
+                script {
+                   env.APPROVED_DEPLOY = input message: 'User input required Choose "Yes" | "Abort"'
+                       }
+                //-----------------end approval prompt------------
+            }
+        }
+		stage('Login2DockerHub') {
+
+			steps {
+				sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
+			}
+		}
+		stage('Publish_to_Docker_Registry') {
+			steps {
+				sh "docker push loksaieta/loksai-eta-app:latest"
+			}
+		}
+		stage('Deploy to Kubernetes_Cluster') {
+			steps {
+				sh "echo 'Deploy to Kubernetes_Cluster'"
+			}
+		}
+    }
+}									
+			
+#k8sdeployment.yaml
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: loksai-eta-deploy
+  labels:
+    app: loksai-eta-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: loksai-eta-app
+  template:
+    metadata:
+      labels:
+        app: loksai-eta-app
+    spec:
+      containers:
+      - name: loksai-eta-container
+        image: loksaieta/loksai-eta-app
+        ports:
+        - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: loksai-eta-np-service
+  labels:
+    app: loksai-eta-app
+spec:
+  selector:
+    app: loksai-eta-app
+
+  type: NodePort
+  ports:
+  - nodePort: 31000
+    port: 8080
+    targetPort: 8080
+
+
+
 				
