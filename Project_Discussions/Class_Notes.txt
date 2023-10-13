@@ -314,11 +314,18 @@ cat id_rsa.pub > authorized_keys
 chown -R devopsadmin /home/devopsadmin/.ssh
 chmod 600 /home/devopsadmin/.ssh/authorized_keys
 chmod 700 /home/devopsadmin/.ssh
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~	
 ###Add user to User to docker group ::
 
 ###As a root user exec this command :
 usermod -aG docker devopsadmin
+
+visudo 
+
+devopsadmin ALL=(ALL) NOPASSWD: ALL
+
+#add Admin access to devopsadmin user with NOPASSWD
 
 ####Give kubectl access to devopsadmin :::::
 
@@ -330,6 +337,13 @@ sudo chown $(id -u):$(id -g) $HOME/.kube/config
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~		
+#################
+13th Oct. 2023
+#################			
+			kubectl create -f <file1.yaml>
+			kubectl apply -f <file1.yaml>
+
+https://github.com/LoksaiETA/SA11-BankingApp.git
 			
 
 pipeline {
@@ -366,14 +380,14 @@ pipeline {
         stage('Build Docker Image') {
             steps {
 				sh 'docker version'
-				sh "docker build -t loksaieta/loksai-eta-app:${BUILD_NUMBER} ."
+				sh "docker build -t loksaieta/loksai-eta-app1:${BUILD_NUMBER} ."
 				sh 'docker image list'
-				sh "docker tag loksaieta/loksai-eta-app:${BUILD_NUMBER} loksaieta/loksai-eta-app:latest"
+				sh "docker tag loksaieta/loksai-eta-app1:${BUILD_NUMBER} loksaieta/loksai-eta-app1:latest"
             }
               post {
                 success {
                   sh "echo 'Send mail docker Build Success'"
-                  mail to:"lemail3@gmail.com", from: 'lemail3@gmail.com', subject:"App Image Created Please validate", body: "App Image Created Please validate - loksaieta/loksai-eta-app:latest"
+                  mail to:"lemail3@gmail.com", from: 'lemail3@gmail.com', subject:"App Image Created Please validate", body: "App Image Created Please validate - loksaieta/loksai-eta-app1:latest"
                 }
                 failure {
                   sh "echo 'Send mail docker Build failure'"
@@ -399,56 +413,101 @@ pipeline {
 		}
 		stage('Publish_to_Docker_Registry') {
 			steps {
-				sh "docker push loksaieta/loksai-eta-app:latest"
+				sh "docker push loksaieta/loksai-eta-app1:latest"
 			}
 		}
 		stage('Deploy to Kubernetes_Cluster') {
 			steps {
-				sh "echo 'Deploy to Kubernetes_Cluster'"
+				script {
+					sshPublisher(publishers: [sshPublisherDesc(configName: 'Kubernetes', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: 'kubectl apply -f k8smvndeployment.yaml', execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '.', remoteDirectorySDF: false, removePrefix: '', sourceFiles: '*.yaml')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])	
+				}
 			}
 		}
     }
 }									
-			
-#k8sdeployment.yaml
+	
 
+https://github.com/LoksaiETA/SA11-BankingApp.git
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~```
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: loksai-eta-deploy
+  name: bankapp-eta-deploy
   labels:
-    app: loksai-eta-app
+    app: bankapp-eta-app1
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: loksai-eta-app
+      app: bankapp-eta-app
   template:
     metadata:
       labels:
-        app: loksai-eta-app
+        app: bankapp-eta-app
     spec:
       containers:
-      - name: loksai-eta-container
-        image: loksaieta/loksai-eta-app
+      - name: bankapp-eta-container
+        image: loksaieta/bankapp-eta-app
+        ports:
+        - containerPort: 8081
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: bankapp-eta-np-service1
+  labels:
+    app: bankapp-eta-app1
+spec:
+  selector:
+    app: bankapp-eta-app
+
+  type: NodePort
+  ports:
+  - nodePort: 31111    
+    port: 8081
+    targetPort: 8081
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~````	
+
+			
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: loksai-eta-deploy1
+  labels:
+    app: loksai-eta-app1
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: loksai-eta-app1
+  template:
+    metadata:
+      labels:
+        app: loksai-eta-app1
+    spec:
+      containers:
+      - name: loksai-eta-container1
+        image: loksaieta/loksai-eta-app1
         ports:
         - containerPort: 8080
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: loksai-eta-np-service
+  name: loksai-eta-np-service1
   labels:
-    app: loksai-eta-app
+    app: loksai-eta-app1
 spec:
   selector:
-    app: loksai-eta-app
+    app: loksai-eta-app1
 
   type: NodePort
   ports:
-  - nodePort: 31000
+  - nodePort: 31002
     port: 8080
     targetPort: 8080
+
 
 
 
