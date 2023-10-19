@@ -511,4 +511,157 @@ spec:
 
 
 
+################
+16th Oct. 2023
+################
+		
+		Developers Perspective:
+			Continuous Development : 
+				
+				- Fork the given src_code Repository.
+				- Open Eclipse IDE / Visual Studio Code 
+						- Import a Maven project from github. 
+				- Make Necessary Changes if need / Without making changes try to validate the result using tomcat server intergration in eclipse.
+				
+				- Commit the changes in remote src_code Repository.
+				- Using GIThub Webhook jenkins CICD pipelines gets triggered.
+				
+		
+		selenium : 
+				
+
+		DevOps Perspective:
+			Continuous Integration/Testing/Delivery/Deployment 
+			
+			- Create github webhook - first.
+			- Create Jenkins_pipeline.
+				Stages :::
+				
+					1. SCM_Checkout
+							--> clone the src_code repo in jenkins slave node.
+							git '<repo_url>'
+								Send the Email Notifications to the stake holder - during failure.						
+					2. Build_Application using Maven ==> *.war 
+					3. Build_Docker Image 
+					4. Publish Image to Docker_Hub
+					5. Deploy the image in target environment QA/UAT/PROD ???
+							If kubernetes is used, deploy the appln in kubernetes_Cluster
+							If Not, deploy the appln in target servers.
+			
+				*** Setup email_Notifications where_ever possible.
+		
+
+
+			1st run ==> 8080
+			
+			2nd run ==> 8081
+			
+			
+
+################
+17th Oct. 2023
+################
+
+DevOps	
+
+git,jenkins,docker,kubernetes,ansible,terraform	
+
+Linux ::
+
+	root user == >
+		while working with any pkgs.
+		sytem config 
+		/etc/*
+		create any new users...
+		
+	Jenkins_Slave_Machine :::
+		installed the build tools, created devopsadmin user				root user
+		Performed Application Build created artifacts					devopsadmin user 
+		docker build 													devopsadmin user
+
+	
+	git,jenkins,docker,kubernetes,ansible,terraform	::::
+	
+		On Interview Perspective ::::
+		
+			Every topic is important.
+			
+			
+################
+19th Oct. 2023
+################
+
+
+		Deployment Controller Objects ???
+		
+		kubectl get pods -n dev
+		
+				Error: Msgs !!!
+				
+				
+		kubectl get pods --all-namespaces
+		
+		kubectl delete ns dev
+
+
+		Ansible is used for Configuration management!
+
+
+		Projects ::::
+		
+			Kubernetes ==> 
+			
+			docker run 
+			
+			
+			Create Playbook : ==> Successful/Failure
+			
+			ansible-playbook xyz.yaml ==> 
+			
+			
+			Profile ::::
+			
+			
+			github!!!! 
+			
+			GitHub 
+			
+			
+			gitlab ==> Src_Code 
+			gitlab-ci ==> Create ci/cd pipeline 
+			
+			jenkins ==> groovy 
+			
+			*.yaml ==> Scripts 
+			
+			
+		Jenkins_pipeline --> Infra Provisioning & Configuration!		==> GitOps!!!!
+		
+			-> SCM_Checkout 						checkout - terraform/playbook(roles)
+			-> Create Resources using Terraform 
+			-> Ansible Config
+		
+		Jenkins_Pipeline -- CI/CD :::
+		
+		SCM_Checkout 
+		Application_Build
+		Deploy to Test_Server
+		
+		DevOps - DevSecops - SRE - GitOps - MLOps - AIOps .....
+		
+		NodePort Service ::::
+		
+			31000 -- <external_IP_Addr>:31000 ==> 
+			
+		Ingress Controller Objects :::
+		
+			www.gmail.com					#LoadBalancer -- IP_Address
+			www.gmail.com/inbox		url 	#Ingress Controller -- IP_Adress 	
+			www.gmail.com/sent		url 	#Ingress Controller -- IP_Adress 
+			
+			
+			
+			
+			
+
 				
